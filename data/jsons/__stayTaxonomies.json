@@ -1,0 +1,79 @@
+[
+    {
+        "id": 101,
+        "name": "City Tours",
+        "href": "archive-stay/city-tours",
+        "thumbnail": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+        "count": 15
+    },
+    {
+        "id": 102,
+        "name": "Cultural Tours",
+        "href": "archive-stay/cultural-tours",
+        "thumbnail": "http://dummyimage.com/300x300.png/dddddd/000000",
+        "count": 12
+    },
+    {
+        "id": 103,
+        "name": "Desert Activities",
+        "href": "archive-stay/desert-activities",
+        "thumbnail": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+        "count": 18
+    },
+    {
+        "id": 104,
+        "name": "Nature Hikes",
+        "href": "archive-stay/nature-hikes",
+        "thumbnail": "http://dummyimage.com/300x300.png/dddddd/000000",
+        "count": 10
+    },
+    {
+        "id": 105,
+        "name": "Water Sports",
+        "href": "archive-stay/water-sports",
+        "thumbnail": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+        "count": 14
+    },
+    {
+        "id": 106,
+        "name": "Animal Rides",
+        "href": "archive-stay/animal-rides",
+        "thumbnail": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+        "count": 8
+    },
+    {
+        "id": 107,
+        "name": "Wellness & Spa",
+        "href": "archive-stay/wellness-spa",
+        "thumbnail": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+        "count": 6
+    },
+    {
+        "id": 108,
+        "name": "Desert Adventure",
+        "href": "archive-stay/desert-adventure",
+        "thumbnail": "http://dummyimage.com/300x300.png/dddddd/000000",
+        "count": 9
+    },
+    {
+        "id": 109,
+        "name": "Parks & Shows",
+        "href": "archive-stay/parks-shows",
+        "thumbnail": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+        "count": 11
+    },
+    {
+        "id": 110,
+        "name": "Transfers",
+        "href": "archive-stay/transfers",
+        "thumbnail": "http://dummyimage.com/300x300.png/dddddd/000000",
+        "count": 5
+    },
+    {
+        "id": 111,
+        "name": "Shows & Events",
+        "href": "archive-stay/shows-events",
+        "thumbnail": "http://dummyimage.com/300x300.png/dddddd/000000",
+        "count": 7
+    }
+]

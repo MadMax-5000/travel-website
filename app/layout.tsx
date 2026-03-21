@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Travel',
-  description: 'Travel UI/UX App for Camping',
+  title: 'HM Tours',
+  description: 'Discover the best tours and experiences',
 }
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <main className="relative overflow-hidden">
+        <main className="relative">
           {children}
         </main>
         <Footer />

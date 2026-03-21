@@ -1,0 +1,676 @@
+[
+  {
+    "id": "tour_1",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 101,
+      "name": "City Tours"
+    },
+    "title": "AGADIR CITY TOUR",
+    "featuredImage": "https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Tourist Area + Marina + Kasbah + Old city + Big Mosque + Souk ALHAD",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "15 € / 150 MAD",
+    "maxGuests": null,
+    "saleOff": "10:00am to 01:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "agadir-city-tour"
+  },
+  {
+    "id": "tour_2",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 102,
+      "name": "Cultural Tours"
+    },
+    "title": "ARGAN GUIDED TOUR",
+    "featuredImage": "https://images.pexels.com/photos/6434634/pexels-photo-6434634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/6434634/pexels-photo-6434634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3201735/pexels-photo-3201735.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/4577673/pexels-photo-4577673.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transport + Visit of the Factory + Morrocan Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "2 € / 20 MAD",
+    "maxGuests": null,
+    "saleOff": "Departure Every Hour",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "argan-guided-tour"
+  },
+  {
+    "id": "tour_3",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 103,
+      "name": "Desert Activities"
+    },
+    "title": "QUAD BIKE IN DESERT",
+    "featuredImage": "https://images.pexels.com/photos/4186560/pexels-photo-4186560.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/4186560/pexels-photo-4186560.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2404422/pexels-photo-2404422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transport + equipement + Morrocan Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "08:30am-11:30am / 02:00pm-05:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "quad-bike-in-desert"
+  },
+  {
+    "id": "tour_4",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 103,
+      "name": "Desert Activities"
+    },
+    "title": "BUGGY IN DESERT",
+    "featuredImage": "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/751268/pexels-photo-751268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3201922/pexels-photo-3201922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transport + equipement + Morrocan Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "65 € / 650 MAD",
+    "maxGuests": null,
+    "saleOff": "08:30am-11:30am / 02:00pm-05:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "buggy-in-desert"
+  },
+  {
+    "id": "tour_5",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 104,
+      "name": "Nature Hikes"
+    },
+    "title": "PARADIS VALLEY",
+    "featuredImage": "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2079452/pexels-photo-2079452.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/261410/pexels-photo-261410.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Half Day Excursion",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "25 € / 250 MAD",
+    "maxGuests": null,
+    "saleOff": "08:30am-01:30pm / 02:00pm-06:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.5896,
+      "lng": -9.5268
+    },
+    "slug": "paradis-valley"
+  },
+  {
+    "id": "tour_6",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 105,
+      "name": "Water Sports"
+    },
+    "title": "BOAT TRIP",
+    "featuredImage": "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2736187/pexels-photo-2736187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/6900098/pexels-photo-6900098.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Round Trip Transportation + Swimming + Fishing + Animation + Lunch + Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "09:00am to 02:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "boat-trip"
+  },
+  {
+    "id": "tour_7",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 106,
+      "name": "Animal Rides"
+    },
+    "title": "CAMEL OR HORSE RIDING",
+    "featuredImage": "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/8506437/pexels-photo-8506437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transportation + 2 hours (horse or Camel) forest and river + Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "25 € / 250 MAD",
+    "maxGuests": null,
+    "saleOff": "10:00am-12:00am / 03:00pm-05:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "camel-or-horse-riding"
+  },
+  {
+    "id": "tour_8",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 106,
+      "name": "Animal Rides"
+    },
+    "title": "CAMEL OR HORSE RIDING + SUNSET + BBQ",
+    "featuredImage": "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/276746/pexels-photo-276746.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Round Trip Transportation + 2 hours forest and river sunset + Barbecue Diner + Mint Tea",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "05:00pm to 08:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "camel-or-horse-riding-sunset-bbq"
+  },
+  {
+    "id": "tour_9",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 103,
+      "name": "Desert Excursions"
+    },
+    "title": "MASSA + TIZNIT (JEEP 4*4 MINI SAHARA)",
+    "featuredImage": "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1909752/pexels-photo-1909752.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Sand dunes + Berber Villages + Wild Beach + Off Road + Lunch At local's House",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "35 € / 350 MAD",
+    "maxGuests": null,
+    "saleOff": "08:30am to 04:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 29.6974,
+      "lng": -9.7323
+    },
+    "slug": "massa-tiznit-jeep-4-4-mini-sahara"
+  },
+  {
+    "id": "tour_10",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 107,
+      "name": "Wellness & Spa"
+    },
+    "title": "ARGAN MASSAGE AND MORROCAN HAMMAM",
+    "featuredImage": "https://images.pexels.com/photos/3935315/pexels-photo-3935315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/3935315/pexels-photo-3935315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2133230/pexels-photo-2133230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transportation + 1 hour Massage + 1 hour Hammam",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "35 € / 350 MAD",
+    "maxGuests": null,
+    "saleOff": "10:00am to 06:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "argan-massage-and-morrocan-hammam"
+  },
+  {
+    "id": "tour_11",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 108,
+      "name": "Desert Adventure"
+    },
+    "title": "SUNSET SANDBORDING",
+    "featuredImage": "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/6480707/pexels-photo-6480707.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2507010/pexels-photo-2507010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Round Trip Transportation + Moroccan Desert Style + Colored Village + equipment",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "04:00pm to 08:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "sunset-sandbording"
+  },
+  {
+    "id": "tour_12",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 105,
+      "name": "Water Sports"
+    },
+    "title": "JETSKI 30MIN",
+    "featuredImage": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1080719/pexels-photo-1080719.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/279867/pexels-photo-279867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transportation + Equipment + 30min",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "60 € / 600 MAD",
+    "maxGuests": null,
+    "saleOff": "Depends on availability",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "jetski-30min"
+  },
+  {
+    "id": "tour_13",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 109,
+      "name": "Parks & Shows"
+    },
+    "title": "CROCODIL PARK",
+    "featuredImage": "https://images.pexels.com/photos/4665034/pexels-photo-4665034.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/4665034/pexels-photo-4665034.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1484981/pexels-photo-1484981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transportation + Entrance Ticket",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "25 € / 250 MAD",
+    "maxGuests": null,
+    "saleOff": "10:00am-01:00pm / 02:00pm-05:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.3871,
+      "lng": -9.489
+    },
+    "slug": "crocodil-park"
+  },
+  {
+    "id": "tour_14",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 109,
+      "name": "Parks & Shows"
+    },
+    "title": "DOLPHIN SHOW",
+    "featuredImage": "https://images.pexels.com/photos/1652423/pexels-photo-1652423.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1652423/pexels-photo-1652423.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2736139/pexels-photo-2736139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Round Trip Transportation + Entrance Ticket",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "35 € / 350 MAD",
+    "maxGuests": null,
+    "saleOff": "10:15am to 12:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "dolphin-show"
+  },
+  {
+    "id": "tour_15",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 110,
+      "name": "Transfers"
+    },
+    "title": "TAXI AIRPORT",
+    "featuredImage": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "https://images.pexels.com/photos/6238615/pexels-photo-6238615.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Pickup from the reception of the hotel + transfert to airport Agadir AL MASSIRA",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "25 € / 250 MAD",
+    "maxGuests": null,
+    "saleOff": "Every time",
+    "isAds": null,
+    "map": {
+      "lat": 30.334,
+      "lng": -9.4121
+    },
+    "slug": "taxi-airport"
+  },
+  {
+    "id": "tour_16",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 101,
+      "name": "Day Trips"
+    },
+    "title": "MARRAKECH (Tuesday / Thursday / Saturday)",
+    "featuredImage": "https://images.pexels.com/photos/3773582/pexels-photo-3773582.png?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/3773582/pexels-photo-3773582.png?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3935330/pexels-photo-3935330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3316925/pexels-photo-3316925.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Guide + Jamaa Lafna Square + Koutoubia Mosque + Market + Free Time",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "07:15am to 09:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 31.6295,
+      "lng": -7.9811
+    },
+    "slug": "marrakech-tuesday-thursday-saturday"
+  },
+  {
+    "id": "tour_17",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 101,
+      "name": "Day Trips"
+    },
+    "title": "TAROUDANT + TIOUT (Tuesday / Thursday / Saturday)",
+    "featuredImage": "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Guide + Berber City + Ramparts + old Fortress + Touareg Ali baba and 40 thieves Lunch",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "08:30am to 06:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4703,
+      "lng": -8.877
+    },
+    "slug": "taroudant-tiout-tuesday-thursday-saturday"
+  },
+  {
+    "id": "tour_18",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 101,
+      "name": "Day Trips"
+    },
+    "title": "LEGZIRA + MASSA (Tuesday / Thursday / Saturday)",
+    "featuredImage": "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Guide + silver city + Swim and relax + Lunch by the Ocean + beautiful Landscapes",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "40 € / 400 MAD",
+    "maxGuests": null,
+    "saleOff": "08:00am to 06:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 29.4449,
+      "lng": -10.1147
+    },
+    "slug": "legzira-massa-tuesday-thursday-saturday"
+  },
+  {
+    "id": "tour_19",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 101,
+      "name": "Day Trips"
+    },
+    "title": "ESSAOUIRA (Monday / Wednesday / Friday)",
+    "featuredImage": "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Guide + Portugal City + harbor + Goats on the Threes + Old City + Medina + Free Time",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "35 € / 350 MAD",
+    "maxGuests": null,
+    "saleOff": "07:30am to 07:00pm",
+    "isAds": null,
+    "map": {
+      "lat": 31.5085,
+      "lng": -9.7595
+    },
+    "slug": "essaouira-monday-wednesday-friday"
+  },
+  {
+    "id": "tour_20",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 111,
+      "name": "Shows & Events"
+    },
+    "title": "BERBER FANTASIA NIGHT SHOW (Monday / Wednesday / Friday)",
+    "featuredImage": "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Transportation + Folklore + Acrobat + Fire Show + Belly Dancer + Moroccan cuisin",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "50 € / 500 MAD",
+    "maxGuests": null,
+    "saleOff": "07:00pm to 11:45pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "berber-fantasia-night-show-monday-wednesday-friday"
+  },
+  {
+    "id": "tour_21",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 105,
+      "name": "Water Sports"
+    },
+    "title": "SURF LESSON 2 HOURS (Monday / Wednesday / Friday)",
+    "featuredImage": "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "galleryImgs": [
+      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": true,
+    "address": "Round Trip Transportation + SurfBoard + BodyBoard",
+    "reviewStart": 0,
+    "reviewCount": 0,
+    "price": "35 € / 350 MAD",
+    "maxGuests": null,
+    "saleOff": "10:30am to 01:30pm",
+    "isAds": null,
+    "map": {
+      "lat": 30.5472,
+      "lng": -9.7028
+    },
+    "slug": "surf-lesson-2-hours-monday-wednesday-friday"
+  }
+]
