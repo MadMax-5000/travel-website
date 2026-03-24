@@ -18,6 +18,7 @@ import {
     PhoneIcon,
 } from "@heroicons/react/24/outline";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
+import ItineraryTimeline from "@/components/ItineraryTimeline";
 
 interface ListingPageClientProps {
     listing: any;
@@ -74,7 +75,7 @@ function MiniCalendar({
                 <button
                     onClick={prev}
                     type="button"
-                    className="p-2 rounded-full hover:bg-orange-50 dark:hover:bg-orange-950/30 transition-colors"
+                    className="p-2 rounded-full hover:bg-orange-50 dark:hover:bg-orange-800/30 transition-colors"
                 >
                     <ChevronLeftIcon className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
                 </button>
@@ -84,7 +85,7 @@ function MiniCalendar({
                 <button
                     onClick={next}
                     type="button"
-                    className="p-2 rounded-full hover:bg-orange-50 dark:hover:bg-orange-950/30 transition-colors"
+                    className="p-2 rounded-full hover:bg-orange-50 dark:hover:bg-orange-800/30 transition-colors"
                 >
                     <ChevronRightIcon className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
                 </button>
@@ -116,9 +117,9 @@ function MiniCalendar({
                                 ${isSel
                                     ? "bg-orange-500 text-white shadow-lg shadow-orange-500/30 scale-105"
                                     : isToday && !isPast
-                                        ? "border-2 border-orange-500 text-orange-500 font-semibold"
+                                        ? "border-2 border-orange-500 text-orange-500 dark:text-orange-400 font-semibold"
                                         : !isPast
-                                            ? "hover:bg-orange-50 dark:hover:bg-orange-950/30 text-neutral-700 dark:text-neutral-300"
+                                            ? "hover:bg-orange-50 dark:hover:bg-orange-800/30 text-neutral-700 dark:text-neutral-300"
                                             : ""
                                 }
                             `}
@@ -160,7 +161,7 @@ function CounterRow({
                     disabled={value <= min}
                     className="w-9 h-9 rounded-full border border-neutral-300 dark:border-neutral-600
                         flex items-center justify-center transition-all
-                        hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-400 dark:hover:text-orange-400
+                        hover:border-orange-500 hover:text-orange-700 dark:hover:border-orange-400 dark:hover:text-orange-400
                         disabled:opacity-25 disabled:cursor-not-allowed disabled:hover:border-neutral-300 disabled:hover:text-neutral-700"
                 >
                     <MinusIcon className="w-4 h-4" />
@@ -174,7 +175,7 @@ function CounterRow({
                     disabled={value >= max}
                     className="w-9 h-9 rounded-full border border-neutral-300 dark:border-neutral-600
                         flex items-center justify-center transition-all
-                        hover:border-orange-500 hover:text-orange-500 dark:hover:border-orange-400 dark:hover:text-orange-400
+                        hover:border-orange-500 hover:text-orange-700 dark:hover:border-orange-400 dark:hover:text-orange-400
                         disabled:opacity-25 disabled:cursor-not-allowed disabled:hover:border-neutral-300 disabled:hover:text-neutral-700"
                 >
                     <PlusIcon className="w-4 h-4" />
@@ -255,7 +256,7 @@ function BookingModal({
                             {data.kids > 0 && <Row label="Price per kid" value={data.pricePerKid} />}
                             <div className="border-t border-neutral-200 dark:border-neutral-700 pt-4 flex justify-between font-bold text-[17px]">
                                 <span className="text-neutral-900 dark:text-neutral-100">Total</span>
-                                <span className="text-orange-600 dark:text-orange-400">{data.grandTotal}</span>
+                                <span className="text-orange-700 dark:text-orange-400">{data.grandTotal}</span>
                             </div>
                         </div>
 
@@ -482,10 +483,10 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                         <span className="text-neutral-500 text-[15px]">/ adult</span>
                     </div>
                     <div className="flex items-center text-[14px] font-medium text-neutral-700 dark:text-neutral-300">
-                        <StarIcon className="w-4 h-4 fill-orange-500 text-orange-500 mr-1.5" />
+                        <StarIcon className="w-4 h-4 fill-orange-500 text-orange-500 dark:text-orange-400 mr-1.5" />
                         <span className="text-neutral-900 dark:text-neutral-100">{reviewStart || 4.8}</span>
                         <span className="text-neutral-400 mx-2">·</span>
-                        <button type="button" className="text-neutral-500 hover:text-orange-600 transition-colors">
+                        <button type="button" className="text-neutral-500 hover:text-orange-700 transition-colors">
                             {reviewCount || 28} reviews
                         </button>
                     </div>
@@ -498,10 +499,10 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                             type="button"
                             onClick={() => { setCalOpen(!calOpen); setGuestsOpen(false); }}
                             className={`w-full p-4 text-left transition-all rounded-t-xl
-                                ${!selectedDate && calOpen ? "bg-orange-50 dark:bg-orange-950/20" : "hover:bg-neutral-50 dark:hover:bg-neutral-800/50"}
+                                ${!selectedDate && calOpen ? "bg-orange-50 dark:bg-orange-900/20" : "hover:bg-neutral-50 dark:hover:bg-neutral-800/50"}
                                 ${!selectedDate && calOpen ? "ring-2 ring-inset ring-orange-500" : ""}`}
                         >
-                            <label className="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 mb-1.5 pointer-events-none">
+                            <label className="block text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 mb-1.5 pointer-events-none">
                                 Event Date
                             </label>
                             <span className={`block text-[15px] ${selectedDate ? "text-neutral-900 dark:text-neutral-100 font-semibold" : "text-neutral-400"}`}>
@@ -521,7 +522,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                                         <button
                                             type="button"
                                             onClick={() => setSelectedDate(null)}
-                                            className="text-[13px] text-neutral-500 hover:text-orange-600 font-medium transition-colors"
+                                            className="text-[13px] text-neutral-500 hover:text-orange-700 font-medium transition-colors"
                                         >
                                             Clear date
                                         </button>
@@ -536,11 +537,11 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                             type="button"
                             onClick={() => { setGuestsOpen(!guestsOpen); setCalOpen(false); }}
                             className={`w-full p-4 text-left flex justify-between items-center transition-all rounded-b-xl
-                                ${guestsOpen ? "bg-orange-50 dark:bg-orange-950/20" : "hover:bg-neutral-50 dark:hover:bg-neutral-800/50"}
+                                ${guestsOpen ? "bg-orange-50 dark:bg-orange-900/20" : "hover:bg-neutral-50 dark:hover:bg-neutral-800/50"}
                                 ${guestsOpen ? "ring-2 ring-inset ring-orange-500" : ""}`}
                         >
                             <div>
-                                <label className="block text-[11px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 mb-1.5 pointer-events-none">
+                                <label className="block text-[11px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 mb-1.5 pointer-events-none">
                                     Guests
                                 </label>
                                 <span className="block text-[15px] text-neutral-900 dark:text-neutral-100 font-semibold">
@@ -580,7 +581,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                                     <button
                                         type="button"
                                         onClick={() => setGuestsOpen(false)}
-                                        className="text-[14px] font-semibold text-orange-600 hover:text-orange-700 transition-colors"
+                                        className="text-[14px] font-semibold text-orange-700 hover:text-orange-700 transition-colors"
                                     >
                                         Close
                                     </button>
@@ -591,7 +592,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 </div>
 
                 {!selectedDate && (
-                    <p className="text-[13px] text-orange-600 dark:text-orange-400 mb-4 flex items-center gap-2">
+                    <p className="text-[13px] text-orange-700 dark:text-orange-400 mb-4 flex items-center gap-2">
                         <CalendarDaysIcon className="w-4 h-4" />
                         Please select a date to continue
                     </p>
@@ -641,15 +642,15 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 </h1>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[15px]">
                     <div className="flex items-center gap-1.5 font-medium">
-                        <StarIcon className="w-5 h-5 fill-orange-500 text-orange-500" />
+                        <StarIcon className="w-5 h-5 fill-orange-500 text-orange-500 dark:text-orange-400" />
                         <span className="text-neutral-900 dark:text-neutral-100">{reviewStart || 4.8}</span>
                     </div>
                     <span className="text-neutral-300">·</span>
-                    <button type="button" className="font-medium text-neutral-600 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                    <button type="button" className="font-medium text-neutral-600 dark:text-neutral-400 hover:text-orange-700 dark:hover:text-orange-400 transition-colors">
                         {reviewCount || 28} reviews
                     </button>
                     <span className="text-neutral-300">·</span>
-                    <button type="button" className="flex items-center gap-1.5 font-medium text-neutral-600 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+                    <button type="button" className="flex items-center gap-1.5 font-medium text-neutral-600 dark:text-neutral-400 hover:text-orange-700 dark:hover:text-orange-400 transition-colors">
                         <MapPinIcon className="w-4 h-4" />
                         {address}
                     </button>
@@ -744,8 +745,8 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
                     <div className="space-y-8 pb-10 border-b border-neutral-200 dark:border-neutral-800">
                         <div className="flex items-start gap-5">
-                            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
-                                <SparklesIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                            <div className="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
+                                <SparklesIcon className="w-6 h-6 text-orange-700 dark:text-orange-400" />
                             </div>
                             <div>
                                 <h3 className="font-semibold text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">{author.displayName} is a Superhost</h3>
@@ -753,8 +754,8 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                             </div>
                         </div>
                         <div className="flex items-start gap-5">
-                            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
-                                <MapPinIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                            <div className="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
+                                <MapPinIcon className="w-6 h-6 text-orange-700 dark:text-orange-400" />
                             </div>
                             <div>
                                 <h3 className="font-semibold text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">Great location</h3>
@@ -762,8 +763,8 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                             </div>
                         </div>
                         <div className="flex items-start gap-5">
-                            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
-                                <ShieldCheckIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                            <div className="w-12 h-12 rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
+                                <ShieldCheckIcon className="w-6 h-6 text-orange-700 dark:text-orange-400" />
                             </div>
                             <div>
                                 <h3 className="font-semibold text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">Free cancellation for 48 hours</h3>
@@ -778,19 +779,23 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                             <p>Experience the ultimate relaxation in our beautifully designed space. Perfect for families, couples, and solo travelers looking for a unique getaway.</p>
                             <p>Located just minutes away from local attractions in {address}, you'll have everything you need for a memorable stay.</p>
                         </div>
-                        <button type="button" className="mt-8 font-semibold text-[15px] text-orange-600 dark:text-orange-400 flex items-center gap-1.5 hover:gap-2 transition-all">
+                        <button type="button" className="mt-8 font-semibold text-[15px] text-orange-700 dark:text-orange-400 flex items-center gap-1.5 hover:gap-2 transition-all">
                             Show more 
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                         </button>
                     </div>
+
+                    {listing.itinerary && listing.itinerary.length > 0 && (
+                        <ItineraryTimeline itinerary={listing.itinerary} />
+                    )}
 
                     <div className="pb-6">
                         <h3 className="text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-7">What this place offers</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                             {["Wifi", "Kitchen", "Free parking on premises", "Pool", "Air conditioning", "Patio or balcony", "Security cameras on property", "Carbon monoxide alarm"].map((item, i) => (
                                 <div key={i} className="flex items-center gap-4 py-2">
-                                    <div className="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
-                                        <CheckIcon className="w-4 h-4 text-orange-600 dark:text-orange-400" />
+                                    <div className="w-6 h-6 rounded-full bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center">
+                                        <CheckIcon className="w-4 h-4 text-orange-700 dark:text-orange-400" />
                                     </div>
                                     <span className="text-[16px] text-neutral-700 dark:text-neutral-300">{item}</span>
                                 </div>

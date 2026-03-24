@@ -1,148 +1,198 @@
 'use client'
 
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Facebook, Instagram, Twitter, Youtube, ArrowUpRight } from 'lucide-react'
+
+const FOOTER_TOURS = [
+  'City Tours', 'Desert Adventures', 'Surf Retreats', 'Atlas Mountains',
+  'Day Trips', 'Luxury Tours', 'Camel Riding', 'Quad Biking', 'Boat Tours'
+]
+
+const FOOTER_COMPANY = ['About Us', 'Contact', 'FAQs', 'Careers', 'Privacy Policy']
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) { setSubscribed(true); setEmail('') }
+  }
 
   return (
-    <footer className="relative overflow-hidden">
-      {/* Black Background */}
-      <div className="absolute inset-0 bg-black" />
+    <footer className="bg-[#0a0a0a] text-white overflow-hidden">
 
-      {/* Decorative Top Border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-orange-500/30" />
+      {/* ── STATEMENT HERO ── */}
+      <div className="border-b border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 lg:py-24">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-12">
 
-      <div className="relative padding-container max-container">
-        <div className="py-16 lg:py-20">
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
-
-            {/* Brand Section */}
-            <div className="lg:col-span-4">
-              <Link href="/" className="inline-block group mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-orange-500/20 blur-xl rounded-full group-hover:bg-orange-500/30 transition-all" />
-                    <Link
-                      href="/"
-                      className="text-2xl font-bold tracking-tighter text-white"
-                    >
-                      HM <span className="font-serif italic text-orange-200">Tours</span>
-                    </Link>
-                  </div>
-                </div>
-              </Link>
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-sm">
-                Discover the magic of <span className="font-serif italic text-orange-400">Agadir</span> with unforgettable adventures, premium tours, and authentic Moroccan experiences.
+            {/* Big type */}
+            <div className="flex-1">
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-orange-500 mb-5">
+                Agadir, Morocco
               </p>
+              <h2
+                className="text-5xl sm:text-6xl lg:text-[5.5rem] xl:text-[6.5rem] font-light leading-[0.92] tracking-tight"
+                style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+              >
+                Your next<br />
+                <em className="text-orange-500">adventure</em><br />
+                starts here.
+              </h2>
+            </div>
 
-              {/* Social Links with Premium Styling */}
-              <div className="flex items-center gap-3">
-                {SOCIALS.links.map((link, index) => (
-                  <Link
-                    href="/"
-                    key={index}
-                    className="group relative flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-sm transition-all hover:border-orange-500 hover:bg-orange-500/10 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/30"
-                  >
-                    <Image
-                      src={link}
-                      alt="social"
-                      width={18}
-                      height={18}
-                      className="transition-transform group-hover:scale-110 opacity-60 group-hover:opacity-100 brightness-0 invert"
+            {/* Newsletter */}
+            <div className="lg:w-72 shrink-0 pb-2">
+              <p className="text-sm text-neutral-500 mb-6 leading-relaxed">
+                From the Sahara to the Atlantic — we craft journeys worth remembering.
+              </p>
+              {subscribed ? (
+                <p className="text-sm text-orange-400">You're on the list — thank you.</p>
+              ) : (
+                <form onSubmit={handleSubscribe}>
+                  <label className="block text-[10px] uppercase tracking-[0.2em] text-neutral-600 mb-2.5">
+                    Stay in the loop
+                  </label>
+                  <div className="flex">
+                    <input
+                      type="email"
+                      placeholder="your@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="flex-1 min-w-0 bg-white/[0.04] border border-white/[0.08] border-r-0 px-4 py-3 text-sm text-white placeholder-neutral-700 outline-none focus:border-orange-500/40 transition-colors"
                     />
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Links Sections */}
-            <div className="lg:col-span-5">
-              <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-                {FOOTER_LINKS.map((column, index) => (
-                  <div key={index}>
-                    <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-white">
-                      {column.title}
-                    </h4>
-                    <ul className="space-y-3">
-                      {column.links.map((link) => (
-                        <li key={link}>
-                          <Link
-                            href="/"
-                            className="group inline-flex items-center gap-1 text-sm text-gray-400 transition-colors hover:text-orange-400"
-                          >
-                            <span>{link}</span>
-                            <ArrowUpRight className="h-3 w-3 opacity-0 -translate-y-1 translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0" />
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div className="lg:col-span-3">
-              <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-white">
-                {FOOTER_CONTACT_INFO.title}
-              </h4>
-              <div className="space-y-4">
-                {FOOTER_CONTACT_INFO.links.map((link) => {
-                  const Icon = link.label === 'Email' ? Mail : link.label === 'Phone' ? Phone : MapPin
-                  return (
-                    <Link
-                      href="/"
-                      key={link.label}
-                      className="group flex items-start gap-3 rounded-lg p-3 transition-all hover:bg-white/5 hover:shadow-lg hover:shadow-orange-500/10"
+                    <button
+                      type="submit"
+                      className="bg-orange-500 hover:bg-orange-600 transition-colors px-5 text-[10px] font-semibold uppercase tracking-[0.15em] text-white whitespace-nowrap"
                     >
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 transition-all group-hover:bg-orange-500/30 group-hover:scale-110">
-                        <Icon className="h-4 w-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                          {link.label}
-                        </p>
-                        <p className="text-sm font-medium text-white break-words">
-                          {link.value}
-                        </p>
-                      </div>
-                    </Link>
-                  )
-                })}
-              </div>
+                      Join
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
-          </div>
 
-          {/* Bottom Bar */}
-          <div className="mt-16 pt-8 border-t border-white/10">
-            <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-              <p className="text-sm text-gray-400">
-                © {currentYear} <span className="font-serif italic text-orange-400">Agadir Travel</span>. All rights reserved.
-              </p>
-              <div className="flex items-center gap-6 text-sm">
-                <Link
-                  href="/"
-                  className="text-gray-400 transition-colors hover:text-orange-400"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
-                  href="/"
-                  className="text-gray-400 transition-colors hover:text-orange-400"
-                >
-                  Terms of Service
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+
+      {/* ── LINKS GRID ── */}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/[0.06] border-b border-white/[0.06]">
+
+          <div className="py-10 pr-8">
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Experiences</p>
+            <ul className="space-y-3">
+              {FOOTER_TOURS.slice(0, 5).map((item) => (
+                <li key={item}>
+                  <Link href="/" className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="py-10 px-8">
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6 invisible">–</p>
+            <ul className="space-y-3">
+              {FOOTER_TOURS.slice(5).map((item) => (
+                <li key={item}>
+                  <Link href="/" className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="py-10 px-8">
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Company</p>
+            <ul className="space-y-3">
+              {FOOTER_COMPANY.map((item) => (
+                <li key={item}>
+                  <Link href="/" className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="py-10 pl-8">
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Contact</p>
+            <ul className="space-y-5">
+              {[
+                { label: 'Phone', value: '+212 528 82 00 00', href: 'tel:+212528820000' },
+                { label: 'Email', value: 'info@hmtours.com', href: 'mailto:info@hmtours.com' },
+                { label: 'Location', value: 'Agadir, Morocco', href: null },
+              ].map(({ label, value, href }) => (
+                <li key={label}>
+                  {href ? (
+                    <Link href={href} className="group flex items-center w-fit gap-0.5">
+                      <div className="flex flex-col gap-0.5">
+                        <span className="text-[10px] uppercase tracking-[0.15em] text-neutral-700">{label}</span>
+                        <span className="text-[13px] text-neutral-500 group-hover:text-white transition-colors">{value}</span>
+                      </div>
+                      <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 text-orange-500 self-end mb-0.5" />
+                    </Link>
+                  ) : (
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-[10px] uppercase tracking-[0.15em] text-neutral-700">{label}</span>
+                      <span className="text-[13px] text-neutral-500">{value}</span>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* ── BOTTOM BAR ── */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-5 py-6">
+
+          <div className="flex items-center gap-5">
+            <Link href="/">
+              <Image src="/ansof.png" alt="HM Tours" width={90} height={36} className="h-6 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" />
+            </Link>
+            <span className="text-[12px] text-neutral-700">© {currentYear} HM Tours</span>
+          </div>
+
+          <div className="flex items-center gap-6">
+            {[
+              { Icon: Facebook, label: 'Facebook', href: 'https://facebook.com' },
+              { Icon: Instagram, label: 'Instagram', href: 'https://instagram.com' },
+              { Icon: Twitter, label: 'Twitter', href: 'https://twitter.com' },
+              { Icon: Youtube, label: 'Youtube', href: 'https://youtube.com' },
+            ].map(({ Icon, label, href }) => (
+              <Link key={href} href={href} target="_blank" className="group flex items-center w-fit text-neutral-700 hover:text-orange-500 transition-colors">
+                <Icon className="h-[15px] w-[15px]" />
+                <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0" />
+              </Link>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-5">
+            {['Privacy', 'Terms', 'Cookies'].map((label) => (
+              <Link key={label} href="/" className="group relative inline-block text-[12px] text-neutral-700 hover:text-neutral-400 transition-colors">
+                {label}
+                <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
     </footer>
   )
 }

@@ -22,8 +22,7 @@ const Badge: FC<BadgeProps> = ({
                 return `text-pink-800 bg-pink-100 ${hasHover ? "hover:bg-pink-800" : ""
                     }`;
             case "orange":
-                return `text-orange-800 bg-orange-100 ${hasHover ? "hover:bg-orange-800" : ""
-                    }`;
+                return `text-orange-700 bg-orange-100 ${hasHover ? "hover:bg-orange-700 hover:text-white" : ""}`;
             case "red":
                 return `text-red-800 bg-red-100 ${hasHover ? "hover:bg-red-800" : ""}`;
             case "gray":
@@ -45,8 +44,7 @@ const Badge: FC<BadgeProps> = ({
                 return `text-blue-800 bg-blue-100 ${hasHover ? "hover:bg-blue-800" : ""
                     }`;
             default:
-                return `text-orange-800 bg-orange-100 ${hasHover ? "hover:bg-orange-800" : ""
-                    }`;
+                return `text-orange-700 bg-orange-100 ${hasHover ? "hover:bg-orange-700 hover:text-white" : ""}`;
         }
     };
 

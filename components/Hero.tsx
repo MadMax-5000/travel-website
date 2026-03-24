@@ -17,7 +17,7 @@ const Hero = () => {
       {/* 1. BACKGROUND with Cinematic Gradient */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="images/agadir.jpg"
+          src="/images/agadir.jpg"
           alt="Agadir Bay"
           fill
           className="object-cover"
@@ -33,7 +33,7 @@ const Hero = () => {
         {/* Small Pill Badge */}
         <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-md transition-transform hover:scale-105 cursor-default">
           <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-400 opacity-75"></span>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-300 opacity-75"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-orange-500"></span>
           </span>
           <span className="text-xs font-medium tracking-wide text-white uppercase">Season Starts Now</span>
@@ -41,7 +41,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="mb-6 text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl">
-          Agadir <span className="font-serif italic text-orange-200">Awaits</span>
+          Agadir <span className="font-serif italic text-orange-300">Awaits</span>
         </h1>
 
         {/* Subtext - clean and readable */}

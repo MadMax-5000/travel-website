@@ -13,14 +13,14 @@ export default function About() {
                     {/* Eyebrow */}
                     <div className="mb-6 flex items-center gap-3">
                         <div className="h-[1px] w-6 bg-orange-500/50" />
-                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-300 uppercase">
+                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-500 uppercase">
                             Our Story
                         </span>
                     </div>
 
                     <h1 className="mb-5 text-4xl font-medium tracking-tight text-white lg:text-5xl lg:leading-[1.1]">
                         Crafted for those <br />
-                        <span className="font-serif italic text-orange-100">who seek more.</span>
+                        <span className="font-serif italic text-orange-200">who seek more.</span>
                     </h1>
                     <p className="max-w-2xl text-[13.5px] font-light leading-relaxed text-zinc-400 sm:text-sm">
                         Born in Agadir, we're a team of passionate locals dedicated to sharing the soul of Morocco. From the golden shores of the Atlantic to the endless dunes of the Sahara, we curate experiences that transcend the ordinary.
@@ -31,7 +31,7 @@ export default function About() {
                 <div className="mb-20 space-y-10">
                     <div className="mb-8 flex items-center gap-3">
                         <div className="h-[1px] w-6 bg-orange-500/50" />
-                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-300 uppercase">
+                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-500 uppercase">
                             The Journey
                         </span>
                     </div>
@@ -49,7 +49,7 @@ export default function About() {
                         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent" />
                         <div className="absolute bottom-8 left-8">
                             <div className="rounded-xl bg-zinc-950/60 backdrop-blur-md border border-white/10 px-6 py-4">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400 mb-1">Welcome to</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500 mb-1">Welcome to</p>
                                 <p className="text-xl font-medium text-white">Morocco's Golden Coast</p>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-6 left-6">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400 mb-1">Ride the Waves</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500 mb-1">Ride the Waves</p>
                                 <p className="text-lg font-medium text-white">World-Class Surf</p>
                             </div>
                         </div>
@@ -84,7 +84,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-6 left-6">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400 mb-1">Golden Hour</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500 mb-1">Golden Hour</p>
                                 <p className="text-lg font-medium text-white">Beach Sunsets</p>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ export default function About() {
                         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/60 via-transparent to-zinc-950/60" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center">
-                                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-orange-400 mb-3">Discover</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-orange-500 mb-3">Discover</p>
                                 <p className="text-2xl md:text-3xl font-serif italic text-white">Where land meets sea</p>
                             </div>
                         </div>
@@ -121,7 +121,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-5 left-5">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Culture</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Culture</p>
                                 <p className="text-base font-medium text-white">Vibrant Souks</p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-5 left-5">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Flavors</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Flavors</p>
                                 <p className="text-base font-medium text-white">Spice Markets</p>
                             </div>
                         </div>
@@ -153,7 +153,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-5 left-5">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Nature</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Nature</p>
                                 <p className="text-base font-medium text-white">Atlas Mountains</p>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ export default function About() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                         <div className="absolute bottom-6 left-6">
-                            <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400 mb-1">Heritage</p>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500 mb-1">Heritage</p>
                             <p className="text-lg font-medium text-white">Fishing Boats</p>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ export default function About() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                         <div className="absolute bottom-6 left-6">
-                            <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400 mb-1">Adventure</p>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500 mb-1">Adventure</p>
                             <p className="text-lg font-medium text-white">Beach Rides</p>
                         </div>
                     </div>
@@ -204,7 +204,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-4 left-4">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Crafts</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Crafts</p>
                                 <p className="text-sm font-medium text-white">Artisans</p>
                             </div>
                         </div>
@@ -220,7 +220,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-4 left-4">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Local Life</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Local Life</p>
                                 <p className="text-sm font-medium text-white">Fishermen</p>
                             </div>
                         </div>
@@ -236,7 +236,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-4 left-4">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Marina</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Marina</p>
                                 <p className="text-sm font-medium text-white">Harbor</p>
                             </div>
                         </div>
@@ -252,7 +252,7 @@ export default function About() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
                             <div className="absolute bottom-4 left-4">
-                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-400">Experience</p>
+                                <p className="text-[10px] font-semibold uppercase tracking-widest text-orange-500">Experience</p>
                                 <p className="text-sm font-medium text-white">Learn to Surf</p>
                             </div>
                         </div>
@@ -263,7 +263,7 @@ export default function About() {
                 <div className="mb-20">
                     <div className="mb-10 flex items-center gap-3">
                         <div className="h-[1px] w-6 bg-orange-500/50" />
-                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-300 uppercase">
+                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-500 uppercase">
                             What We Do
                         </span>
                     </div>
@@ -271,7 +271,7 @@ export default function About() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {/* Premium Tours */}
                         <div className="group rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-5 transition-all duration-300 hover:border-zinc-700 hover:bg-zinc-900/60">
-                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-400 transition-transform duration-300 group-hover:scale-110">
+                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500 transition-transform duration-300 group-hover:scale-110">
                                 <Compass className="h-5 w-5" />
                             </div>
                             <h3 className="mb-2 text-sm font-medium text-white">Premium Tours</h3>
@@ -282,7 +282,7 @@ export default function About() {
 
                         {/* Surf Retreats */}
                         <div className="group rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-5 transition-all duration-300 hover:border-zinc-700 hover:bg-zinc-900/60">
-                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-400 transition-transform duration-300 group-hover:scale-110">
+                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500 transition-transform duration-300 group-hover:scale-110">
                                 <Waves className="h-5 w-5" />
                             </div>
                             <h3 className="mb-2 text-sm font-medium text-white">Surf Retreats</h3>
@@ -293,7 +293,7 @@ export default function About() {
 
                         {/* Desert Adventures */}
                         <div className="group rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-5 transition-all duration-300 hover:border-zinc-700 hover:bg-zinc-900/60">
-                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-400 transition-transform duration-300 group-hover:scale-110">
+                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500 transition-transform duration-300 group-hover:scale-110">
                                 <Mountain className="h-5 w-5" />
                             </div>
                             <h3 className="mb-2 text-sm font-medium text-white">Desert Adventures</h3>
@@ -308,7 +308,7 @@ export default function About() {
                 <div className="mb-20">
                     <div className="mb-8 flex items-center gap-3">
                         <div className="h-[1px] w-6 bg-orange-500/50" />
-                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-300 uppercase">
+                        <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-500 uppercase">
                             Why HM Tours
                         </span>
                     </div>
@@ -316,7 +316,7 @@ export default function About() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-800/80 overflow-hidden rounded-xl">
                         {/* Local Expertise */}
                         <div className="bg-zinc-900/80 p-5 hover:bg-zinc-900 transition-colors">
-                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
+                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-500">
                                 <Globe className="h-4 w-4" />
                             </div>
                             <h3 className="mb-1 text-xs font-semibold text-white uppercase tracking-wide">Local Roots</h3>
@@ -327,7 +327,7 @@ export default function About() {
 
                         {/* Personalized */}
                         <div className="bg-zinc-900/80 p-5 hover:bg-zinc-900 transition-colors">
-                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
+                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-500">
                                 <Heart className="h-4 w-4" />
                             </div>
                             <h3 className="mb-1 text-xs font-semibold text-white uppercase tracking-wide">Tailored to You</h3>
@@ -338,7 +338,7 @@ export default function About() {
 
                         {/* Small Groups */}
                         <div className="bg-zinc-900/80 p-5 hover:bg-zinc-900 transition-colors">
-                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
+                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-500">
                                 <Users className="h-4 w-4" />
                             </div>
                             <h3 className="mb-1 text-xs font-semibold text-white uppercase tracking-wide">Intimate Groups</h3>
@@ -349,7 +349,7 @@ export default function About() {
 
                         {/* Safety */}
                         <div className="bg-zinc-900/80 p-5 hover:bg-zinc-900 transition-colors">
-                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-400">
+                            <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-orange-500/20 text-orange-500">
                                 <Star className="h-4 w-4" />
                             </div>
                             <h3 className="mb-1 text-xs font-semibold text-white uppercase tracking-wide">Safety Assured</h3>

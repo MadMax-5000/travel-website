@@ -50,37 +50,45 @@ export const FEATURES = [
 // FOOTER SECTION
 export const FOOTER_LINKS = [
   {
-    title: 'Learn More',
+    title: 'Tours & Experiences',
     links: [
-      'About Hilink',
-      'Press Releases',
-      'Environment',
-      'Jobs',
-      'Privacy Policy',
-      'Contact Us',
+      'City Tours',
+      'Desert Adventures',
+      'Surf Retreats',
+      'Atlas Mountains',
+      'Day Trips',
+      'Camel Riding',
+      'Quad Biking',
+      'Boat Tours',
     ],
   },
   {
-    title: 'Our Community',
-    links: ['Climbing xixixi', 'Hiking hilink', 'Hilink kinthill'],
+    title: 'Company',
+    links: [
+      'About Us',
+      'Contact',
+      'FAQs',
+      'Careers',
+      'Privacy Policy',
+    ],
   },
 ];
 
 export const FOOTER_CONTACT_INFO = {
   title: 'Contact Us',
   links: [
-    { label: 'Admin Officer', value: '123-456-7890' },
-    { label: 'Email Officer', value: 'hilink@akinthil.com' },
+    { label: 'Phone', value: '+212 528 82 00 00' },
+    { label: 'Email', value: 'info@hmtours.com' },
+    { label: 'Address', value: 'Agadir, Morocco' },
   ],
 };
 
 export const SOCIALS = {
   title: 'Social',
   links: [
-    '/facebook.svg',
-    '/instagram.svg',
-    '/twitter.svg',
-    '/youtube.svg',
-    '/wordpress.svg',
+    'facebook',
+    'instagram',
+    'twitter',
+    'youtube',
   ],
 };

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { NAV_LINKS } from "@/constants"
 import Link from "next/link"
+import Image from "next/image"
 import { Send, Menu, X } from "lucide-react"
 
 const Navbar = () => {
@@ -54,15 +55,20 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-3 w-full bg-black border-b border-white/10 transition-transform duration-300 ${
-          scrollDir === "down" ? "-translate-y-full" : "translate-y-0"
-        }`}
+        className={`max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-3 w-full bg-black border-b border-white/10 transition-transform duration-300 ${scrollDir === "down" ? "-translate-y-full" : "translate-y-0"
+          }`}
       >
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tighter text-white"
+          className="flex items-center"
         >
-          HM <span className="font-serif italic text-orange-200">Tours</span>
+          <Image
+            src="/ansof.png"
+            alt="HM Tours Logo"
+            width={140}
+            height={60}
+            className="h-10 w-auto object-contain"   // h-10 = 40px tall, width scales proportionally
+          />
         </Link>
 
         <ul className="hidden gap-8 lg:flex">
@@ -70,7 +76,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.key}
-              className="text-sm font-medium text-white/90 transition-colors hover:text-orange-200"
+              className="text-sm font-medium text-white/90 transition-colors hover:text-orange-300"
             >
               {link.label}
             </Link>
@@ -80,7 +86,7 @@ const Navbar = () => {
         <div className="hidden lg:flexCenter">
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-white px-5 py-2 text-orange-950 transition-all duration-300 hover:bg-orange-50 active:scale-95 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
+            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-white px-5 py-2 text-orange-900 transition-all duration-300 hover:bg-orange-50 active:scale-95 hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]"
           >
             <span className="font-medium text-sm tracking-tight">Contact Us</span>
             <Send className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -98,23 +104,20 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 lg:hidden ${
-          mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-50 lg:hidden ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+          }`}
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
-            mobileMenuOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100" : "opacity-0"
+            }`}
           onClick={closeMenu}
         />
 
         {/* Menu Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-neutral-900 shadow-2xl transition-transform duration-300 ease-out ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-neutral-900 shadow-2xl transition-transform duration-300 ease-out ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="flex items-center justify-between p-5 border-b border-white/10">
             <span className="text-lg font-semibold text-white">Menu</span>
@@ -134,7 +137,7 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="block text-lg font-medium text-white/80 hover:text-orange-200 transition-colors py-2"
+                    className="block text-lg font-medium text-white/80 hover:text-orange-300 transition-colors py-2"
                   >
                     {link.label}
                   </Link>
@@ -146,7 +149,7 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="flex items-center justify-center gap-3 w-full py-3.5 rounded-full bg-white text-orange-950 font-medium transition-all duration-300 hover:bg-orange-50"
+                className="flex items-center justify-center gap-3 w-full py-3.5 rounded-full bg-white text-orange-900 font-medium transition-all duration-300 hover:bg-orange-50"
               >
                 <span>Contact Us</span>
                 <Send className="w-5 h-5" />

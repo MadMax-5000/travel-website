@@ -63,6 +63,15 @@ export type TwMainColor =
     | "orange";
 
 //
+// Itinerary Item
+export interface ItineraryItem {
+    time: string;
+    title: string;
+    description: string;
+    stepNumber: number;
+}
+
+//
 export interface StayDataType {
     id: string | number;
     slug: string;
@@ -89,6 +98,7 @@ export interface StayDataType {
         lat: number;
         lng: number;
     };
+    itinerary?: ItineraryItem[];
 }
 
 //
