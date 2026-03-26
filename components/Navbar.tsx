@@ -65,9 +65,9 @@ const Navbar = () => {
           <Image
             src="/ansof.png"
             alt="HM Tours Logo"
-            width={140}
+            width={120}
             height={60}
-            className="h-10 w-auto object-contain"   // h-10 = 40px tall, width scales proportionally
+            className="h-8 sm:h-10 w-auto object-contain"
           />
         </Link>
 

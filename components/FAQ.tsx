@@ -35,23 +35,23 @@ const FAQItem = ({ question, answer, isOpen, onToggle }: { question: string; ans
     <div className="border-b border-neutral-200 dark:border-neutral-700">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-5 text-left group"
+        className="w-full flex items-center justify-between py-4 sm:py-5 text-left group"
       >
-        <span className="text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors">
+        <span className="text-sm sm:text-lg font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors pr-2">
           {question}
         </span>
         {isOpen ? (
-          <ChevronUp className="w-5 h-5 text-orange-500 flex-shrink-0" />
+          <ChevronUp className="w-4 sm:w-5 h-4 sm:h-5 text-orange-500 flex-shrink-0" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-neutral-400 group-hover:text-orange-500 transition-colors" />
+          <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5 text-neutral-400 group-hover:text-orange-500 transition-colors flex-shrink-0" />
         )}
       </button>
       <div 
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-40 pb-5" : "max-h-0"
+          isOpen ? "max-h-40 pb-4 sm:pb-5" : "max-h-0"
         }`}
       >
-        <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+        <p className="text-xs sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
           {answer}
         </p>
       </div>
@@ -67,13 +67,13 @@ const FAQ = () => {
   }
 
   return (
-    <section className="w-full bg-white dark:bg-neutral-900 py-16 lg:py-24">
+    <section className="w-full bg-white dark:bg-neutral-900 py-12 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-3xl">
-        <div className="text-center mb-12">
-          <p className="text-xs md:text-sm font-semibold uppercase tracking-widest text-orange-500 mb-3">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-xs md:text-sm font-semibold uppercase tracking-widest text-orange-500 mb-2 sm:mb-3">
             Got Questions?
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -90,13 +90,13 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-neutral-500 dark:text-neutral-400 mb-4">
+        <div className="mt-8 sm:mt-12 text-center">
+          <p className="text-neutral-500 dark:text-neutral-400 mb-4 text-sm sm:text-base">
             Still have questions?
           </p>
           <a 
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors text-sm sm:text-base"
           >
             Contact Us
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

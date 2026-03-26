@@ -91,6 +91,72 @@ const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
   )
 }
 
+const TourCardMobile = ({ data, index }: { data: StayDataType; index: number }) => {
+  const {
+    title,
+    price,
+    address,
+    reviewStart,
+    listingCategory,
+    href,
+    like,
+    galleryImgs,
+  } = data
+
+  const [isLiked, setIsLiked] = useState(like)
+
+  const imageSrc = typeof galleryImgs?.[0] === 'string' 
+    ? galleryImgs[0] 
+    : galleryImgs?.[0]?.src 
+    || "/images/agadir.jpg"
+
+  return (
+    <Link href={href} className="group">
+      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            setIsLiked(!isLiked)
+          }}
+          className="absolute top-3 right-3 p-1.5 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
+        >
+          <Heart 
+            className={`w-3.5 h-3.5 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
+          />
+        </button>
+
+        <div className="absolute bottom-3 left-3 flex items-center gap-1.5 px-2 py-1 bg-orange-500 rounded-full text-[10px] font-medium text-white">
+          <Star className="w-3 h-3 fill-white" />
+          {reviewStart || "4.8"}
+        </div>
+      </div>
+
+      <div className="mt-3">
+        <p className="text-[10px] text-orange-500 font-medium">
+          {listingCategory?.name || "Tour"}
+        </p>
+        <h3 className="font-semibold text-sm sm:text-base text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
+          {title}
+        </h3>
+        <div className="flex items-center gap-1 mt-1 text-neutral-500 dark:text-neutral-400 text-xs">
+          <MapPin className="w-3.5 h-3.5" />
+          <span className="line-clamp-1">{address}</span>
+        </div>
+        <p className="text-sm font-bold text-orange-500 mt-1">{price}</p>
+      </div>
+    </Link>
+  )
+}
+
 const TourGrid = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -112,19 +178,19 @@ const TourGrid = () => {
   }
 
   return (
-    <section className="w-full overflow-hidden bg-white dark:bg-neutral-900 py-16 lg:py-24">
+    <section className="w-full overflow-hidden bg-white dark:bg-neutral-900 py-12 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="mb-10 md:mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div className="mb-8 md:mb-14 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 sm:mb-4">
               Unforgettable <span className="font-serif italic text-orange-500">Adventures</span>
             </h2>
-            <p className="text-neutral-500 dark:text-neutral-400 text-lg leading-relaxed">
+            <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
               Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
@@ -146,23 +212,33 @@ const TourGrid = () => {
           </div>
         </div>
 
-        <div 
-          ref={scrollRef}
-          onScroll={checkScroll}
-          className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {DEMO_DATA.map((tour, index) => (
-            <div key={tour.id} className="snap-start">
-              <TourCard data={tour} index={index} />
-            </div>
+        {/* Desktop: horizontal scroll, Mobile: responsive grid */}
+        <div className="hidden md:flex">
+          <div 
+            ref={scrollRef}
+            onScroll={checkScroll}
+            className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {DEMO_DATA.map((tour, index) => (
+              <div key={tour.id} className="snap-start">
+                <TourCard data={tour} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile: 2-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+          {DEMO_DATA.slice(0, 6).map((tour, index) => (
+            <TourCardMobile key={tour.id} data={tour} index={index} />
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 md:mt-12">
           <Link 
             href="/tours"
-            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium hover:bg-orange-500 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium hover:bg-orange-500 hover:text-white transition-colors text-sm sm:text-base"
           >
             View All Tours
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

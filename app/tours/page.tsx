@@ -77,30 +77,30 @@ export default function ToursPage() {
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
       {/* Hero Banner */}
-      <div className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[30vh] sm:h-[35vh] min-h-[200px] sm:min-h-[250px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/agadir.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 tracking-tight">
             Explore <span className="font-serif italic text-orange-300">Agadir</span>
           </h1>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-lg text-white/80 max-w-2xl mx-auto">
             Discover amazing tours and experiences in Morocco's coastal paradise
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Mobile Filter Button */}
         <div className="lg:hidden mb-6">
           <button
             onClick={() => setMobileFiltersOpen(true)}
-            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium shadow-sm"
+            className="flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 font-medium shadow-sm text-sm"
           >
-            <SlidersHorizontal className="w-5 h-5" />
+            <SlidersHorizontal className="w-4 h-4 sm:w-5 sm:h-5" />
             Filters
             {activeFiltersCount > 0 && (
               <span className="ml-1 px-2 py-0.5 rounded-full bg-orange-500 text-white text-xs">
@@ -110,7 +110,7 @@ export default function ToursPage() {
           </button>
         </div>
 
-        <div className="flex gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Desktop Sidebar */}
           <div className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-28 bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-sm border border-neutral-200 dark:border-neutral-800">
@@ -132,14 +132,14 @@ export default function ToursPage() {
           {/* Main Content */}
           <div className="flex-1">
             {/* Results Header */}
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-6 sm:mb-8">
               <div>
-                <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
+                <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white">
                   {selectedCategory
                     ? categories.find((c) => c.id === selectedCategory)?.name
                     : "All Tours"}
                 </h2>
-                <p className="text-neutral-500 dark:text-neutral-400 mt-1">
+                <p className="text-neutral-500 dark:text-neutral-400 text-sm sm:text-base mt-1">
                   {filteredTours.length} tours available
                 </p>
               </div>
@@ -147,25 +147,25 @@ export default function ToursPage() {
 
             {/* Tours Grid */}
             {currentTours.length > 0 ? (
-              <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {currentTours.map((tour, index) => (
                   <StayCard2 key={tour.id} data={tour} />
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
-                  <MapPin className="w-8 h-8 text-neutral-400" />
+              <div className="text-center py-12 sm:py-16">
+                <div className="w-12 sm:w-16 h-12 sm:h-16 mx-auto mb-4 rounded-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+                  <MapPin className="w-6 sm:w-8 h-6 sm:h-8 text-neutral-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                <h3 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-white mb-2">
                   No tours found
                 </h3>
-                <p className="text-neutral-500 dark:text-neutral-400 mb-6">
+                <p className="text-neutral-500 dark:text-neutral-400 mb-4 sm:mb-6 text-sm sm:text-base">
                   Try adjusting your filters
                 </p>
                 <button
                   onClick={clearFilters}
-                  className="px-6 py-3 rounded-full bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
+                  className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors text-sm"
                 >
                   Clear filters
                 </button>
@@ -174,20 +174,20 @@ export default function ToursPage() {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex mt-12 justify-center items-center gap-3">
+              <div className="flex mt-10 sm:mt-12 justify-center items-center gap-2 sm:gap-3">
                 <button
                   onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
-                  className="px-5 py-2.5 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
+                  className="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-xs sm:text-sm font-medium"
                 >
-                  Previous
+                  Prev
                 </button>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
+                      className={`w-8 sm:w-10 h-8 sm:h-10 rounded-full text-xs sm:text-sm font-medium transition-colors ${
                         currentPage === page
                           ? "bg-orange-500 text-white"
                           : "text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
@@ -200,7 +200,7 @@ export default function ToursPage() {
                 <button
                   onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-5 py-2.5 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
+                  className="px-3 sm:px-5 py-2 sm:py-2.5 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-xs sm:text-sm font-medium"
                 >
                   Next
                 </button>
@@ -227,7 +227,7 @@ export default function ToursPage() {
             mobileFiltersOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-between p-5 border-b border-neutral-200 dark:border-neutral-800">
+          <div className="flex items-center justify-between p-4 sm:p-5 border-b border-neutral-200 dark:border-neutral-800">
             <h2 className="text-lg font-semibold text-neutral-900 dark:text-white">Filters</h2>
             <button
               onClick={() => setMobileFiltersOpen(false)}
@@ -236,11 +236,11 @@ export default function ToursPage() {
               <X className="w-5 h-5" />
             </button>
           </div>
-          <div className="p-5 overflow-y-auto h-[calc(100%-70px)]">
+          <div className="p-4 sm:p-5 overflow-y-auto h-[calc(100%-70px)]">
             {renderFilterSidebar()}
             <button
               onClick={() => setMobileFiltersOpen(false)}
-              className="w-full mt-8 py-3.5 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors"
+              className="w-full mt-6 sm:mt-8 py-3 sm:py-3.5 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors text-sm"
             >
               Show {filteredTours.length} Results
             </button>
