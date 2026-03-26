@@ -1027,7 +1027,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     );
 
     return (
-        <div className="container relative pb-20 sm:pb-28 lg:pb-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
+        <div className="container relative pb-20 sm:pb-28 lg:pb-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-0 overflow-visible">
             {renderHeader()}
             {renderGallery()}
 

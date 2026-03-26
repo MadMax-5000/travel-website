@@ -1,7 +1,8 @@
 'use client'
 
-import { ArrowDown } from 'lucide-react'
+import { ArrowDown, Plane } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => {
   const scrollToContent = () => {
@@ -49,14 +50,24 @@ const Hero = () => {
           Escape to Morocco's golden coast. We curate premium tours, surf retreats, and desert adventures tailored just for you.
         </p>
 
-        {/* CTA Button */}
-        <button
-          onClick={scrollToContent}
-          className="group relative inline-flex items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 sm:px-6 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-orange-600 active:scale-95 hover:shadow-lg hover:shadow-orange-500/30"
-        >
-          <span className="tracking-tight">Explore Packages</span>
-          <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-        </button>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+          <button
+            onClick={scrollToContent}
+            className="group relative inline-flex items-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 sm:px-6 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-orange-600 active:scale-95 hover:shadow-lg hover:shadow-orange-500/30"
+          >
+            <span className="tracking-tight">Explore Packages</span>
+            <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+          </button>
+          
+          <Link
+            href="/airport-pickup"
+            className="group relative inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2.5 sm:px-6 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:border-white/50 backdrop-blur-sm"
+          >
+            <Plane className="h-4 w-4" />
+            <span className="tracking-tight">Airport Pickup</span>
+          </Link>
+        </div>
       </div>
 
       {/* Scroll Indicator */}

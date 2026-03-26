@@ -1,0 +1,137 @@
+[
+  {
+    "id": "route_1",
+    "fromCity": "Paris",
+    "fromAirport": "CDG",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "89 € / 890 MAD",
+    "duration": "3h 45m"
+  },
+  {
+    "id": "route_2",
+    "fromCity": "Paris",
+    "fromAirport": "ORY",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "79 € / 790 MAD",
+    "duration": "3h 45m"
+  },
+  {
+    "id": "route_3",
+    "fromCity": "London",
+    "fromAirport": "LGW",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "95 € / 950 MAD",
+    "duration": "3h 30m"
+  },
+  {
+    "id": "route_4",
+    "fromCity": "London",
+    "fromAirport": "STN",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "85 € / 850 MAD",
+    "duration": "3h 30m"
+  },
+  {
+    "id": "route_5",
+    "fromCity": "Amsterdam",
+    "fromAirport": "AMS",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "99 € / 990 MAD",
+    "duration": "4h 00m"
+  },
+  {
+    "id": "route_6",
+    "fromCity": "Brussels",
+    "fromAirport": "BRU",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "89 € / 890 MAD",
+    "duration": "3h 50m"
+  },
+  {
+    "id": "route_7",
+    "fromCity": "Madrid",
+    "fromAirport": "MAD",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "65 € / 650 MAD",
+    "duration": "2h 30m"
+  },
+  {
+    "id": "route_8",
+    "fromCity": "Barcelona",
+    "fromAirport": "BCN",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "69 € / 690 MAD",
+    "duration": "2h 45m"
+  },
+  {
+    "id": "route_9",
+    "fromCity": "Frankfurt",
+    "fromAirport": "FRA",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "95 € / 950 MAD",
+    "duration": "4h 00m"
+  },
+  {
+    "id": "route_10",
+    "fromCity": "Milan",
+    "fromAirport": "MXP",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "85 € / 850 MAD",
+    "duration": "3h 30m"
+  },
+  {
+    "id": "route_11",
+    "fromCity": "Casablanca",
+    "fromAirport": "CMN",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "45 € / 450 MAD",
+    "duration": "2h 30m"
+  },
+  {
+    "id": "route_12",
+    "fromCity": "Marrakech",
+    "fromAirport": "RAK",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "35 € / 350 MAD",
+    "duration": "3h 00m"
+  },
+  {
+    "id": "route_13",
+    "fromCity": "Rabat",
+    "fromAirport": "RBA",
+    "toAirport": "AGA",
+    "toCity": "Agadir",
+    "price": "55 € / 550 MAD",
+    "duration": "3h 30m"
+  },
+  {
+    "id": "route_14",
+    "fromCity": "Casablanca",
+    "fromAirport": "CMN",
+    "toAirport": "CMN",
+    "toCity": "Casablanca",
+    "price": "25 € / 250 MAD",
+    "duration": "1h 00m"
+  },
+  {
+    "id": "route_15",
+    "fromCity": "Marrakech",
+    "fromAirport": "RAK",
+    "toAirport": "RAK",
+    "toCity": "Marrakech",
+    "price": "20 € / 200 MAD",
+    "duration": "45m"
+  }
+]

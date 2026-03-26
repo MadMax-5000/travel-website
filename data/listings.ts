@@ -1,10 +1,12 @@
 import __stayListing from "./jsons/__stayListing.json";
 import __experiencesListing from "./jsons/__experiencesListing.json";
+import __packsListing from "./jsons/__packs.json";
+import __airportRoutes from "./jsons/__airportRoutes.json";
 import {
     DEMO_STAY_CATEGORIES,
     DEMO_EXPERIENCES_CATEGORIES,
 } from "./taxonomies";
-import { ExperiencesDataType, StayDataType, ItineraryItem } from "./types";
+import { ExperiencesDataType, StayDataType, ItineraryItem, PackDataType, AirportRouteType } from "./types";
 import { DEMO_AUTHORS } from "./authors";
 import { Route } from "@/routers/types";
 
@@ -88,5 +90,32 @@ const DEMO_EXPERIENCES_LISTINGS = __experiencesListing.map(
     }
 );
 
-export { DEMO_STAY_LISTINGS, DEMO_EXPERIENCES_LISTINGS };
+const DEMO_PACK_LISTINGS = __packsListing.map((post, index): PackDataType => {
+    const category = DEMO_STAY_CATEGORIES.filter(
+        (taxonomy) => taxonomy.id === post.listingCategory.id
+    )[0];
+
+    const tours = DEMO_STAY_LISTINGS.filter((tour) => 
+        post.tours.includes(tour.id as string)
+    );
+
+    return {
+        ...post,
+        id: post.id || `pack_${index}_`,
+        slug: post.slug || `pack-${index}`,
+        saleOff: post.saleOff,
+        isAds: post.isAds,
+        author: DEMO_AUTHORS.filter((user) => user.id === post.authorId)[0],
+        listingCategory: category,
+        href: `/packs/${post.slug || `pack-${index}`}` as Route,
+        tours: tours,
+    };
+});
+
+const DEMO_AIRPORT_ROUTES = __airportRoutes.map((route, index): AirportRouteType => ({
+    ...route,
+    id: route.id || `route_${index}_`,
+}));
+
+export { DEMO_STAY_LISTINGS, DEMO_EXPERIENCES_LISTINGS, DEMO_PACK_LISTINGS, DEMO_AIRPORT_ROUTES };
 

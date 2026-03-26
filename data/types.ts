@@ -127,3 +127,57 @@ export interface ExperiencesDataType {
     };
 }
 
+export interface PackDataType {
+    id: string | number;
+    slug: string;
+    author: AuthorType;
+    date: string;
+    href: Route<string>;
+    title: string;
+    subtitle: string;
+    featuredImage: StaticImageData | string;
+    commentCount: number;
+    viewCount: number;
+    address: string;
+    reviewStart: number;
+    reviewCount: number;
+    like: boolean;
+    galleryImgs: (StaticImageData | string)[];
+    price: string;
+    originalPrice: string;
+    savings: string;
+    tours: StayDataType[];
+    duration: string;
+    maxGuests: number;
+    listingCategory: TaxonomyType;
+    description: string;
+    highlights: string[];
+    saleOff?: string | null;
+    isAds: boolean | null;
+    map: {
+        lat: number;
+        lng: number;
+    };
+}
+
+export interface AirportRouteType {
+    id: string | number;
+    fromCity: string;
+    fromAirport: string;
+    toAirport: string;
+    toCity: string;
+    price: string;
+    duration: string;
+}
+
+export interface AirportPickupDataType {
+    id: string | number;
+    fromCity: string;
+    fromAirport: string;
+    toAirport: string;
+    toCity: string;
+    vehicleType: string;
+    price: string;
+    maxPassengers: number;
+}
+
