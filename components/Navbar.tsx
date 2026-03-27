@@ -60,7 +60,7 @@ const Navbar = () => {
       >
         <Link
           href="/"
-          className="flex items-center"
+          className="flex items-center gap-3"
         >
           <Image
             src="/ansof.png"
@@ -69,6 +69,9 @@ const Navbar = () => {
             height={60}
             className="h-8 sm:h-10 w-auto object-contain"
           />
+          <span className="text-lg sm:text-xl text-white font-semibold italic font-serif">
+            HM Tours
+          </span>
         </Link>
 
         <ul className="hidden gap-8 lg:flex">
