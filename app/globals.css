@@ -174,26 +174,25 @@ body::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #000000;
 }
 
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #f97316;
   border-radius: 999px;
-  border: 2px solid #f1f1f1;
 }
 
 html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
+  background: #ea580c;
 }
 
 /* Firefox */
 html,
 body {
   scrollbar-width: thin;
-  scrollbar-color: #c1c1c1 #f1f1f1;
+  scrollbar-color: #f97316 #000000;
 }
 
 @layer base {
