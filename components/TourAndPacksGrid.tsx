@@ -1,349 +1,360 @@
 "use client"
 
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { DEMO_STAY_LISTINGS, DEMO_PACK_LISTINGS } from "@/data/listings"
 import { StayDataType, PackDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, MapPin, Star, Tag, Plane } from "lucide-react"
+import { Heart, Star, Tag, Plane } from "lucide-react"
 
 type TabType = "tours" | "packs"
 
+/* ─────────────────────────── TOUR CARD (desktop) ─────────────────────────── */
 const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
-  const {
-    title,
-    price,
-    address,
-    reviewStart,
-    reviewCount,
-    listingCategory,
-    href,
-    like,
-    galleryImgs,
-  } = data
-
+  const { title, price, reviewStart, listingCategory, href, like, galleryImgs } = data
+  const euroPrice = price?.split("/")[0]?.trim() || price
   const [isLiked, setIsLiked] = useState(like)
 
-  const imageSrc = typeof galleryImgs?.[0] === 'string' 
-    ? galleryImgs[0] 
-    : galleryImgs?.[0]?.src 
-    || "/images/agadir.jpg"
+  const imageSrc =
+    typeof galleryImgs?.[0] === "string"
+      ? galleryImgs[0]
+      : galleryImgs?.[0]?.src || "/images/agadir.jpg"
 
   return (
-    <div className="group relative flex-shrink-0 w-[240px] md:w-[280px] lg:w-[320px]">
-      <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-          priority={index < 4}
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            setIsLiked(!isLiked)
-          }}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
-        >
-          <Heart 
-            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
+    <div className="flex-shrink-0 w-[300px] md:w-[340px] lg:w-[370px]">
+      {/* Card shell */}
+      <div className="bg-white dark:bg-neutral-800 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden p-4 flex flex-col gap-4">
+
+        {/* ── Rounded image ── */}
+        <Link href={href} className="block relative aspect-[4/3] rounded-2xl overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+            priority={index < 4}
           />
-        </button>
-
-        <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-neutral-900">
-              {listingCategory?.name || "Tour"}
-            </span>
-            <div className="flex items-center gap-1 px-2 py-1 bg-orange-500 rounded-full text-xs font-medium text-white">
-              <Star className="w-3 h-3 fill-white" />
-              {reviewStart || "4.8"}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Link href={href} className="block mt-4">
-        <div className="flex justify-between items-start gap-2">
-          <div className="flex-1">
-            <p className="text-xs text-orange-500 font-medium mb-1">
-              {listingCategory?.name || "Agadir Tour"}
-            </p>
-            <h3 className="font-semibold text-lg text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-              {title}
-            </h3>
-            <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-sm">
-              <MapPin className="w-4 h-4" />
-              <span className="line-clamp-1">{address}</span>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-lg font-bold text-orange-500">{price}</p>
-            <p className="text-xs text-neutral-400">per person</p>
-          </div>
-        </div>
-      </Link>
-    </div>
-  )
-}
-
-const PackCard = ({ data, index }: { data: PackDataType; index: number }) => {
-  const {
-    title,
-    subtitle,
-    price,
-    originalPrice,
-    savings,
-    address,
-    duration,
-    reviewStart,
-    reviewCount,
-    listingCategory,
-    href,
-    like,
-    galleryImgs,
-  } = data
-
-  const [isLiked, setIsLiked] = useState(like)
-
-  const imageSrc = typeof galleryImgs?.[0] === 'string' 
-    ? galleryImgs[0] 
-    : galleryImgs?.[0]?.src 
-    || "/images/agadir.jpg"
-
-  return (
-    <div className="group relative flex-shrink-0 w-[240px] md:w-[280px] lg:w-[320px]">
-      <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-          priority={index < 4}
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            setIsLiked(!isLiked)
-          }}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
-        >
-          <Heart 
-            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
-          />
-        </button>
-
-        {savings && (
-          <div className="absolute top-4 left-4 px-3 py-1.5 bg-orange-500 rounded-full z-10">
-            <span className="text-xs font-bold text-white">{savings}</span>
-          </div>
-        )}
-
-        <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-          <div className="flex items-center justify-between">
-            <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-neutral-900">
-              {listingCategory?.name || "Pack"} • {duration}
-            </span>
-            {!!reviewStart && (
-              <div className="flex items-center gap-1 px-2 py-1 bg-orange-500 rounded-full text-xs font-medium text-white">
-                <Star className="w-3 h-3 fill-white" />
-                {reviewStart}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <Link href={href} className="block mt-4">
-        <div className="flex justify-between items-start gap-2">
-          <div className="flex-1">
-            <p className="text-xs text-orange-500 font-medium mb-1">
-              {listingCategory?.name || "Pack"} • {duration}
-            </p>
-            <h3 className="font-semibold text-lg text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-              {title}
-            </h3>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-1">
-              {subtitle}
-            </p>
-            <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-sm">
-              <MapPin className="w-4 h-4" />
-              <span className="line-clamp-1">{address}</span>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-sm text-neutral-400 line-through">{originalPrice}</p>
-            <p className="text-lg font-bold text-orange-500">{price}</p>
-            <p className="text-xs text-neutral-400">per person</p>
-          </div>
-        </div>
-      </Link>
-    </div>
-  )
-}
-
-const TourCardMobile = ({ data, index }: { data: StayDataType; index: number }) => {
-  const {
-    title,
-    price,
-    address,
-    reviewStart,
-    listingCategory,
-    href,
-    like,
-    galleryImgs,
-  } = data
-
-  const [isLiked, setIsLiked] = useState(like)
-
-  const imageSrc = typeof galleryImgs?.[0] === 'string' 
-    ? galleryImgs[0] 
-    : galleryImgs?.[0]?.src 
-    || "/images/agadir.jpg"
-
-  return (
-    <Link href={href} className="group">
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-        
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            setIsLiked(!isLiked)
-          }}
-          className="absolute top-3 right-3 p-1.5 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
-        >
-          <Heart 
-            className={`w-3.5 h-3.5 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
-          />
-        </button>
-
-        <div className="absolute bottom-3 left-3 flex items-center gap-1.5 px-2 py-1 bg-orange-500 rounded-full text-[10px] font-medium text-white">
-          <Star className="w-3 h-3 fill-white" />
-          {reviewStart || "4.8"}
-        </div>
-      </div>
-
-      <div className="mt-3">
-        <p className="text-[10px] text-orange-500 font-medium">
-          {listingCategory?.name || "Tour"}
-        </p>
-        <h3 className="font-semibold text-sm sm:text-base text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-          {title}
-        </h3>
-        <div className="flex items-center gap-1 mt-1 text-neutral-500 dark:text-neutral-400 text-xs">
-          <MapPin className="w-3.5 h-3.5" />
-          <span className="line-clamp-1">{address}</span>
-        </div>
-        <p className="text-sm font-bold text-orange-500 mt-1">{price}</p>
-      </div>
-    </Link>
-  )
-}
-
-const PackCardMobile = ({ data, index }: { data: PackDataType; index: number }) => {
-  const {
-    title,
-    subtitle,
-    price,
-    savings,
-    address,
-    duration,
-    reviewStart,
-    listingCategory,
-    href,
-    like,
-    galleryImgs,
-  } = data
-
-  const [isLiked, setIsLiked] = useState(like)
-
-  const imageSrc = typeof galleryImgs?.[0] === 'string' 
-    ? galleryImgs[0] 
-    : galleryImgs?.[0]?.src 
-    || "/images/agadir.jpg"
-
-  return (
-    <Link href={href} className="group">
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-        
-        <button
-          onClick={(e) => {
-            e.preventDefault()
-            setIsLiked(!isLiked)
-          }}
-          className="absolute top-3 right-3 p-1.5 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
-        >
-          <Heart 
-            className={`w-3.5 h-3.5 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
-          />
-        </button>
-
-        {savings && (
-          <div className="absolute top-3 left-3 px-2 py-1 bg-orange-500 rounded-full z-10">
-            <span className="text-[10px] font-bold text-white">{savings}</span>
-          </div>
-        )}
-
-        <div className="absolute bottom-3 left-3 flex items-center gap-1.5">
-          {!!reviewStart && (
-            <div className="flex items-center gap-1 px-2 py-1 bg-orange-500 rounded-full text-[10px] font-medium text-white">
-              <Star className="w-3 h-3 fill-white" />
+          {reviewStart > 0 && (
+            <div className="absolute bottom-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/90 dark:bg-neutral-900/80 backdrop-blur-sm rounded-full text-xs font-semibold text-neutral-800 dark:text-white shadow-sm">
+              <Star className="w-3.5 h-3.5 fill-orange-500 text-orange-500" />
               {reviewStart}
             </div>
           )}
-        </div>
-      </div>
+        </Link>
 
-      <div className="mt-3">
-        <p className="text-[10px] text-orange-500 font-medium">
-          {listingCategory?.name || "Pack"} • {duration}
-        </p>
-        <h3 className="font-semibold text-sm sm:text-base text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-          {title}
-        </h3>
-        <p className="text-xs text-neutral-500 dark:text-neutral-400 line-clamp-1">
-          {subtitle}
-        </p>
-        <div className="flex items-center justify-between mt-2">
-          <div className="flex items-center gap-1 text-neutral-500 dark:text-neutral-400 text-xs">
-            <MapPin className="w-3.5 h-3.5" />
-            <span className="line-clamp-1">{address}</span>
-          </div>
-          <p className="text-sm font-bold text-orange-500">{price}</p>
+        {/* ── Text block ── */}
+        <div className="px-1">
+          <Link href={href}>
+            <h3 className="font-bold text-lg leading-snug text-neutral-900 dark:text-white hover:text-orange-500 transition-colors line-clamp-1">
+              {title}
+            </h3>
+          </Link>
+          <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-1 line-clamp-1">
+            {listingCategory?.name || "Tour"}
+          </p>
+        </div>
+
+        {/* ── Price row ── */}
+        <div className="flex items-center gap-2 px-1">
+          <Tag className="w-4 h-4 text-neutral-400 flex-shrink-0" />
+          <span className="text-sm text-neutral-500 dark:text-neutral-400">from</span>
+          <span className="text-base font-bold text-neutral-900 dark:text-white">{euroPrice}</span>
+        </div>
+
+        {/* ── CTA row ── */}
+        <div className="flex items-center gap-2 px-1 pb-1">
+          <Link
+            href={href}
+            className="flex-1 flex items-center justify-center py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold transition-colors"
+          >
+            Book Tour
+          </Link>
+          <button
+            onClick={() => setIsLiked(!isLiked)}
+            className={`w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-full border-2 transition-colors ${
+              isLiked
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-950"
+                : "border-neutral-200 dark:border-neutral-600 hover:border-orange-400"
+            }`}
+          >
+            <Heart
+              className={`w-5 h-5 transition-colors ${
+                isLiked ? "fill-orange-500 text-orange-500" : "text-neutral-400"
+              }`}
+            />
+          </button>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 
+/* ─────────────────────────── PACK CARD (desktop) ─────────────────────────── */
+const PackCard = ({ data, index }: { data: PackDataType; index: number }) => {
+  const { title, price, originalPrice, savings, duration, reviewStart, listingCategory, href, like, galleryImgs } = data
+  const euroPrice = price?.split("/")[0]?.trim() || price
+  const [isLiked, setIsLiked] = useState(like)
+
+  const imageSrc =
+    typeof galleryImgs?.[0] === "string"
+      ? galleryImgs[0]
+      : galleryImgs?.[0]?.src || "/images/agadir.jpg"
+
+  return (
+    <div className="flex-shrink-0 w-[300px] md:w-[340px] lg:w-[370px]">
+      <div className="bg-white dark:bg-neutral-800 rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden p-4 flex flex-col gap-4">
+
+        {/* ── Rounded image ── */}
+        <Link href={href} className="block relative aspect-[4/3] rounded-2xl overflow-hidden">
+          <Image
+            src={imageSrc}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+            priority={index < 4}
+          />
+          {savings && (
+            <div className="absolute top-3 left-3 px-3 py-1 bg-orange-500 rounded-full z-10 shadow-sm">
+              <span className="text-xs font-bold text-white">{savings}</span>
+            </div>
+          )}
+          {reviewStart > 0 && (
+            <div className="absolute bottom-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/90 dark:bg-neutral-900/80 backdrop-blur-sm rounded-full text-xs font-semibold text-neutral-800 dark:text-white shadow-sm">
+              <Star className="w-3.5 h-3.5 fill-orange-500 text-orange-500" />
+              {reviewStart}
+            </div>
+          )}
+        </Link>
+
+        {/* ── Text block ── */}
+        <div className="px-1">
+          <Link href={href}>
+            <h3 className="font-bold text-lg leading-snug text-neutral-900 dark:text-white hover:text-orange-500 transition-colors line-clamp-1">
+              {title}
+            </h3>
+          </Link>
+          <p className="text-sm text-neutral-400 dark:text-neutral-500 mt-1 line-clamp-1">
+            {listingCategory?.name || "Pack"}
+            {duration ? ` · ${duration}` : ""}
+          </p>
+        </div>
+
+        {/* ── Price row ── */}
+        <div className="flex items-center gap-2 px-1">
+          <Tag className="w-4 h-4 text-neutral-400 flex-shrink-0" />
+          <span className="text-sm text-neutral-500 dark:text-neutral-400">from</span>
+          <span className="text-base font-bold text-neutral-900 dark:text-white">{euroPrice}</span>
+          {originalPrice && (
+            <span className="text-sm text-neutral-400 line-through ml-1">{originalPrice}</span>
+          )}
+        </div>
+
+        {/* ── CTA row ── */}
+        <div className="flex items-center gap-2 px-1 pb-1">
+          <Link
+            href={href}
+            className="flex-1 flex items-center justify-center py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold transition-colors"
+          >
+            Book Pack
+          </Link>
+          <button
+            onClick={() => setIsLiked(!isLiked)}
+            className={`w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-full border-2 transition-colors ${
+              isLiked
+                ? "border-orange-500 bg-orange-50 dark:bg-orange-950"
+                : "border-neutral-200 dark:border-neutral-600 hover:border-orange-400"
+            }`}
+          >
+            <Heart
+              className={`w-5 h-5 transition-colors ${
+                isLiked ? "fill-orange-500 text-orange-500" : "text-neutral-400"
+              }`}
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ────────────────────────── TOUR CARD (mobile) ───────────────────────────── */
+const TourCardMobile = ({ data, index }: { data: StayDataType; index: number }) => {
+  const { title, price, reviewStart, listingCategory, href, like, galleryImgs } = data
+  const euroPrice = price?.split("/")[0]?.trim() || price
+  const [isLiked, setIsLiked] = useState(like)
+
+  const imageSrc =
+    typeof galleryImgs?.[0] === "string"
+      ? galleryImgs[0]
+      : galleryImgs?.[0]?.src || "/images/agadir.jpg"
+
+  return (
+    <div className="bg-white dark:bg-neutral-800 rounded-3xl shadow-md overflow-hidden p-3.5 flex flex-col gap-3.5">
+
+      {/* Rounded image */}
+      <Link href={href} className="block relative aspect-[4/3] rounded-2xl overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-cover"
+        />
+        {reviewStart > 0 && (
+          <div className="absolute bottom-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/90 dark:bg-neutral-900/80 backdrop-blur-sm rounded-full text-xs font-semibold text-neutral-800 dark:text-white shadow-sm">
+            <Star className="w-3 h-3 fill-orange-500 text-orange-500" />
+            {reviewStart}
+          </div>
+        )}
+      </Link>
+
+      {/* Text */}
+      <div className="px-0.5">
+        <Link href={href}>
+          <h3 className="font-bold text-base text-neutral-900 dark:text-white hover:text-orange-500 transition-colors line-clamp-1">
+            {title}
+          </h3>
+        </Link>
+        <p className="text-xs text-neutral-400 mt-0.5">{listingCategory?.name || "Tour"}</p>
+      </div>
+
+      {/* Price */}
+      <div className="flex items-center gap-1.5 px-0.5">
+        <Tag className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0" />
+        <span className="text-xs text-neutral-500">from</span>
+        <span className="text-sm font-bold text-neutral-900 dark:text-white">{euroPrice}</span>
+      </div>
+
+      {/* CTA */}
+      <div className="flex items-center gap-2 pb-0.5">
+        <Link
+          href={href}
+          className="flex-1 flex items-center justify-center py-2.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold transition-colors"
+        >
+          Book Tour
+        </Link>
+        <button
+          onClick={() => setIsLiked(!isLiked)}
+          className={`w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full border-2 transition-colors ${
+            isLiked
+              ? "border-orange-500 bg-orange-50 dark:bg-orange-950"
+              : "border-neutral-200 dark:border-neutral-600"
+          }`}
+        >
+          <Heart
+            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-neutral-400"}`}
+          />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+/* ────────────────────────── PACK CARD (mobile) ───────────────────────────── */
+const PackCardMobile = ({ data, index }: { data: PackDataType; index: number }) => {
+  const { title, price, originalPrice, savings, duration, reviewStart, listingCategory, href, like, galleryImgs } = data
+  const euroPrice = price?.split("/")[0]?.trim() || price
+  const [isLiked, setIsLiked] = useState(like)
+
+  const imageSrc =
+    typeof galleryImgs?.[0] === "string"
+      ? galleryImgs[0]
+      : galleryImgs?.[0]?.src || "/images/agadir.jpg"
+
+  return (
+    <div className="bg-white dark:bg-neutral-800 rounded-3xl shadow-md overflow-hidden p-3.5 flex flex-col gap-3.5">
+
+      {/* Rounded image */}
+      <Link href={href} className="block relative aspect-[4/3] rounded-2xl overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-cover"
+        />
+        {savings && (
+          <div className="absolute top-3 left-3 px-2.5 py-1 bg-orange-500 rounded-full z-10">
+            <span className="text-xs font-bold text-white">{savings}</span>
+          </div>
+        )}
+        {reviewStart > 0 && (
+          <div className="absolute bottom-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/90 dark:bg-neutral-900/80 backdrop-blur-sm rounded-full text-xs font-semibold text-neutral-800 dark:text-white shadow-sm">
+            <Star className="w-3 h-3 fill-orange-500 text-orange-500" />
+            {reviewStart}
+          </div>
+        )}
+      </Link>
+
+      {/* Text */}
+      <div className="px-0.5">
+        <Link href={href}>
+          <h3 className="font-bold text-base text-neutral-900 dark:text-white hover:text-orange-500 transition-colors line-clamp-1">
+            {title}
+          </h3>
+        </Link>
+        <p className="text-xs text-neutral-400 mt-0.5">
+          {listingCategory?.name || "Pack"}{duration ? ` · ${duration}` : ""}
+        </p>
+      </div>
+
+      {/* Price */}
+      <div className="flex items-center gap-1.5 px-0.5">
+        <Tag className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0" />
+        <span className="text-xs text-neutral-500">from</span>
+        <span className="text-sm font-bold text-neutral-900 dark:text-white">{euroPrice}</span>
+        {originalPrice && (
+          <span className="text-xs text-neutral-400 line-through ml-1">{originalPrice}</span>
+        )}
+      </div>
+
+      {/* CTA */}
+      <div className="flex items-center gap-2 pb-0.5">
+        <Link
+          href={href}
+          className="flex-1 flex items-center justify-center py-2.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold transition-colors"
+        >
+          Book Pack
+        </Link>
+        <button
+          onClick={() => setIsLiked(!isLiked)}
+          className={`w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-full border-2 transition-colors ${
+            isLiked
+              ? "border-orange-500 bg-orange-50 dark:bg-orange-950"
+              : "border-neutral-200 dark:border-neutral-600"
+          }`}
+        >
+          <Heart
+            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-neutral-400"}`}
+          />
+        </button>
+      </div>
+    </div>
+  )
+}
+
+/* ─────────────────────────────── MAIN SECTION ────────────────────────────── */
 const TourAndPacksGrid = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
   const [activeTab, setActiveTab] = useState<TabType>("tours")
+  const tabsRef = useRef<HTMLDivElement>(null)
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      if (tabsRef.current) {
+        const buttons = tabsRef.current.querySelectorAll(".tab-button")
+        const activeIndex = activeTab === "tours" ? 0 : 1
+        const activeBtn = buttons[activeIndex] as HTMLElement
+        if (activeBtn) {
+          setIndicatorStyle({ left: activeBtn.offsetLeft, width: activeBtn.offsetWidth })
+        }
+      }
+    }
+    updateIndicator()
+    window.addEventListener("resize", updateIndicator)
+    return () => window.removeEventListener("resize", updateIndicator)
+  }, [activeTab])
 
   const checkScroll = () => {
     if (scrollRef.current) {
@@ -353,10 +364,9 @@ const TourAndPacksGrid = () => {
     }
   }
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -400 : 400
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+      scrollRef.current.scrollBy({ left: direction === "left" ? -400 : 400, behavior: "smooth" })
     }
   }
 
@@ -369,16 +379,24 @@ const TourAndPacksGrid = () => {
   return (
     <section className="w-full overflow-hidden bg-white dark:bg-neutral-900 py-12 lg:py-24">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        {/* Header section - centered with pill tabs */}
-        <div className="mb-8 md:mb-14">
-          {/* Pill-shaped Tab Switcher - Orange, Centered */}
+
+        {/* ── Header ── */}
+        <div className="mb-8 md:mb-12">
+          {/* Tab switcher */}
           <div className="flex justify-center mb-6">
-            <div className="inline-flex bg-neutral-200 dark:bg-neutral-800 p-1 rounded-full">
+            <div
+              className="relative inline-flex bg-neutral-200 dark:bg-neutral-800 p-1 rounded-full"
+              ref={tabsRef}
+            >
+              <div
+                className="absolute top-1 bottom-1 bg-orange-500 rounded-full transition-all duration-300 ease-out"
+                style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
+              />
               <button
                 onClick={() => setActiveTab("tours")}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`tab-button relative flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 z-10 ${
                   activeTab === "tours"
-                    ? "bg-orange-500 text-white shadow-sm"
+                    ? "text-white"
                     : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                 }`}
               >
@@ -387,9 +405,9 @@ const TourAndPacksGrid = () => {
               </button>
               <button
                 onClick={() => setActiveTab("packs")}
-                className={`flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`tab-button relative flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 z-10 ${
                   activeTab === "packs"
-                    ? "bg-orange-500 text-white shadow-sm"
+                    ? "text-white"
                     : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
                 }`}
               >
@@ -400,14 +418,14 @@ const TourAndPacksGrid = () => {
           </div>
 
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-1 sm:mb-2">
               {activeTab === "tours" ? (
                 <>Unforgettable <span className="font-serif italic text-orange-500">Adventures</span></>
               ) : (
                 <>Curated <span className="font-serif italic text-orange-500">Packages</span></>
               )}
             </h2>
-            <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
+            <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
               {activeTab === "tours"
                 ? "Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences."
                 : "Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together."}
@@ -415,39 +433,35 @@ const TourAndPacksGrid = () => {
           </div>
         </div>
 
-        {/* Scroll controls and cards section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="hidden md:block w-64" />
-
-          <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={() => scroll('left')}
-              disabled={!canScrollLeft}
-              className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              disabled={!canScrollRight}
-              className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+        {/* ── Desktop: scroll nav ── */}
+        <div className="hidden md:flex items-center justify-end gap-3 mb-6">
+          <button
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
-        {/* Desktop: horizontal scroll */}
+        {/* ── Desktop: horizontal scroll ── */}
         <div className="hidden md:flex">
-          <div 
+          <div
             ref={scrollRef}
             onScroll={checkScroll}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory animate-fadeIn"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {currentData.map((item, index) => (
               <div key={item.id} className="snap-start">
@@ -461,8 +475,8 @@ const TourAndPacksGrid = () => {
           </div>
         </div>
 
-        {/* Mobile: 2-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+        {/* ── Mobile: 2-column grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden animate-fadeIn">
           {currentData.slice(0, 6).map((item, index) => (
             <div key={item.id}>
               {activeTab === "tours" ? (
@@ -474,8 +488,9 @@ const TourAndPacksGrid = () => {
           ))}
         </div>
 
+        {/* ── View all CTA ── */}
         <div className="flex justify-center mt-8 md:mt-12">
-          <Link 
+          <Link
             href={viewAllLink}
             className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium hover:bg-orange-500 hover:text-white transition-colors text-sm sm:text-base"
           >

@@ -5,29 +5,32 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 201,
-      "name": "Adventure Packs"
+      "id": 103,
+      "name": "Desert Activities"
     },
-    "title": "Ultimate Desert Adventure",
-    "subtitle": "Quad + Buggy + Camel Trek",
-    "featuredImage": "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "title": "Timlalin Adventure",
+    "subtitle": "Quad • Camel Ride • Show • Gelsa",
+    "featuredImage": "/images/goats.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/4186560/pexels-photo-4186560.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3201922/pexels-photo-3201922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/man-fishing.jpg",
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/surf.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Agadir Desert - Taghazout - Berbere Village",
+    "address": "Agadir Desert • Taghazout • Berbere Village",
     "reviewStart": 5,
     "reviewCount": 12,
-    "price": "75 € / 750 MAD",
-    "originalPrice": "100 € / 1000 MAD",
-    "savings": "Save 25%",
-    "tours": ["tour_3", "tour_4", "tour_7"],
-    "duration": "Full Day",
+    "price": "65 € / 650 MAD",
+    "originalPrice": "85 € / 850 MAD",
+    "savings": "Save 24%",
+    "tours": [
+      "tour_3",
+      "tour_7",
+      "tour_20"
+    ],
+    "duration": "Half Day",
     "maxGuests": 8,
     "saleOff": "Popular",
     "isAds": null,
@@ -35,14 +38,14 @@
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "ultimate-desert-adventure",
-    "description": "Experience the best of Moroccan desert adventure in one action-packed day! Start with an thrilling quad bike session, move to high-speed buggy driving, and end with a peaceful camel trek through the dunes. Perfect for adrenaline seekers and culture enthusiasts alike.",
+    "slug": "timlalin-adventure",
+    "description": "Experience the ultimate Moroccan desert adventure! Start with an thrilling quad bike session through the golden dunes, then hop on a gentle camel ride for a traditional experience. End your day with an authentic Gelsa (local dance) and a captivating Skit (Berber show) performance. Round-trip transportation included from your hotel.",
     "highlights": [
-      "Quad biking in the Sahara dunes",
-      "High-speed buggy adventure",
-      "Traditional camel trek at sunset",
-      "Moroccan mint tea ceremony",
-      "Round-trip transportation from Agadir"
+      "Quad biking in the Sahara dunes (1 hour)",
+      "Traditional camel trek (30 minutes)",
+      "Authentic Gelsa dance performance",
+      "Captivating Skit (Berber folklore show)",
+      "Round-trip hotel transportation"
     ]
   },
   {
@@ -51,44 +54,48 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 202,
-      "name": "Nature & Relaxation"
+      "id": 105,
+      "name": "Water Sports"
     },
-    "title": "Paradise Valley Escape",
-    "subtitle": "Paradise Valley + Boat Trip + Lunch",
-    "featuredImage": "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "title": "Saki Experience",
+    "subtitle": "Quad • Boat • Animation • Show",
+    "featuredImage": "/images/beach-sunset.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2079452/pexels-photo-2079452.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2736187/pexels-photo-2736187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/guy-selling-spices.jpg",
+      "/images/boats.jpg",
+      "/images/beach-sunset.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Paradise Valley - Agadir Marina",
+    "address": "Agadir Beach • Marina • Desert",
     "reviewStart": 4.8,
     "reviewCount": 28,
-    "price": "55 € / 550 MAD",
-    "originalPrice": "70 € / 700 MAD",
+    "price": "75 € / 750 MAD",
+    "originalPrice": "95 € / 950 MAD",
     "savings": "Save 21%",
-    "tours": ["tour_5", "tour_6"],
-    "duration": "Full Day",
+    "tours": [
+      "tour_3",
+      "tour_6",
+      "tour_20"
+    ],
+    "duration": "Half Day",
     "maxGuests": 6,
     "saleOff": "Best Seller",
     "isAds": null,
     "map": {
-      "lat": 30.5896,
-      "lng": -9.5268
+      "lat": 30.4278,
+      "lng": -9.5981
     },
-    "slug": "paradise-valley-escape",
-    "description": "Discover the hidden paradise of Paradise Valley with its stunning waterfalls and natural pools, then relax with a scenic boat trip along the Agadir coast. Includes a delicious seafood lunch and plenty of time for swimming and photography.",
+    "slug": "saki-experience",
+    "description": "The perfect blend of adventure and entertainment! Feel the adrenaline with quad biking in the desert, then head to the marina for an exciting boat trip with animation. Enjoy live entertainment with a Skit show and return to your hotel with memories to last a lifetime.",
     "highlights": [
-      "Hike through Paradise Valley waterfalls",
-      "Swimming in natural rock pools",
-      "Scenic boat trip along the coast",
-      "Fresh seafood lunch included",
-      "Professional guide throughout"
+      "Quad biking adventure in the desert",
+      "Scenic boat trip from Agadir Marina",
+      "On-board animation and entertainment",
+      "Live Skit (Berber folklore) performance",
+      "Hotel pick-up and drop-off included"
     ]
   },
   {
@@ -97,137 +104,47 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 203,
-      "name": "Cultural Immersion"
+      "id": 101,
+      "name": "City Tours"
     },
-    "title": "Agadir City & Culture",
-    "subtitle": "City Tour + Argan + Souk",
-    "featuredImage": "https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "title": "Agadir by Night",
+    "subtitle": "Oufella • Marina • Koutchi • Dinner",
+    "featuredImage": "/images/surf.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/6434634/pexels-photo-6434634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/souk-lhad.jpg",
+      "/images/mountain.jpg",
+      "/images/guy-selling-spices.jpg",
+      "/images/large-boat-agadir-harbor.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Agadir - Kasbah - Souk El Had",
+    "address": "Agadir Kasbah • Marina • Koutchi",
     "reviewStart": 4.9,
     "reviewCount": 45,
-    "price": "35 € / 350 MAD",
-    "originalPrice": "45 € / 450 MAD",
-    "savings": "Save 22%",
-    "tours": ["tour_1", "tour_2"],
-    "duration": "Half Day",
+    "price": "55 € / 550 MAD",
+    "originalPrice": "70 € / 700 MAD",
+    "savings": "Save 21%",
+    "tours": [
+      "tour_1",
+      "tour_8"
+    ],
+    "duration": "Evening",
     "maxGuests": 10,
-    "saleOff": "文化 Experience",
+    "saleOff": "Evening Special",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "agadir-city-culture",
-    "description": "Immerse yourself in the rich culture of Agadir. Visit the historic Kasbah, explore the modern Marina, shop at the traditional Souk El Had, and learn about the famous Argan oil production. A perfect introduction to Moroccan culture.",
+    "slug": "agadir-by-night",
+    "description": "Discover the magic of Agadir after dark! Begin with a scenic tour of the historic Oufella (Kasbah) offering panoramic views, then stroll through the lively Marina. Experience the vibrant Koutchi (night market) before savoring a delicious traditional Moroccan dinner. The perfect evening to soak in Agadir's nightlife.",
     "highlights": [
-      "Guided tour of Agadir Kasbah",
-      "Visit to Argan oil cooperative",
-      "Shopping at Souk El Had market",
-      "Marina and beach walk",
-      "Traditional mint tea included"
-    ]
-  },
-  {
-    "id": "pack_4",
-    "authorId": 1,
-    "date": "2026-02-15",
-    "href": "/packs",
-    "listingCategory": {
-      "id": 201,
-      "name": "Adventure Packs"
-    },
-    "title": "Sunset Desert Romance",
-    "subtitle": "Camel Ride + BBQ + Sunset",
-    "featuredImage": "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    "galleryImgs": [
-      "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/8506437/pexels-photo-8506437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    ],
-    "commentCount": 0,
-    "viewCount": 0,
-    "like": true,
-    "address": "Agadir Desert - Berbere Village",
-    "reviewStart": 5,
-    "reviewCount": 67,
-    "price": "45 € / 450 MAD",
-    "originalPrice": "55 € / 550 MAD",
-    "savings": "Save 18%",
-    "tours": ["tour_8"],
-    "duration": "Afternoon to Evening",
-    "maxGuests": 8,
-    "saleOff": "Romantic",
-    "isAds": null,
-    "map": {
-      "lat": 30.4278,
-      "lng": -9.5981
-    },
-    "slug": "sunset-desert-romance",
-    "description": "A magical evening experience combining camel riding through the desert, breathtaking sunset views, and a traditional BBQ dinner under the stars. Perfect for couples and families seeking a romantic Moroccan experience.",
-    "highlights": [
-      "Camel riding through desert dunes",
-      "Spectacular sunset photography",
-      "Traditional BBQ dinner",
-      "Berbere music and entertainment",
-      "Hotel pickup and drop-off"
-    ]
-  },
-  {
-    "id": "pack_5",
-    "authorId": 1,
-    "date": "2026-02-15",
-    "href": "/packs",
-    "listingCategory": {
-      "id": 204,
-      "name": "Combo Packs"
-    },
-    "title": "Agadir Mega Experience",
-    "subtitle": "City + Desert + Boat + Paradise Valley",
-    "featuredImage": "https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "galleryImgs": [
-      "https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    ],
-    "commentCount": 0,
-    "viewCount": 0,
-    "like": false,
-    "address": "Agadir & Surroundings",
-    "reviewStart": 4.9,
-    "reviewCount": 89,
-    "price": "130 € / 1300 MAD",
-    "originalPrice": "175 € / 1750 MAD",
-    "savings": "Save 26%",
-    "tours": ["tour_1", "tour_4", "tour_6", "tour_5"],
-    "duration": "4 Days",
-    "maxGuests": 6,
-    "saleOff": "Best Value",
-    "isAds": null,
-    "map": {
-      "lat": 30.4278,
-      "lng": -9.5981
-    },
-    "slug": "agadir-mega-experience",
-    "description": "The ultimate Agadir experience! Cover all the highlights in 4 unforgettable days. From city tours to desert adventures, coastal boat trips to hidden valley explorations - this pack has it all. The perfect way to experience everything Agadir has to offer.",
-    "highlights": [
-      "Day 1: Agadir City Tour & Argan Visit",
-      "Day 2: Desert Buggy Adventure",
-      "Day 3: Boat Trip with Lunch",
-      "Day 4: Paradise Valley Hike",
-      "All transportation included"
+      "Pick-up from your hotel at 5:45 PM",
+      "Panoramic tour of Oufella (Kasbah)",
+      "Agadir Marina walk & photos",
+      "Explore the vibrant Koutchi night market",
+      "Traditional Moroccan dinner included"
     ]
   }
 ]

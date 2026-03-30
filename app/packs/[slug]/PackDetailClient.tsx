@@ -133,7 +133,7 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
                                     {pack.listingCategory?.name}
                                 </span>
                                 {pack.saleOff && (
-                                    <span className="text-sm px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-medium">
+                                    <span className="text-sm px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 font-medium">
                                         {pack.saleOff}
                                     </span>
                                 )}
@@ -183,7 +183,7 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
                                 <div className="grid gap-3 sm:grid-cols-2">
                                     {pack.highlights.map((highlight, idx) => (
                                         <div key={idx} className="flex items-start gap-3">
-                                            <CheckIcon className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                                            <CheckIcon className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
                                             <span className="text-neutral-600 dark:text-neutral-400">{highlight}</span>
                                         </div>
                                     ))}
@@ -241,7 +241,7 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
                                     </span>
                                 </div>
                                 {pack.savings && (
-                                    <span className="inline-block mt-2 text-sm font-semibold text-green-600 bg-green-50 dark:bg-green-900/20 px-3 py-1 rounded-full">
+                                    <span className="inline-block mt-2 text-sm font-semibold text-orange-600 bg-orange-50 dark:bg-orange-900/20 px-3 py-1 rounded-full">
                                         {pack.savings}
                                     </span>
                                 )}

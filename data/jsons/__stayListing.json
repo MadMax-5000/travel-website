@@ -9,13 +9,12 @@
       "name": "City Tours"
     },
     "title": "AGADIR CITY TOUR",
-    "featuredImage": "https://images.pexels.com/photos/5191371/pexels-photo-5191371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/beach-sunset.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2506988/pexels-photo-2506988.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1268871/pexels-photo-1268871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1179156/pexels-photo-1179156.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/moroccan-leather-artisans.jpg",
+      "/images/large-boat-agadir-harbor.jpg",
+      "/images/hall.jpg",
+      "/images/mountain.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -43,11 +42,12 @@
       "name": "Cultural Tours"
     },
     "title": "ARGAN GUIDED TOUR",
-    "featuredImage": "https://images.pexels.com/photos/6434634/pexels-photo-6434634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/6434634/pexels-photo-6434634.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3201735/pexels-photo-3201735.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4577673/pexels-photo-4577673.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/surf.jpg",
+      "/images/hall.jpg",
+      "/images/surf-2.jpg",
+      "/images/large-boat-agadir-harbor.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -55,7 +55,7 @@
     "address": "Round Trip Transport + Visit of the Factory + Morrocan Mint Tea",
     "reviewStart": 0,
     "reviewCount": 0,
-    "price": "2 € / 20 MAD",
+    "price": "20 € / 20 MAD",
     "maxGuests": null,
     "saleOff": "Departure Every Hour",
     "isAds": null,
@@ -75,11 +75,12 @@
       "name": "Desert Activities"
     },
     "title": "QUAD BIKE IN DESERT",
-    "featuredImage": "https://images.pexels.com/photos/4186560/pexels-photo-4186560.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/4186560/pexels-photo-4186560.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2404422/pexels-photo-2404422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2677398/pexels-photo-2677398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/surf-2.jpg",
+      "/images/goats.jpg",
+      "/images/mountain.jpg",
+      "/images/guy-selling-spices.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -107,11 +108,12 @@
       "name": "Desert Activities"
     },
     "title": "BUGGY IN DESERT",
-    "featuredImage": "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/goats.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/2290738/pexels-photo-2290738.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/751268/pexels-photo-751268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3201922/pexels-photo-3201922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/guy-selling-spices.jpg",
+      "/images/goats.jpg",
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/mountain.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -139,11 +141,12 @@
       "name": "Nature Hikes"
     },
     "title": "PARADIS VALLEY",
-    "featuredImage": "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/souk-lhad.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/261327/pexels-photo-261327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2079452/pexels-photo-2079452.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/261410/pexels-photo-261410.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/beach-sunset.jpg",
+      "/images/souk-lhad.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -171,11 +174,12 @@
       "name": "Water Sports"
     },
     "title": "BOAT TRIP",
-    "featuredImage": "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/surf.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/2373201/pexels-photo-2373201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2736187/pexels-photo-2736187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/6900098/pexels-photo-6900098.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/surf.jpg",
+      "/images/boats.jpg",
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/surf-2.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -203,11 +207,11 @@
       "name": "Animal Rides"
     },
     "title": "CAMEL OR HORSE RIDING",
-    "featuredImage": "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/3068519/pexels-photo-3068519.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1638341/pexels-photo-1638341.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/8506437/pexels-photo-8506437.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/large-boat-agadir-harbor.jpg",
+      "/images/hall.jpg",
+      "/images/beach-sunset.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -235,11 +239,12 @@
       "name": "Animal Rides"
     },
     "title": "CAMEL OR HORSE RIDING + SUNSET + BBQ",
-    "featuredImage": "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "featuredImage": "/images/boats.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/2343466/pexels-photo-2343466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "https://images.pexels.com/photos/276746/pexels-photo-276746.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/mountain.jpg",
+      "/images/guy-selling-spices.jpg",
+      "/images/large-boat-agadir-harbor.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -267,11 +272,12 @@
       "name": "Desert Excursions"
     },
     "title": "MASSA + TIZNIT (JEEP 4*4 MINI SAHARA)",
-    "featuredImage": "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/mountain.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1571469/pexels-photo-1571469.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1909752/pexels-photo-1909752.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/surf-2.jpg",
+      "/images/guy-selling-spices.jpg",
+      "/images/goats.jpg",
+      "/images/hall.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -299,11 +305,11 @@
       "name": "Wellness & Spa"
     },
     "title": "ARGAN MASSAGE AND MORROCAN HAMMAM",
-    "featuredImage": "https://images.pexels.com/photos/3935315/pexels-photo-3935315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/surf-2.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/3935315/pexels-photo-3935315.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2133230/pexels-photo-2133230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/souk-lhad.jpg",
+      "/images/boats.jpg",
+      "/images/guy-selling-spices.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -331,11 +337,12 @@
       "name": "Desert Adventure"
     },
     "title": "SUNSET SANDBORDING",
-    "featuredImage": "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/beach-sunset.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/6480707/pexels-photo-6480707.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2507010/pexels-photo-2507010.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/hall.jpg",
+      "/images/moroccan-leather-artisans.jpg",
+      "/images/souk-lhad.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -363,11 +370,12 @@
       "name": "Water Sports"
     },
     "title": "JETSKI 30MIN",
-    "featuredImage": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/souk-lhad.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1080719/pexels-photo-1080719.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/279867/pexels-photo-279867.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/agadir.jpg",
+      "/images/souk-lhad.jpg",
+      "/images/boats.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -395,11 +403,12 @@
       "name": "Parks & Shows"
     },
     "title": "CROCODIL PARK",
-    "featuredImage": "https://images.pexels.com/photos/4665034/pexels-photo-4665034.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/hall.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/4665034/pexels-photo-4665034.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1484981/pexels-photo-1484981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/man-fishing.jpg",
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/goats.jpg",
+      "/images/beach-sunset.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -427,11 +436,12 @@
       "name": "Parks & Shows"
     },
     "title": "DOLPHIN SHOW",
-    "featuredImage": "https://images.pexels.com/photos/1652423/pexels-photo-1652423.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/guy-selling-spices.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1652423/pexels-photo-1652423.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2736139/pexels-photo-2736139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/agadir.jpg",
+      "/images/goats.jpg",
+      "/images/moroccan-leather-artisans.jpg",
+      "/images/guy-riding-camel-inbeach.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -459,11 +469,12 @@
       "name": "Transfers"
     },
     "title": "TAXI AIRPORT",
-    "featuredImage": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    "featuredImage": "/images/guy-selling-spices.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-      "https://images.pexels.com/photos/6238615/pexels-photo-6238615.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/goats.jpg",
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/man-fishing.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -491,11 +502,12 @@
       "name": "Day Trips"
     },
     "title": "MARRAKECH (Tuesday / Thursday / Saturday)",
-    "featuredImage": "https://images.pexels.com/photos/3773582/pexels-photo-3773582.png?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/guy-selling-spices.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/3773582/pexels-photo-3773582.png?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3935330/pexels-photo-3935330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3316925/pexels-photo-3316925.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/large-boat-agadir-harbor.jpg",
+      "/images/guy-selling-spices.jpg",
+      "/images/goats.jpg",
+      "/images/birdview-agadir-beach&city.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -523,11 +535,12 @@
       "name": "Day Trips"
     },
     "title": "TAROUDANT + TIOUT (Tuesday / Thursday / Saturday)",
-    "featuredImage": "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3741314/pexels-photo-3741314.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/guy-riding-camel-inbeach.jpg",
+      "/images/moroccan-leather-artisans.jpg",
+      "/images/souk-lhad.jpg",
+      "/images/surf.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -555,11 +568,11 @@
       "name": "Day Trips"
     },
     "title": "LEGZIRA + MASSA (Tuesday / Thursday / Saturday)",
-    "featuredImage": "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/boats.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/surf.jpg",
+      "/images/large-boat-agadir-harbor.jpg",
+      "/images/boats.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -587,11 +600,12 @@
       "name": "Day Trips"
     },
     "title": "ESSAOUIRA (Monday / Wednesday / Friday)",
-    "featuredImage": "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/3935326/pexels-photo-3935326.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/hall.jpg",
+      "/images/surf.jpg",
+      "/images/goats.jpg",
+      "/images/man-fishing.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -619,11 +633,10 @@
       "name": "Shows & Events"
     },
     "title": "BERBER FANTASIA NIGHT SHOW (Monday / Wednesday / Friday)",
-    "featuredImage": "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/6527028/pexels-photo-6527028.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/goats.jpg",
+      "/images/mountain.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -651,11 +664,11 @@
       "name": "Water Sports"
     },
     "title": "SURF LESSON 2 HOURS (Monday / Wednesday / Friday)",
-    "featuredImage": "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "featuredImage": "/images/moroccan-leather-artisans.jpg",
     "galleryImgs": [
-      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1539777/pexels-photo-1539777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "/images/moroccan-leather-artisans.jpg",
+      "/images/mountain.jpg",
+      "/images/birdview-agadir-beach&city.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,

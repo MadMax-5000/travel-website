@@ -49,7 +49,7 @@ const PackCard: FC<PackCardProps> = ({
                 <BtnLikeIcon isLiked={like} className="absolute right-3 top-3 z-[1]" />
                 {savings && (
                     <div className="absolute left-3 top-3 z-[1]">
-                        <span className="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                        <span className="bg-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg">
                             {savings}
                         </span>
                     </div>
