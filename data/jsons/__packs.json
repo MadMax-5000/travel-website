@@ -25,10 +25,6 @@
     "price": "65 € / 650 MAD",
     "originalPrice": "85 € / 850 MAD",
     "savings": "Save 24%",
-    "tours": [
-      "tour_3",
-      "tour_7"
-    ],
     "duration": "Half Day",
     "maxGuests": 8,
     "saleOff": "Popular",
@@ -73,11 +69,6 @@
     "price": "75 € / 750 MAD",
     "originalPrice": "95 € / 950 MAD",
     "savings": "Save 21%",
-    "tours": [
-      "tour_3",
-      "tour_6",
-      "tour_20"
-    ],
     "duration": "Half Day",
     "maxGuests": 6,
     "saleOff": "Best Seller",
@@ -122,10 +113,6 @@
     "price": "55 € / 550 MAD",
     "originalPrice": "70 € / 700 MAD",
     "savings": "Save 21%",
-    "tours": [
-      "tour_1",
-      "tour_8"
-    ],
     "duration": "Evening",
     "maxGuests": 10,
     "saleOff": "Evening Special",
@@ -170,7 +157,6 @@
     "price": "45 € / 450 MAD",
     "originalPrice": "",
     "savings": "",
-    "tours": [],
     "duration": "Half Day",
     "maxGuests": 8,
     "saleOff": null,
@@ -187,6 +173,51 @@
       "Discover Aghroud (Colored City)",
       "Photo stops at scenic viewpoints",
       "Round-trip hotel transportation"
+    ]
+  },
+  {
+    "id": "pack_5",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/packs",
+    "listingCategory": {
+      "id": 103,
+      "name": "Desert Activities"
+    },
+    "title": "Desert Triple Adventure",
+    "subtitle": "Quad • Sandboarding • Camel/Horse Ride",
+    "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+    "galleryImgs": [
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502445.jpg",
+      "/images/taghazout-2.jpg",
+      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Agadir Desert • Colored Village",
+    "reviewStart": 5,
+    "reviewCount": 0,
+    "price": "110 € / 1100 MAD",
+    "originalPrice": "130 € / 1300 MAD",
+    "savings": "Save 15%",
+    "duration": "Full Day",
+    "maxGuests": 8,
+    "saleOff": "Best Value",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "desert-triple-adventure",
+    "description": "Experience the ultimate desert adventure with three exciting activities in one day! Feel the thrill of quad biking through golden dunes, slide down the sandy slopes with sandboarding, and enjoy a peaceful camel or horse ride through the scenic landscape. Perfect combination of adrenaline and relaxation!",
+    "highlights": [
+      "Quad biking in the Sahara dunes (1 hour)",
+      "Sandboarding adventure at sunset",
+      "Camel or Horse riding through forest and river trails",
+      "Visit to the colorful village",
+      "Round-trip hotel transportation",
+      "Traditional Moroccan mint tea"
     ]
   }
 ]
