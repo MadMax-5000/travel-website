@@ -68,10 +68,19 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
         }
 
         const tourList = pack.tours.map(t => t.title).join(", ");
-        const message = `*New Pack Booking Request*\n\n*Pack:* ${pack.title}\n*Included Tours:* ${tourList}\n*Date:* ${formatDate(selectedDate)}\n*Adults:* ${adults}\n*Kids:* ${kids}\n*Total:* ${grandTotal.toLocaleString()} MAD\n\n*Customer Info:*\n*Name:* ${customerName}\n*Phone:* ${customerPhone}`;
+        const message = `Hello! I'd like to book the following pack:
+
+Pack: ${pack.title}
+Included Tours: ${tourList}
+Date: ${formatDate(selectedDate)}
+Guests: ${adults} adult${adults !== 1 ? "s" : ""}${kids > 0 ? `, ${kids} kid${kids !== 1 ? "s" : ""}` : ""}
+Total: ${grandTotal.toLocaleString()} MAD
+
+Name: ${customerName}
+Phone: ${customerPhone}`;
         
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/212661223344?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/212609080257?text=${encodedMessage}`, '_blank');
         setBookingStep("success");
     };
 

@@ -162,10 +162,26 @@ export default function AirportPickupPage() {
         const selectedVehicleInfo = VEHICLE_TYPES.find((v) => v.type === vehicleType);
         
         const formattedDate = selectedDate.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-        const message = `*New Airport Pickup Request*\n\n*Pickup Details:*\n*From:* ${fromCity}\n*To:* ${toAirportInfo?.name} (${toAirportInfo?.city})\n*Flight Number:* ${flightNumber || "N/A"}\n*Date:* ${formattedDate}\n*Time:* ${flightTime}\n\n*Vehicle:* ${vehicleType} (${selectedVehicleInfo?.description})\n*Passengers:* ${passengers}\n*Total Price:* ${selectedRoute?.price}\n\n*Drop-off Address:* ${hotelAddress || "Hotel in Agadir"}\n\n*Customer Info:*\n*Name:* ${customerName}\n*Phone:* ${customerPhone}`;
+        const message = `Hello! I'd like to book an airport pickup:
+
+Pickup Details:
+From: ${fromCity}
+To: ${toAirportInfo?.name} (${toAirportInfo?.city})
+Flight Number: ${flightNumber || "N/A"}
+Date: ${formattedDate}
+Time: ${flightTime}
+
+Vehicle: ${vehicleType} (${selectedVehicleInfo?.description})
+Passengers: ${passengers}
+Total Price: ${selectedRoute?.price} MAD
+
+Drop-off Address: ${hotelAddress || "Hotel in Agadir"}
+
+Name: ${customerName}
+Phone: ${customerPhone}`;
         
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/212661223344?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/212609080257?text=${encodedMessage}`, '_blank');
         setBookingStep("success");
     };
 

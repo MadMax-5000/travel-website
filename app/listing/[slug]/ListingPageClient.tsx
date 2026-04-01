@@ -716,17 +716,17 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const handleWhatsApp = (name: string, phone: string) => {
         if (!reservationData) return;
         
-        const message = `*New Booking Request*\n\n` +
-            `*Tour:* ${reservationData.listingTitle}\n` +
-            `*Date:* ${reservationData.selectedDate}\n` +
-            `*Adults:* ${reservationData.adults}\n` +
-            `*Kids:* ${reservationData.kids}\n` +
-            `*Total:* ${reservationData.grandTotal}\n\n` +
-            `*Customer Info:*\n` +
-            `*Name:* ${name}\n` +
-            `*Phone:* ${phone}`;
+        const message = `Hello! I'd like to book the following tour:
 
-        const whatsappNumber = "212661223344";
+Tour: ${reservationData.listingTitle}
+Date: ${reservationData.selectedDate}
+Guests: ${reservationData.adults} adult${reservationData.adults !== 1 ? "s" : ""}${reservationData.kids > 0 ? `, ${reservationData.kids} kid${reservationData.kids !== 1 ? "s" : ""}` : ""}
+Total: ${reservationData.grandTotal}
+
+Name: ${name}
+Phone: ${phone}`;
+
+        const whatsappNumber = "212609080257";
         window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
         setShowModal(false);
     };
