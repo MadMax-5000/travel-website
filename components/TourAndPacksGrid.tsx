@@ -114,8 +114,8 @@ const PackCard = ({ data, index }: { data: PackDataType; index: number }) => {
             priority={index < 4}
           />
           {savings && (
-            <div className="absolute top-3 left-3 px-3 py-1 bg-orange-500 rounded-full z-10 shadow-sm">
-              <span className="text-xs font-bold text-white">{savings}</span>
+            <div className="absolute top-3 left-3 px-3 py-1 bg-neutral-900/80 dark:bg-white/90 backdrop-blur-sm rounded-full z-10 shadow-sm">
+              <span className="text-xs font-bold text-white dark:text-neutral-900 text-center">{savings}</span>
             </div>
           )}
           {reviewStart > 0 && (
@@ -272,8 +272,8 @@ const PackCardMobile = ({ data, index }: { data: PackDataType; index: number }) 
           className="object-cover"
         />
         {savings && (
-          <div className="absolute top-3 left-3 px-2.5 py-1 bg-orange-500 rounded-full z-10">
-            <span className="text-xs font-bold text-white">{savings}</span>
+          <div className="absolute top-3 left-3 px-2.5 py-1 bg-neutral-900/80 dark:bg-white/90 backdrop-blur-sm rounded-full z-10">
+            <span className="text-xs font-bold text-white dark:text-neutral-900 text-center">{savings}</span>
           </div>
         )}
         {reviewStart > 0 && (
@@ -381,7 +381,7 @@ const TourAndPacksGrid = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
 
         {/* ── Header ── */}
-        <div className="mb-8 md:mb-12">
+        <div className="mb-4 md:mb-6">
           {/* Tab switcher */}
           <div className="flex justify-center mb-6">
             <div
@@ -417,42 +417,42 @@ const TourAndPacksGrid = () => {
             </div>
           </div>
 
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-1 sm:mb-2">
-              {activeTab === "tours" ? (
-                <>Unforgettable <span className="font-serif italic text-orange-500">Adventures</span></>
-              ) : (
-                <>Curated <span className="font-serif italic text-orange-500">Packages</span></>
-              )}
-            </h2>
-            <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-              {activeTab === "tours"
-                ? "Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences."
-                : "Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together."}
-            </p>
+          <div className="flex items-center justify-between gap-6 mb-6">
+            <div className="flex-1 max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-1 sm:mb-2">
+                {activeTab === "tours" ? (
+                  <>Unforgettable <span className="font-serif italic text-orange-500">Adventures</span></>
+                ) : (
+                  <>Curated <span className="font-serif italic text-orange-500">Packages</span></>
+                )}
+              </h2>
+              <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
+                {activeTab === "tours"
+                  ? "Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences."
+                  : "Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together."}
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+              <button
+                onClick={() => scroll("left")}
+                disabled={!canScrollLeft}
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                disabled={!canScrollRight}
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-
-        {/* ── Desktop: scroll nav ── */}
-        <div className="hidden md:flex items-center justify-end gap-3 mb-6">
-          <button
-            onClick={() => scroll("left")}
-            disabled={!canScrollLeft}
-            className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            disabled={!canScrollRight}
-            className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
         </div>
 
         {/* ── Desktop: horizontal scroll ── */}

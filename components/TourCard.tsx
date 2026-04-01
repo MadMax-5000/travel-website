@@ -1,32 +1,30 @@
 "use client"
 
 import React, { useState } from "react"
-import { PackDataType } from "@/data/types"
+import { StayDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, MapPin, Star, Tag } from "lucide-react"
+import { Heart, MapPin, Star } from "lucide-react"
 
-export interface PackCardProps {
-    data?: PackDataType
+export interface TourCardProps {
+    data?: StayDataType
     className?: string
 }
 
-const PackCard = ({ data, className = "" }: PackCardProps) => {
+const TourCard = ({ data, className = "" }: TourCardProps) => {
     const [isLiked, setIsLiked] = useState(data?.like || false)
 
     if (!data) return null
 
     const {
         title,
+        priceMad,
         address,
         reviewStart,
         reviewCount,
         listingCategory,
         href,
         galleryImgs,
-        price,
-        originalPrice,
-        tours,
     } = data
 
     const imageSrc = typeof galleryImgs?.[0] === 'string' 
@@ -63,7 +61,7 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                     <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                         <div className="flex items-center justify-between">
                             <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-neutral-900">
-                                {listingCategory?.name || "Package"}
+                                {listingCategory?.name || "Tour"}
                             </span>
                             <div className="flex items-center gap-1 px-2 py-1 bg-orange-500 rounded-full text-xs font-medium text-white">
                                 <Star className="w-3 h-3 fill-white" />
@@ -71,21 +69,12 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                             </div>
                         </div>
                     </div>
-
-                    {originalPrice && (
-                        <div className="absolute top-4 left-4">
-                            <span className="flex items-center gap-1 px-3 py-1.5 bg-orange-500 rounded-full text-xs font-bold text-white shadow-lg">
-                                <Tag className="w-3 h-3" />
-                                Save {Math.round((1 - parseInt(price.replace(/[^0-9]/g, '')) / parseInt(originalPrice.replace(/[^0-9]/g, ''))) * 100)}%
-                            </span>
-                        </div>
-                    )}
                 </div>
 
                 <div className="flex justify-between items-start gap-2 mt-4">
                     <div className="flex-1">
                         <p className="text-xs text-orange-500 font-medium mb-1">
-                            {listingCategory?.name || "Package"}
+                            {listingCategory?.name || "Tour"}
                         </p>
                         <h3 className="font-semibold text-lg text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
                             {title}
@@ -96,10 +85,7 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                         </div>
                     </div>
                     <div className="text-right">
-                        {originalPrice && (
-                            <p className="text-sm text-neutral-400 line-through">{originalPrice}</p>
-                        )}
-                        <p className="text-lg font-bold text-orange-500">{price}</p>
+                        <p className="text-lg font-bold text-orange-500">{priceMad} MAD</p>
                         <p className="text-xs text-neutral-400">per person</p>
                     </div>
                 </div>
@@ -108,4 +94,4 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
     )
 }
 
-export default PackCard
+export default TourCard
