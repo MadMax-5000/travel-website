@@ -7,37 +7,7 @@ import Image from "next/image"
 import { Send, Menu, X } from "lucide-react"
 
 const Navbar = () => {
-  const [scrollDir, setScrollDir] = useState("up")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const threshold = 0
-    let lastScrollY = window.scrollY
-    let ticking = false
-
-    const updateScrollDir = () => {
-      const scrollY = window.scrollY
-
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false
-        return
-      }
-
-      setScrollDir(scrollY > lastScrollY && scrollY > 0 ? "down" : "up")
-      lastScrollY = scrollY > 0 ? scrollY : 0
-      ticking = false
-    }
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir)
-        ticking = true
-      }
-    }
-
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
 
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -55,8 +25,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-3 w-full bg-black border-b border-white/10 transition-transform duration-300 ${scrollDir === "down" ? "-translate-y-full" : "translate-y-0"
-          }`}
+        className="max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-3 w-full bg-black border-b border-white/10"
       >
         <Link
           href="/"
