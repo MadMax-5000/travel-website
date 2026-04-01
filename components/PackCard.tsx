@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { PackDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, MapPin, Star, Tag } from "lucide-react"
+import { Heart, Star, Tag } from "lucide-react"
 
 export interface PackCardProps {
     data?: PackDataType
@@ -19,7 +19,6 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
     const {
         title,
         subtitle,
-        address,
         reviewStart,
         reviewCount,
         listingCategory,
@@ -92,10 +91,6 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                             {subtitle}
                         </p>
                     )}
-                    <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-xs">
-                        <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-                        <span className="line-clamp-1">{address}</span>
-                    </div>
                 </div>
                 <div className="text-right flex-shrink-0">
                     {originalPrice && (
