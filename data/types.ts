@@ -153,7 +153,6 @@ export interface PackDataType {
     price: string;
     originalPrice: string;
     savings: string;
-    tours: StayDataType[];
     duration: string;
     maxGuests: number;
     listingCategory: TaxonomyType;
