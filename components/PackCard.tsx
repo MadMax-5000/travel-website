@@ -18,6 +18,7 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
 
     const {
         title,
+        subtitle,
         address,
         reviewStart,
         reviewCount,
@@ -82,26 +83,26 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                     )}
                 </div>
 
-                <div className="flex justify-between items-start gap-2 mt-4">
-                    <div className="flex-1">
-                        <p className="text-xs text-orange-500 font-medium mb-1">
-                            {listingCategory?.name || "Package"}
+                <div className="mt-3">
+                    <h3 className="font-semibold text-base text-neutral-900 dark:text-white line-clamp-2 group-hover:text-orange-500 transition-colors">
+                        {title}
+                    </h3>
+                    {subtitle && (
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-1">
+                            {subtitle}
                         </p>
-                        <h3 className="font-semibold text-lg text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-                            {title}
-                        </h3>
-                        <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-sm">
-                            <MapPin className="w-4 h-4" />
-                            <span className="line-clamp-1">{address}</span>
-                        </div>
+                    )}
+                    <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-xs">
+                        <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+                        <span className="line-clamp-1">{address}</span>
                     </div>
-                    <div className="text-right">
-                        {originalPrice && (
-                            <p className="text-sm text-neutral-400 line-through">{originalPrice}</p>
-                        )}
-                        <p className="text-lg font-bold text-orange-500">{price}</p>
-                        <p className="text-xs text-neutral-400">per person</p>
-                    </div>
+                </div>
+                <div className="text-right flex-shrink-0">
+                    {originalPrice && (
+                        <p className="text-xs text-neutral-400 line-through">{originalPrice}</p>
+                    )}
+                    <p className="text-lg font-bold text-orange-500">{price}</p>
+                    <p className="text-[10px] text-neutral-400">per person</p>
                 </div>
             </Link>
         </div>
