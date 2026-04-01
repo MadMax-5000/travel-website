@@ -15,13 +15,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     if (!listing) {
         return {
-            title: "Tour Not Found | HM Tours",
+            title: "Tour Not Found | OHM Tours",
         };
     }
 
     return {
-        title: `${listing.title} | HM Tours`,
-        description: `Book ${listing.title} - ${listing.address}. Starting from ${listing.price}. Experience the best of Agadir with HM Tours.`,
+        title: `${listing.title} | OHM Tours`,
+        description: `Book ${listing.title} - ${listing.address}. Starting from ${listing.price}. Experience the best of Agadir with OHM Tours.`,
         openGraph: {
             title: listing.title,
             description: `Book ${listing.title} - ${listing.address}. Starting from ${listing.price}.`,

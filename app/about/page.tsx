@@ -309,7 +309,7 @@ export default function About() {
                     <div className="mb-8 flex items-center gap-3">
                         <div className="h-[1px] w-6 bg-orange-500/50" />
                         <span className="text-[10px] font-semibold tracking-[0.25em] text-orange-500 uppercase">
-                            Why HM Tours
+                            Why OHM Tours
                         </span>
                     </div>
 

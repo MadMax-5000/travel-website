@@ -162,9 +162,9 @@ const Footer = () => {
 
           <div className="flex items-center gap-5">
             <Link href="/">
-              <Image src="/ansof.png" alt="HM Tours" width={90} height={36} className="h-6 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" />
+              <Image src="/ansof.png" alt="OHM Tours" width={90} height={36} className="h-6 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" />
             </Link>
-            <span className="text-[12px] text-neutral-700">© {currentYear} HM Tours</span>
+            <span className="text-[12px] text-neutral-700">© {currentYear} OHM Tours</span>
           </div>
 
           <div className="flex items-center gap-6">

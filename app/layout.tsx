@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'HM Tours',
+  title: 'OHM Tours',
   description: 'Discover the best tours and experiences',
 }
 

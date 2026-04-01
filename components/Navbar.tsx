@@ -33,13 +33,13 @@ const Navbar = () => {
         >
           <Image
             src="/ansof.png"
-            alt="HM Tours Logo"
+            alt="OHM Tours Logo"
             width={120}
             height={60}
             className="h-8 sm:h-10 w-auto object-contain"
           />
           <span className="text-lg sm:text-xl text-white font-semibold italic font-serif">
-            HM Tours
+            OHM Tours
           </span>
         </Link>
 

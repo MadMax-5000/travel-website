@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
     if (!pack) {
         return {
-            title: "Pack Not Found | HM Tours",
+            title: "Pack Not Found | OHM Tours",
         };
     }
 
     return {
-        title: `${pack.title} | HM Tours`,
+        title: `${pack.title} | OHM Tours`,
         description: `${pack.description} - Starting from ${pack.price}. Save ${pack.savings}.`,
         openGraph: {
             title: pack.title,
