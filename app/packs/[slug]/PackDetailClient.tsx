@@ -92,14 +92,6 @@ Phone: ${customerPhone}`;
 
     return (
         <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 pt-16">
-            {/* Back Button - Fixed */}
-            <Link
-                href="/packs"
-                className="absolute top-20 sm:top-24 left-4 sm:left-6 p-2 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-lg"
-            >
-                <ChevronLeftIcon className="w-6 h-6 text-neutral-900" />
-            </Link>
-
             {/* Bento Grid Gallery */}
             <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2 h-[45vh] sm:h-[55vh] mx-2 sm:mx-4 mt-2">
                 {/* Main large image - spans 2x2 */}
@@ -125,11 +117,6 @@ Phone: ${customerPhone}`;
                             alt={pack.title}
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
-                        {pack.galleryImgs.length > 4 && (
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <span className="text-white font-semibold text-lg">+{pack.galleryImgs.length - 4}</span>
-                            </div>
-                        )}
                     </div>
                 )}
                 
@@ -161,7 +148,7 @@ Phone: ${customerPhone}`;
                     </div>
                 )}
                 
-                {/* Fifth image - or show all button */}
+                {/* Fifth image - show remaining count */}
                 {pack.galleryImgs[4] && (
                     <div 
                         className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden rounded-br-xl"
@@ -170,11 +157,13 @@ Phone: ${customerPhone}`;
                         <img 
                             src={pack.galleryImgs[4] as string} 
                             alt={pack.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0"
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
-                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                            <span className="text-white font-medium text-sm">Show all photos</span>
-                        </div>
+                        {pack.galleryImgs.length > 5 && (
+                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                                <span className="text-white font-medium text-sm">+{pack.galleryImgs.length - 5} more photos</span>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
