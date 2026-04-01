@@ -91,9 +91,17 @@ Phone: ${customerPhone}`;
     };
 
     return (
-        <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
+        <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 pt-16">
+            {/* Back Button - Fixed */}
+            <Link
+                href="/packs"
+                className="absolute top-20 sm:top-24 left-4 sm:left-6 p-2 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10 shadow-lg"
+            >
+                <ChevronLeftIcon className="w-6 h-6 text-neutral-900" />
+            </Link>
+
             {/* Bento Grid Gallery */}
-            <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2 h-[50vh] sm:h-[60vh]">
+            <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2 h-[45vh] sm:h-[55vh] mx-2 sm:mx-4 mt-2">
                 {/* Main large image - spans 2x2 */}
                 <div 
                     className="col-span-2 row-span-2 relative cursor-pointer overflow-hidden rounded-l-xl"
@@ -170,14 +178,6 @@ Phone: ${customerPhone}`;
                     </div>
                 )}
             </div>
-
-            {/* Back Button - Fixed */}
-            <Link
-                href="/packs"
-                className="absolute top-4 left-4 p-2 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10"
-            >
-                <ChevronLeftIcon className="w-6 h-6 text-neutral-900" />
-            </Link>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
