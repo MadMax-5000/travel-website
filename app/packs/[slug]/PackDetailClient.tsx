@@ -92,42 +92,92 @@ Phone: ${customerPhone}`;
 
     return (
         <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950">
-            {/* Image Gallery */}
-            <div className="relative h-[50vh] sm:h-[60vh]">
+            {/* Bento Grid Gallery */}
+            <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2 h-[50vh] sm:h-[60vh]">
+                {/* Main large image - spans 2x2 */}
                 <div 
-                    className="absolute inset-0 bg-cover bg-center cursor-pointer"
-                    style={{ backgroundImage: `url(${pack.galleryImgs[currentImageIndex]})` }}
-                    onClick={() => setLightboxOpen(true)}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
-                {/* Navigation Arrows */}
-                <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-md rounded-full hover:bg-white/40 transition-colors"
+                    className="col-span-2 row-span-2 relative cursor-pointer overflow-hidden rounded-l-xl"
+                    onClick={() => { setCurrentImageIndex(0); setLightboxOpen(true); }}
                 >
-                    <ChevronLeftIcon className="w-6 h-6 text-white" />
-                </button>
-                <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/20 backdrop-blur-md rounded-full hover:bg-white/40 transition-colors"
-                >
-                    <ChevronRightIcon className="w-6 h-6 text-white" />
-                </button>
-
-                {/* Image Counter */}
-                <div className="absolute bottom-4 right-4 px-3 py-1.5 bg-black/50 backdrop-blur-md rounded-full text-white text-sm">
-                    {currentImageIndex + 1} / {pack.galleryImgs.length}
+                    <img 
+                        src={pack.galleryImgs[0] as string} 
+                        alt={pack.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
                 </div>
-
-                {/* Back Button */}
-                <Link
-                    href="/packs"
-                    className="absolute top-4 left-4 p-2 bg-white/20 backdrop-blur-md rounded-full hover:bg-white/40 transition-colors"
-                >
-                    <ChevronLeftIcon className="w-6 h-6 text-white" />
-                </Link>
+                
+                {/* Second image - top right */}
+                {pack.galleryImgs[1] && (
+                    <div 
+                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden"
+                        onClick={() => { setCurrentImageIndex(1); setLightboxOpen(true); }}
+                    >
+                        <img 
+                            src={pack.galleryImgs[1] as string} 
+                            alt={pack.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                        {pack.galleryImgs.length > 4 && (
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <span className="text-white font-semibold text-lg">+{pack.galleryImgs.length - 4}</span>
+                            </div>
+                        )}
+                    </div>
+                )}
+                
+                {/* Third image - bottom right top */}
+                {pack.galleryImgs[2] && (
+                    <div 
+                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden"
+                        onClick={() => { setCurrentImageIndex(2); setLightboxOpen(true); }}
+                    >
+                        <img 
+                            src={pack.galleryImgs[2] as string} 
+                            alt={pack.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                )}
+                
+                {/* Fourth image - bottom right bottom */}
+                {pack.galleryImgs[3] && (
+                    <div 
+                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden rounded-tr-xl"
+                        onClick={() => { setCurrentImageIndex(3); setLightboxOpen(true); }}
+                    >
+                        <img 
+                            src={pack.galleryImgs[3] as string} 
+                            alt={pack.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                )}
+                
+                {/* Fifth image - or show all button */}
+                {pack.galleryImgs[4] && (
+                    <div 
+                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden rounded-br-xl"
+                        onClick={() => setLightboxOpen(true)}
+                    >
+                        <img 
+                            src={pack.galleryImgs[4] as string} 
+                            alt={pack.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 grayscale hover:grayscale-0"
+                        />
+                        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                            <span className="text-white font-medium text-sm">Show all photos</span>
+                        </div>
+                    </div>
+                )}
             </div>
+
+            {/* Back Button - Fixed */}
+            <Link
+                href="/packs"
+                className="absolute top-4 left-4 p-2 bg-white/90 backdrop-blur-md rounded-full hover:bg-white transition-colors z-10"
+            >
+                <ChevronLeftIcon className="w-6 h-6 text-neutral-900" />
+            </Link>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
