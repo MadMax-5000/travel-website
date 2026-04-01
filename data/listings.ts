@@ -222,9 +222,9 @@ const DEMO_PACK_LISTINGS = __packsListing.map((post, index): PackDataType => {
         (taxonomy) => taxonomy.id === post.listingCategory.id
     )[0];
 
-    const tours = DEMO_STAY_LISTINGS.filter((tour) => 
-        post.tours.includes(tour.id as string)
-    );
+    const tours = post.tours && post.tours.length > 0 
+        ? DEMO_STAY_LISTINGS.filter((tour) => (post.tours as string[]).includes(tour.id as string))
+        : [];
 
     return {
         ...post,

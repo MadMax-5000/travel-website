@@ -144,5 +144,50 @@
       "Explore the vibrant Koutchi night market",
       "Traditional Moroccan dinner included"
     ]
+  },
+  {
+    "id": "pack_4",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/packs",
+    "listingCategory": {
+      "id": 103,
+      "name": "Desert Activities"
+    },
+    "title": "Taghazoute",
+    "subtitle": "Anza • Taghazoute • Aghroud (Colored City)",
+    "featuredImage": "/images/taghazoute/taghazoute.jpg",
+    "galleryImgs": [
+      "/images/taghazoute/taghazoute.jpg",
+      "/images/taghazoute/anza.jpg",
+      "/images/taghazoute/aghroud.jpg"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Anza • Taghazout • Aghroud",
+    "reviewStart": 5,
+    "reviewCount": 0,
+    "price": "45 € / 450 MAD",
+    "originalPrice": "",
+    "savings": "",
+    "tours": [],
+    "duration": "Half Day",
+    "maxGuests": 8,
+    "saleOff": null,
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "taghazoute",
+    "description": "Explore the beautiful coastal villages of Taghazoute region. Visit Anza, discover the surfer's paradise of Taghazoute, and explore the colorful streets of Aghroud (Colored City). Experience the unique blend of traditional Berber culture and modern surf culture.",
+    "highlights": [
+      "Visit Anza fishing village",
+      "Explore Taghazoute surf village",
+      "Discover Aghroud (Colored City)",
+      "Photo stops at scenic viewpoints",
+      "Round-trip hotel transportation"
+    ]
   }
 ]

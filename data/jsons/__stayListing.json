@@ -591,9 +591,9 @@
     "address": "Marrakech",
     "reviewStart": 4.9,
     "reviewCount": 312,
-    "price": "400 MAD",
-    "priceEur": 40,
-    "priceMad": 400,
+    "price": "2000 MAD",
+    "priceEur": 200,
+    "priceMad": 2000,
     "maxGuests": 8,
     "saleOff": "TUESDAY / THURSDAY / SATURDAY",
     "isAds": null,
@@ -604,8 +604,8 @@
     "slug": "marrakech",
     "duration": "from 07:15am to 09:00pm",
     "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
-    "includes": ["Air-Conditioned Transport", "Professional Guide", "Jamaa el-Fna Square", "Koutoubia Mosque", "Traditional Market", "Free Time"],
-    "tourDescription": "Discover the magical Red City of Marrakech. Visit the iconic Koutoubia Mosque, explore the labyrinthine souks, and experience the sensory explosion of Jamaa el-Fna square. Let our expert guide show you the hidden gems of this ancient city."
+    "includes": ["Air-Conditioned Transport", "Professional Guide", "Jamaa el-Fna Square", "Koutoubia Mosque", "Hotel Mamounia Visit", "Free Time", "Return to Agadir"],
+    "tourDescription": "Discover the magical Red City of Marrakech. Visit the iconic Koutoubia Mosque, explore the historic Jamaa el-Fna square, enjoy the famous Hotel Mamounia, and explore the souks. Let our expert guide show you the hidden gems of this ancient city before returning to Agadir."
   },
   {
     "id": "tour_17",
@@ -718,8 +718,8 @@
     "slug": "essaouira",
     "duration": "from 07:30am to 07:00pm",
     "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
-    "includes": ["Air-Conditioned Transport", "Professional Guide", "Historic Port", "Goats on Trees", "Old Medina", "Free Time for Shopping"],
-    "tourDescription": "Discover the windswept beauty of Essaouira, the former Portuguese city. Explore the historic port, visit the famous goats climbing argan trees, wander through the UNESCO-listed medina, and enjoy free time in this artistic coastal gem."
+    "includes": ["Air-Conditioned Transport", "Professional Guide", "Station Stop", "Argane Cooperative", "Goats on Trees", "Essaouira City Tour", "Return to Agadir"],
+    "tourDescription": "Discover the windswept beauty of Essaouira, the former Portuguese city. Starting at 7:30 AM, visit the station, stop at an argane cooperative with famous goats on trees, enjoy a guided tour of the UNESCO-listed medina, and return to Agadir."
   },
   {
     "id": "tour_20",
