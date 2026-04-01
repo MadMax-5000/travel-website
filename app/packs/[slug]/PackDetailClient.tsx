@@ -67,11 +67,9 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
             return;
         }
 
-        const tourList = pack.tours.map(t => t.title).join(", ");
         const message = `Hello! I'd like to book the following pack:
 
 Pack: ${pack.title}
-Included Tours: ${tourList}
 Date: ${formatDate(selectedDate)}
 Guests: ${adults} adult${adults !== 1 ? "s" : ""}${kids > 0 ? `, ${kids} kid${kids !== 1 ? "s" : ""}` : ""}
 Total: ${grandTotal.toLocaleString()} MAD
@@ -200,40 +198,6 @@ Phone: ${customerPhone}`;
                             </div>
                         )}
 
-                        {/* Included Tours */}
-                        <div className="mb-8">
-                            <h2 className="text-xl font-bold text-neutral-900 dark:text-white mb-4">
-                                Included Tours ({pack.tours.length})
-                            </h2>
-                            <div className="space-y-4">
-                                {pack.tours.map((tour, idx) => (
-                                    <Link
-                                        key={idx}
-                                        href={tour.href}
-                                        className="flex items-center gap-4 p-4 bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-orange-500 transition-colors group"
-                                    >
-                                        <div className="w-16 h-16 rounded-xl bg-neutral-100 dark:bg-neutral-800 overflow-hidden shrink-0">
-                                            <img
-                                                src={tour.featuredImage as string}
-                                                alt={tour.title}
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </div>
-                                        <div className="flex-1 min-w-0">
-                                            <h3 className="font-semibold text-neutral-900 dark:text-white group-hover:text-orange-500 transition-colors">
-                                                {tour.title}
-                                            </h3>
-                                            <p className="text-sm text-neutral-500 dark:text-neutral-400 line-clamp-1">
-                                                {tour.address}
-                                            </p>
-                                        </div>
-                                        <span className="text-sm font-medium text-neutral-500 dark:text-neutral-400 shrink-0">
-                                            {tour.price}
-                                        </span>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
                     </div>
 
                     {/* Booking Sidebar */}
