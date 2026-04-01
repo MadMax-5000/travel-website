@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { PackDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, Star, Tag } from "lucide-react"
+import { Heart, Star } from "lucide-react"
 
 export interface PackCardProps {
     data?: PackDataType
@@ -25,7 +25,6 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
         href,
         galleryImgs,
         price,
-        originalPrice,
         tours,
     } = data
 
@@ -72,14 +71,6 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                         </div>
                     </div>
 
-                    {originalPrice && (
-                        <div className="absolute top-4 left-4">
-                            <span className="flex items-center gap-1 px-3 py-1.5 bg-orange-500 rounded-full text-xs font-bold text-white shadow-lg">
-                                <Tag className="w-3 h-3" />
-                                Save {Math.round((1 - parseInt(price.replace(/[^0-9]/g, '')) / parseInt(originalPrice.replace(/[^0-9]/g, ''))) * 100)}%
-                            </span>
-                        </div>
-                    )}
                 </div>
 
                 <div className="mt-3">
@@ -91,12 +82,7 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
                             {subtitle}
                         </p>
                     )}
-                </div>
-                <div className="text-right flex-shrink-0">
-                    {originalPrice && (
-                        <p className="text-xs text-neutral-400 line-through">{originalPrice}</p>
-                    )}
-                    <p className="text-lg font-bold text-orange-500">{price}</p>
+                    <p className="text-base font-bold text-orange-500 mt-2">{price}</p>
                     <p className="text-[10px] text-neutral-400">per person</p>
                 </div>
             </Link>
