@@ -19,6 +19,7 @@ export interface TaxonomyType {
     color?: TwMainColor | string;
     taxonomy: "category" | "tag";
     listingType?: "stay" | "experiences";
+    icon?: string;
 }
 
 export interface AuthorType {
@@ -88,6 +89,8 @@ export interface StayDataType {
     like: boolean;
     galleryImgs: (StaticImageData | string)[];
     price: string;
+    priceEur: number;
+    priceMad: number;
     listingCategory: TaxonomyType;
     maxGuests: number;
     bedrooms: number;
@@ -99,6 +102,10 @@ export interface StayDataType {
         lng: number;
     };
     itinerary?: ItineraryItem[];
+    duration: string;
+    scheduleDays: string;
+    includes: string[];
+    tourDescription?: string;
 }
 
 //

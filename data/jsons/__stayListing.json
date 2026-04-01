@@ -9,28 +9,33 @@
       "name": "City Tours"
     },
     "title": "AGADIR CITY TOUR",
-    "featuredImage": "/images/beach-sunset.jpg",
+    "featuredImage": "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
     "galleryImgs": [
-      "/images/moroccan-leather-artisans.jpg",
-      "/images/large-boat-agadir-harbor.jpg",
-      "/images/hall.jpg",
-      "/images/mountain.jpg"
+      "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-2165030241-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-1146362546-612x612.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Tourist Area + Marina + Kasbah + Old city + Big Mosque + Souk ALHAD",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "15 € / 150 MAD",
-    "maxGuests": null,
-    "saleOff": "10:00am to 01:00pm",
+    "address": "Agadir, Morocco",
+    "reviewStart": 4.8,
+    "reviewCount": 124,
+    "price": "150 MAD",
+    "priceEur": 15,
+    "priceMad": 150,
+    "maxGuests": 8,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "agadir-city-tour"
+    "slug": "agadir-city-tour",
+    "duration": "from 10:00am to 01:00pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Professional Guide", "Souk ALHAD Visit", "Mint Tea"],
+    "tourDescription": "Discover the best of Agadir on this comprehensive city tour. Visit the stunning Marina, explore the historic Kasbah, experience the vibrant Old City, admire the magnificent Big Mosque, and lose yourself in the colors and scents of Souk ALHAD. Perfect for first-time visitors wanting to experience the essence of Agadir."
   },
   {
     "id": "tour_2",
@@ -42,28 +47,33 @@
       "name": "Cultural Tours"
     },
     "title": "ARGAN GUIDED TOUR",
-    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
+    "featuredImage": "/images/argan-guided-tour/pexels-mert-kaya-60338873-13962138.jpg",
     "galleryImgs": [
-      "/images/surf.jpg",
-      "/images/hall.jpg",
-      "/images/surf-2.jpg",
-      "/images/large-boat-agadir-harbor.jpg"
+      "/images/argan-guided-tour/pexels-mert-kaya-60338873-13962138.jpg",
+      "/images/argan-guided-tour/pexels-luigi-maggio-1750047758-28076406.jpg",
+      "/images/argan-guided-tour/pexels-christophe-rascle-159591525-18742777.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transport + Visit of the Factory + Morrocan Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "20 € / 20 MAD",
-    "maxGuests": null,
-    "saleOff": "Departure Every Hour",
+    "address": "Argan Oil Cooperative, Agadir",
+    "reviewStart": 4.6,
+    "reviewCount": 89,
+    "price": "20 MAD",
+    "priceEur": 2,
+    "priceMad": 20,
+    "maxGuests": 10,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "argan-guided-tour"
+    "slug": "argan-guided-tour",
+    "duration": "Departure Every Hour",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Factory Visit", "Argan Oil Presentation", "Moroccan Mint Tea"],
+    "tourDescription": "Learn about Morocco's precious Argan oil on this guided tour of a traditional cooperative. Watch the ancient extraction process, discover the many uses of Argan oil, and enjoy a relaxing cup of traditional Moroccan mint tea. A cultural experience not to be missed."
   },
   {
     "id": "tour_3",
@@ -75,28 +85,33 @@
       "name": "Desert Activities"
     },
     "title": "QUAD BIKE IN DESERT",
-    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
+    "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
     "galleryImgs": [
-      "/images/surf-2.jpg",
-      "/images/goats.jpg",
-      "/images/mountain.jpg",
-      "/images/guy-selling-spices.jpg"
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+      "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg",
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transport + equipement + Morrocan Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "08:30am-11:30am / 02:00pm-05:30pm",
+    "address": "Desert Area, Agadir",
+    "reviewStart": 4.5,
+    "reviewCount": 67,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 6,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "quad-bike-in-desert"
+    "slug": "quad-bike-in-desert",
+    "duration": "08:30am-11:30am / 02:00pm-05:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Quad Bike Equipment", "Safety Briefing", "Moroccan Mint Tea"],
+    "tourDescription": "Feel the adrenaline rush as you navigate through the stunning Moroccan desert on a powerful quad bike. Traverse sand dunes, rocky paths, and breathtaking landscapes. All equipment provided with professional safety briefing included."
   },
   {
     "id": "tour_4",
@@ -108,28 +123,33 @@
       "name": "Desert Activities"
     },
     "title": "BUGGY IN DESERT",
-    "featuredImage": "/images/goats.jpg",
+    "featuredImage": "/images/buggy-in-desert/pexels-jdgromov-13252283.jpg",
     "galleryImgs": [
-      "/images/guy-selling-spices.jpg",
-      "/images/goats.jpg",
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/mountain.jpg"
+      "/images/buggy-in-desert/pexels-jdgromov-13252283.jpg",
+      "/images/buggy-in-desert/pexels-magda-ehlers-pexels-35112800.jpg",
+      "/images/buggy-in-desert/pexels-koto-28525238.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transport + equipement + Morrocan Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "65 € / 650 MAD",
-    "maxGuests": null,
-    "saleOff": "08:30am-11:30am / 02:00pm-05:30pm",
+    "address": "Desert Area, Agadir",
+    "reviewStart": 4.7,
+    "reviewCount": 42,
+    "price": "650 MAD",
+    "priceEur": 65,
+    "priceMad": 650,
+    "maxGuests": 4,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "buggy-in-desert"
+    "slug": "buggy-in-desert",
+    "duration": "08:30am-11:30am / 02:00pm-05:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Buggy Equipment", "Safety Gear", "Moroccan Mint Tea"],
+    "tourDescription": "Experience the thrill of off-road adventure with our desert buggy tour. Tackle challenging terrain in a powerful buggy, explore hidden valleys, and enjoy spectacular desert views. An unforgettable adventure for thrill-seekers."
   },
   {
     "id": "tour_5",
@@ -141,28 +161,33 @@
       "name": "Nature Hikes"
     },
     "title": "PARADIS VALLEY",
-    "featuredImage": "/images/souk-lhad.jpg",
+    "featuredImage": "/images/paradis-valley/paradise.jpg",
     "galleryImgs": [
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/beach-sunset.jpg",
-      "/images/souk-lhad.jpg"
+      "/images/paradis-valley/paradise.jpg",
+      "/images/paradis-valley/0bd3a0bc-1aef-4ea8-b465-a415de6c2fa2.jpg",
+      "/images/paradis-valley/paradise-valley-7-Morocco.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Half Day Excursion",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "25 € / 250 MAD",
-    "maxGuests": null,
-    "saleOff": "08:30am-01:30pm / 02:00pm-06:30pm",
+    "address": "Paradise Valley, Tiznit Road",
+    "reviewStart": 4.9,
+    "reviewCount": 156,
+    "price": "250 MAD",
+    "priceEur": 25,
+    "priceMad": 250,
+    "maxGuests": 10,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.5896,
       "lng": -9.5268
     },
-    "slug": "paradis-valley"
+    "slug": "paradis-valley",
+    "duration": "08:30am-01:30pm / 02:00pm-06:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Swimming in Natural Pools", "Scenic Hike", "Moroccan Mint Tea"],
+    "tourDescription": "Escape to Paradise Valley, a stunning oasis nestled in the Anti-Atlas mountains. Swim in crystal-clear natural pools, explore lush palm groves, and discover hidden waterfalls. A nature lover's paradise just a short drive from Agadir."
   },
   {
     "id": "tour_6",
@@ -174,28 +199,33 @@
       "name": "Water Sports"
     },
     "title": "BOAT TRIP",
-    "featuredImage": "/images/surf.jpg",
+    "featuredImage": "/images/boat-trip/boats.jpg",
     "galleryImgs": [
-      "/images/surf.jpg",
-      "/images/boats.jpg",
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/surf-2.jpg"
+      "/images/boat-trip/boats.jpg",
+      "/images/boat-trip/pexels-mag-photography-1501456-30532040.jpg",
+      "/images/boat-trip/pexels-mag-photography-1501456-30532042.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Round Trip Transportation + Swimming + Fishing + Animation + Lunch + Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "09:00am to 02:00pm",
+    "address": "Agadir Marina",
+    "reviewStart": 4.8,
+    "reviewCount": 203,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 20,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "boat-trip"
+    "slug": "boat-trip",
+    "duration": "from 09:00am to 02:00pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Swimming Stop", "Fishing Activity", "Onboard Animation", "Lunch Included", "Mint Tea"],
+    "tourDescription": "Set sail from Agadir Marina for an unforgettable day on the Atlantic. Enjoy swimming in calm waters, try your hand at fishing, feast on a delicious onboard lunch, and soak up the sun with full animation and entertainment throughout the trip."
   },
   {
     "id": "tour_7",
@@ -207,27 +237,33 @@
       "name": "Animal Rides"
     },
     "title": "CAMEL OR HORSE RIDING",
-    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
+    "featuredImage": "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
     "galleryImgs": [
-      "/images/large-boat-agadir-harbor.jpg",
-      "/images/hall.jpg",
-      "/images/beach-sunset.jpg"
+      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
+      "/images/camel-or-horse-riding/isabeltenbrink-horses-1530497.jpg",
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transportation + 2 hours (horse or Camel) forest and river + Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "25 € / 250 MAD",
-    "maxGuests": null,
-    "saleOff": "10:00am-12:00am / 03:00pm-05:00pm",
+    "address": "Forest & River Area, Agadir",
+    "reviewStart": 4.7,
+    "reviewCount": 178,
+    "price": "250 MAD",
+    "priceEur": 25,
+    "priceMad": 250,
+    "maxGuests": 8,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "camel-or-horse-riding"
+    "slug": "camel-or-horse-riding",
+    "duration": "10:00am-12:00pm / 03:00pm-05:00pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "2 Hours Ride", "Forest & River Trail", "Mint Tea"],
+    "tourDescription": "Experience traditional Moroccan transportation on a peaceful ride through scenic forest and river landscapes. Choose between a gentle camel or elegant horse and explore the beautiful countryside surrounding Agadir."
   },
   {
     "id": "tour_8",
@@ -239,28 +275,33 @@
       "name": "Animal Rides"
     },
     "title": "CAMEL OR HORSE RIDING + SUNSET + BBQ",
-    "featuredImage": "/images/boats.jpg",
+    "featuredImage": "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg",
     "galleryImgs": [
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/mountain.jpg",
-      "/images/guy-selling-spices.jpg",
-      "/images/large-boat-agadir-harbor.jpg"
+      "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg",
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
+      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Round Trip Transportation + 2 hours forest and river sunset + Barbecue Diner + Mint Tea",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "05:00pm to 08:30pm",
+    "address": "Forest & River Area, Agadir",
+    "reviewStart": 4.9,
+    "reviewCount": 145,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 8,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "camel-or-horse-riding-sunset-bbq"
+    "slug": "camel-or-horse-riding-sunset-bbq",
+    "duration": "from 05:00pm to 08:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "2 Hours Sunset Ride", "Forest & River Trail", "Barbecue Dinner", "Mint Tea"],
+    "tourDescription": "The ultimate combinaton of adventure and relaxation. Ride through the forest and river at sunset, then enjoy a delicious traditional Moroccan barbecue dinner under the stars. A magical evening experience."
   },
   {
     "id": "tour_9",
@@ -271,29 +312,34 @@
       "id": 103,
       "name": "Desert Excursions"
     },
-    "title": "MASSA + TIZNIT (JEEP 4*4 MINI SAHARA)",
-    "featuredImage": "/images/mountain.jpg",
+    "title": "MASSA + TIZNIT (JEEP 4×4 MINI SAHARA)",
+    "featuredImage": "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-ktschankula-32955677.jpg",
     "galleryImgs": [
-      "/images/surf-2.jpg",
-      "/images/guy-selling-spices.jpg",
-      "/images/goats.jpg",
-      "/images/hall.jpg"
+      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-ktschankula-32955677.jpg",
+      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-jdgromov-13118555.jpg",
+      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-soumithsoman-5812065.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Sand dunes + Berber Villages + Wild Beach + Off Road + Lunch At local's House",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "35 € / 350 MAD",
-    "maxGuests": null,
-    "saleOff": "08:30am to 04:00pm",
+    "address": "Massa & Tiznit Region",
+    "reviewStart": 4.8,
+    "reviewCount": 112,
+    "price": "350 MAD",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 6,
+    "saleOff": "TUESDAY / THURSDAY / SATURDAY",
     "isAds": null,
     "map": {
       "lat": 29.6974,
       "lng": -9.7323
     },
-    "slug": "massa-tiznit-jeep-4-4-mini-sahara"
+    "slug": "massa-tiznit-jeep-4-4-mini-sahara",
+    "duration": "from 08:30am to 04:00pm",
+    "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
+    "includes": ["4×4 Jeep Transport", "Sand Dunes", "Berber Villages", "Wild Beach", "Off-Road Adventure", "Lunch at Local's House"],
+    "tourDescription": "Embark on an epic off-road adventure through southern Morocco. Explore golden sand dunes, visit traditional Berber villages, relax on untouched wild beaches, and enjoy an authentic lunch with local families. Experience the real Morocco."
   },
   {
     "id": "tour_10",
@@ -304,28 +350,34 @@
       "id": 107,
       "name": "Wellness & Spa"
     },
-    "title": "ARGAN MASSAGE AND MORROCAN HAMMAM",
-    "featuredImage": "/images/surf-2.jpg",
+    "title": "ARGAN MASSAGE AND MOROCCAN HAMMAM",
+    "featuredImage": "/images/argan-massage-and-morrocan-hammam/Moroccan-Hammam-Spa-Travel-Exploration-Morocco.jpg",
     "galleryImgs": [
-      "/images/souk-lhad.jpg",
-      "/images/boats.jpg",
-      "/images/guy-selling-spices.jpg"
+      "/images/argan-massage-and-morrocan-hammam/Moroccan-Hammam-Spa-Travel-Exploration-Morocco.jpg",
+      "/images/argan-massage-and-morrocan-hammam/Essaouira-hammam-feature.webp",
+      "/images/argan-massage-and-morrocan-hammam/whitesession-massage-2768833.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transportation + 1 hour Massage + 1 hour Hammam",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "35 € / 350 MAD",
-    "maxGuests": null,
-    "saleOff": "10:00am to 06:00pm",
+    "address": "Spa Center, Agadir",
+    "reviewStart": 4.9,
+    "reviewCount": 98,
+    "price": "350 MAD",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 4,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "argan-massage-and-morrocan-hammam"
+    "slug": "argan-massage-and-morrocan-hammam",
+    "duration": "from 10:00am to 06:00pm (Depends on availability)",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "1 Hour Argan Massage", "1 Hour Traditional Hammam", "Black Soap Scrub", "Ghassoul Clay Mask"],
+    "tourDescription": "Indulge in the ultimate Moroccan spa experience. Start with a traditional hammam ritual including black soap scrub and ghassoul clay, followed by a rejuvenating Argan oil massage. Pure relaxation and wellness."
   },
   {
     "id": "tour_11",
@@ -337,28 +389,33 @@
       "name": "Desert Adventure"
     },
     "title": "SUNSET SANDBORDING",
-    "featuredImage": "/images/beach-sunset.jpg",
+    "featuredImage": "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
     "galleryImgs": [
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/hall.jpg",
-      "/images/moroccan-leather-artisans.jpg",
-      "/images/souk-lhad.jpg"
+      "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
+      "/images/sunset-sandboarding/pexels-oidonnyboy-9540385.jpg",
+      "/images/sunset-sandboarding/pexels-misho-cha-61081292-11763711.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Round Trip Transportation + Moroccan Desert Style + Colored Village + equipment",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "04:00pm to 08:30pm",
+    "address": "Colored Village, Desert Area",
+    "reviewStart": 4.6,
+    "reviewCount": 76,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 8,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "sunset-sandbording"
+    "slug": "sunset-sandboarding",
+    "duration": "from 04:00pm to 08:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Sandboarding Equipment", "Colored Village Visit", "Desert Style Experience", "Moroccan Tea"],
+    "tourDescription": "Catch the magical desert sunset while sandboarding down giant dunes. Visit the stunning Colored Village famous for its vibrant landscapes, and experience authentic Moroccan desert hospitality. An unforgettable evening adventure."
   },
   {
     "id": "tour_12",
@@ -370,28 +427,33 @@
       "name": "Water Sports"
     },
     "title": "JETSKI 30MIN",
-    "featuredImage": "/images/souk-lhad.jpg",
+    "featuredImage": "/images/jetski/pexels-keeganjchecks-18636561.jpg",
     "galleryImgs": [
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/agadir.jpg",
-      "/images/souk-lhad.jpg",
-      "/images/boats.jpg"
+      "/images/jetski/pexels-keeganjchecks-18636561.jpg",
+      "/images/jetski/pexels-lureofadventure-31029438.jpg",
+      "/images/jetski/pexels-nicole-waters-76904452-8609596.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transportation + Equipment + 30min",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "60 € / 600 MAD",
-    "maxGuests": null,
-    "saleOff": "Depends on availability",
+    "address": "Agadir Beach",
+    "reviewStart": 4.4,
+    "reviewCount": 54,
+    "price": "600 MAD",
+    "priceEur": 60,
+    "priceMad": 600,
+    "maxGuests": 2,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "jetski-30min"
+    "slug": "jetski-30min",
+    "duration": "30 minutes (Depends on availability)",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Life Jacket", "Safety Briefing", "30 Minutes Riding Time"],
+    "tourDescription": "Feel the thrill of speeding across the Atlantic waves on a powerful jetski. 30 minutes of pure excitement with all safety equipment provided. Perfect for adrenaline junkies looking for a quick aquatic adventure."
   },
   {
     "id": "tour_13",
@@ -403,28 +465,33 @@
       "name": "Parks & Shows"
     },
     "title": "CROCODIL PARK",
-    "featuredImage": "/images/hall.jpg",
+    "featuredImage": "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
     "galleryImgs": [
-      "/images/man-fishing.jpg",
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/goats.jpg",
-      "/images/beach-sunset.jpg"
+      "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
+      "/images/crocodile-park/35.jpg",
+      "/images/crocodile-park/Crocoparc-Agadir-bassins-crocodiles-min.jfif"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transportation + Entrance Ticket",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "25 € / 250 MAD",
-    "maxGuests": null,
-    "saleOff": "10:00am-01:00pm / 02:00pm-05:00pm",
+    "address": "Crocodil Park, Tizgui",
+    "reviewStart": 4.3,
+    "reviewCount": 89,
+    "price": "250 MAD",
+    "priceEur": 25,
+    "priceMad": 250,
+    "maxGuests": 10,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.3871,
       "lng": -9.489
     },
-    "slug": "crocodil-park"
+    "slug": "crocodil-park",
+    "duration": "10:00am-01:00pm / 02:00pm-05:00pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Entrance Ticket", "Guided Tour", "Crocodile Feeding Show"],
+    "tourDescription": "Discover the fascinating world of crocodiles at this unique park. Home to hundreds of Nile crocodiles, the park also features beautiful gardens, a museum, and regular feeding shows. Educational fun for the whole family."
   },
   {
     "id": "tour_14",
@@ -436,28 +503,33 @@
       "name": "Parks & Shows"
     },
     "title": "DOLPHIN SHOW",
-    "featuredImage": "/images/guy-selling-spices.jpg",
+    "featuredImage": "/images/dolphin-show/pexels-magda-ehlers-pexels-11740717.jpg",
     "galleryImgs": [
-      "/images/agadir.jpg",
-      "/images/goats.jpg",
-      "/images/moroccan-leather-artisans.jpg",
-      "/images/guy-riding-camel-inbeach.jpg"
+      "/images/dolphin-show/pexels-magda-ehlers-pexels-11740717.jpg",
+      "/images/dolphin-show/pexels-andromeda99-18155773.jpg",
+      "/images/dolphin-show/pexels-raul-mex-2159043921-35797193.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Round Trip Transportation + Entrance Ticket",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "35 € / 350 MAD",
-    "maxGuests": null,
-    "saleOff": "10:15am to 12:30pm",
+    "address": "Dolphin Center, Agadir",
+    "reviewStart": 4.7,
+    "reviewCount": 134,
+    "price": "350 MAD",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 20,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "dolphin-show"
+    "slug": "dolphin-show",
+    "duration": "from 10:15am to 12:30pm",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Round Trip Transport", "Entrance Ticket", "Dolphin Show", "Photo Opportunity"],
+    "tourDescription": "Be amazed by the intelligence and grace of bottlenose dolphins in a spectacular show. Watch these incredible creatures perform incredible acrobatics and interact with their trainers. A memorable experience for all ages."
   },
   {
     "id": "tour_15",
@@ -468,29 +540,34 @@
       "id": 110,
       "name": "Transfers"
     },
-    "title": "TAXI AIRPORT",
-    "featuredImage": "/images/guy-selling-spices.jpg",
+    "title": "AIRPORT TRANSFER",
+    "featuredImage": "/images/airport-transfer/aéroport-international-Agadir-Al-Massira.jpg",
     "galleryImgs": [
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/goats.jpg",
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/man-fishing.jpg"
+      "/images/airport-transfer/aéroport-international-Agadir-Al-Massira.jpg",
+      "/images/airport-transfer/morocco-expands-agadir-airport-ahead-2030-world-cup-co-hosting-107755.jpg",
+      "/images/airport-transfer/51.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Pickup from the reception of the hotel + transfert to airport Agadir AL MASSIRA",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "25 € / 250 MAD",
-    "maxGuests": null,
-    "saleOff": "Every time",
+    "address": "Agadir Al Massira Airport",
+    "reviewStart": 5.0,
+    "reviewCount": 267,
+    "price": "250 MAD",
+    "priceEur": 25,
+    "priceMad": 250,
+    "maxGuests": 4,
+    "saleOff": "EVERYDAY",
     "isAds": null,
     "map": {
       "lat": 30.334,
       "lng": -9.4121
     },
-    "slug": "taxi-airport"
+    "slug": "airport-transfer",
+    "duration": "Any time (24/7)",
+    "scheduleDays": "EVERYDAY",
+    "includes": ["Hotel Pickup", "Direct Transfer", "Flight Monitoring", "Meet & Greet"],
+    "tourDescription": "Comfortable and reliable airport transfer service. Pickup from your hotel reception with direct transfer to Agadir Al Massira Airport. Professional drivers, flight monitoring, and punctual service guaranteed."
   },
   {
     "id": "tour_16",
@@ -501,29 +578,34 @@
       "id": 101,
       "name": "Day Trips"
     },
-    "title": "MARRAKECH (Tuesday / Thursday / Saturday)",
-    "featuredImage": "/images/guy-selling-spices.jpg",
+    "title": "MARRAKECH",
+    "featuredImage": "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg",
     "galleryImgs": [
-      "/images/large-boat-agadir-harbor.jpg",
-      "/images/guy-selling-spices.jpg",
-      "/images/goats.jpg",
-      "/images/birdview-agadir-beach&city.jpg"
+      "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg",
+      "/images/marrakesh/pexels-tony-zohari-3296024-35659931.jpg",
+      "/images/marrakesh/pexels-poppin-2448418.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Guide + Jamaa Lafna Square + Koutoubia Mosque + Market + Free Time",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "07:15am to 09:00pm",
+    "address": "Marrakech",
+    "reviewStart": 4.9,
+    "reviewCount": 312,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 8,
+    "saleOff": "TUESDAY / THURSDAY / SATURDAY",
     "isAds": null,
     "map": {
       "lat": 31.6295,
       "lng": -7.9811
     },
-    "slug": "marrakech-tuesday-thursday-saturday"
+    "slug": "marrakech",
+    "duration": "from 07:15am to 09:00pm",
+    "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
+    "includes": ["Air-Conditioned Transport", "Professional Guide", "Jamaa el-Fna Square", "Koutoubia Mosque", "Traditional Market", "Free Time"],
+    "tourDescription": "Discover the magical Red City of Marrakech. Visit the iconic Koutoubia Mosque, explore the labyrinthine souks, and experience the sensory explosion of Jamaa el-Fna square. Let our expert guide show you the hidden gems of this ancient city."
   },
   {
     "id": "tour_17",
@@ -534,29 +616,34 @@
       "id": 101,
       "name": "Day Trips"
     },
-    "title": "TAROUDANT + TIOUT (Tuesday / Thursday / Saturday)",
-    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
+    "title": "TAROUDANT + TIOUT",
+    "featuredImage": "/images/taroudant+tiout/taroudant.jpg.1920x0_q85_format-jpg.jpg",
     "galleryImgs": [
-      "/images/guy-riding-camel-inbeach.jpg",
-      "/images/moroccan-leather-artisans.jpg",
-      "/images/souk-lhad.jpg",
-      "/images/surf.jpg"
+      "/images/taroudant+tiout/taroudant.jpg.1920x0_q85_format-jpg.jpg",
+      "/images/taroudant+tiout/pexels-axp-photography-500641970-19473609.jpg",
+      "/images/taroudant+tiout/pexels-jean-pierre-liut-722716555-33691653.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Guide + Berber City + Ramparts + old Fortress + Touareg Ali baba and 40 thieves Lunch",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "08:30am to 06:00pm",
+    "address": "Taroudant & Tiout",
+    "reviewStart": 4.8,
+    "reviewCount": 98,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 8,
+    "saleOff": "TUESDAY / THURSDAY / SATURDAY",
     "isAds": null,
     "map": {
       "lat": 30.4703,
       "lng": -8.877
     },
-    "slug": "taroudant-tiout-tuesday-thursday-saturday"
+    "slug": "taroudant-tiout",
+    "duration": "from 08:30am to 06:00pm",
+    "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
+    "includes": ["4×4 Transport", "Professional Guide", "Taroudant Ramparts", "Old Fortress", "Tiout Oasis", "Ali Baba Lunch"],
+    "tourDescription": "Explore the charming Berber city of Taroudant, often called 'Little Marrakech'. Walk the historic ramparts, visit the ancient fortress, then continue to the beautiful Tiout oasis. Enjoy an authentic Ali Baba themed lunch in a stunning setting."
   },
   {
     "id": "tour_18",
@@ -567,28 +654,34 @@
       "id": 101,
       "name": "Day Trips"
     },
-    "title": "LEGZIRA + MASSA (Tuesday / Thursday / Saturday)",
-    "featuredImage": "/images/boats.jpg",
+    "title": "LEGZIRA + MASSA",
+    "featuredImage": "/images/legzira+massa/Legzira.jpg",
     "galleryImgs": [
-      "/images/surf.jpg",
-      "/images/large-boat-agadir-harbor.jpg",
-      "/images/boats.jpg"
+      "/images/legzira+massa/Legzira.jpg",
+      "/images/legzira+massa/legzira-beach.jpg",
+      "/images/legzira+massa/Screenshot-2023-06-26-at-16.28.09-1024x638.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Guide + silver city + Swim and relax + Lunch by the Ocean + beautiful Landscapes",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "40 € / 400 MAD",
-    "maxGuests": null,
-    "saleOff": "08:00am to 06:00pm",
+    "address": "Legzira & Massa",
+    "reviewStart": 4.7,
+    "reviewCount": 145,
+    "price": "400 MAD",
+    "priceEur": 40,
+    "priceMad": 400,
+    "maxGuests": 8,
+    "saleOff": "TUESDAY / THURSDAY / SATURDAY",
     "isAds": null,
     "map": {
       "lat": 29.4449,
       "lng": -10.1147
     },
-    "slug": "legzira-massa-tuesday-thursday-saturday"
+    "slug": "legzira-massa",
+    "duration": "from 08:00am to 06:00pm",
+    "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
+    "includes": ["Air-Conditioned Transport", "Professional Guide", "Legzira Arches", "Massa Lagoon", "Ocean Lunch", "Beautiful Landscapes"],
+    "tourDescription": "Visit the legendary Legzira beach famous for its stunning natural rock arches. Continue to the peaceful Massa lagoon and enjoy a delicious lunch by the ocean. Experience breathtaking Atlantic coastline scenery."
   },
   {
     "id": "tour_19",
@@ -599,29 +692,34 @@
       "id": 101,
       "name": "Day Trips"
     },
-    "title": "ESSAOUIRA (Monday / Wednesday / Friday)",
-    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
+    "title": "ESSAOUIRA",
+    "featuredImage": "/images/essaouira/Essaouira.jpg",
     "galleryImgs": [
-      "/images/hall.jpg",
-      "/images/surf.jpg",
-      "/images/goats.jpg",
-      "/images/man-fishing.jpg"
+      "/images/essaouira/Essaouira.jpg",
+      "/images/essaouira/pexels-sarah-hall-74912249-12494695.jpg",
+      "/images/essaouira/cuyahoga-boats-1143724.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Guide + Portugal City + harbor + Goats on the Threes + Old City + Medina + Free Time",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "35 € / 350 MAD",
-    "maxGuests": null,
-    "saleOff": "07:30am to 07:00pm",
+    "address": "Essaouira",
+    "reviewStart": 4.9,
+    "reviewCount": 234,
+    "price": "350 MAD",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 8,
+    "saleOff": "MONDAY / WEDNESDAY / FRIDAY",
     "isAds": null,
     "map": {
       "lat": 31.5085,
       "lng": -9.7595
     },
-    "slug": "essaouira-monday-wednesday-friday"
+    "slug": "essaouira",
+    "duration": "from 07:30am to 07:00pm",
+    "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
+    "includes": ["Air-Conditioned Transport", "Professional Guide", "Historic Port", "Goats on Trees", "Old Medina", "Free Time for Shopping"],
+    "tourDescription": "Discover the windswept beauty of Essaouira, the former Portuguese city. Explore the historic port, visit the famous goats climbing argan trees, wander through the UNESCO-listed medina, and enjoy free time in this artistic coastal gem."
   },
   {
     "id": "tour_20",
@@ -632,27 +730,34 @@
       "id": 111,
       "name": "Shows & Events"
     },
-    "title": "BERBER FANTASIA NIGHT SHOW (Monday / Wednesday / Friday)",
-    "featuredImage": "/images/large-boat-agadir-harbor.jpg",
+    "title": "BERBER FANTASIA NIGHT SHOW",
+    "featuredImage": "/images/berber-fantasia-night-show/48.jpg",
     "galleryImgs": [
-      "/images/goats.jpg",
-      "/images/mountain.jpg"
+      "/images/berber-fantasia-night-show/48.jpg",
+      "/images/berber-fantasia-night-show/132.jpg",
+      "/images/berber-fantasia-night-show/145-3.webp"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": false,
-    "address": "Transportation + Folklore + Acrobat + Fire Show + Belly Dancer + Moroccan cuisin",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "50 € / 500 MAD",
-    "maxGuests": null,
-    "saleOff": "07:00pm to 11:45pm",
+    "address": "Berber Village, Agadir",
+    "reviewStart": 4.8,
+    "reviewCount": 167,
+    "price": "500 MAD",
+    "priceEur": 50,
+    "priceMad": 500,
+    "maxGuests": 20,
+    "saleOff": "MONDAY / WEDNESDAY / FRIDAY",
     "isAds": null,
     "map": {
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "berber-fantasia-night-show-monday-wednesday-friday"
+    "slug": "berber-fantasia-night-show",
+    "duration": "from 07:00pm to 11:45pm",
+    "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
+    "includes": ["Round Trip Transport", "Folklore Show", "Acrobatics", "Fire Show", "Belly Dancer", "Traditional Moroccan Dinner"],
+    "tourDescription": "Experience authentic Moroccan culture at this spectacular evening show. Watch traditional Berber folklore, thrilling acrobatics, and a mesmerizing fire show. Enjoy a delicious traditional Moroccan dinner while being entertained by skilled belly dancers."
   },
   {
     "id": "tour_21",
@@ -663,27 +768,33 @@
       "id": 105,
       "name": "Water Sports"
     },
-    "title": "SURF LESSON 2 HOURS (Monday / Wednesday / Friday)",
-    "featuredImage": "/images/moroccan-leather-artisans.jpg",
+    "title": "SURF LESSON 2 HOURS",
+    "featuredImage": "/images/surf-lesson/pexels-grishkoff-30118075.jpg",
     "galleryImgs": [
-      "/images/moroccan-leather-artisans.jpg",
-      "/images/mountain.jpg",
-      "/images/birdview-agadir-beach&city.jpg"
+      "/images/surf-lesson/pexels-grishkoff-30118075.jpg",
+      "/images/surf-lesson/pexels-sergk1-19756565.jpg",
+      "/images/surf-lesson/pexels-victoria-marzullo-310266016-13581283.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Round Trip Transportation + SurfBoard + BodyBoard",
-    "reviewStart": 0,
-    "reviewCount": 0,
-    "price": "35 € / 350 MAD",
-    "maxGuests": null,
-    "saleOff": "10:30am to 01:30pm",
+    "address": "Surf Beach, Agadir",
+    "reviewStart": 4.9,
+    "reviewCount": 189,
+    "price": "350 MAD",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 6,
+    "saleOff": "MONDAY / WEDNESDAY / FRIDAY",
     "isAds": null,
     "map": {
       "lat": 30.5472,
       "lng": -9.7028
     },
-    "slug": "surf-lesson-2-hours-monday-wednesday-friday"
+    "slug": "surf-lesson-2-hours",
+    "duration": "from 10:30am to 01:30pm",
+    "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
+    "includes": ["Round Trip Transport", "Professional Instructor", "Surfboard", "Bodyboard", "Wetsuit", "Safety Briefing"],
+    "tourDescription": "Learn to ride the Atlantic waves with our professional surf instructors. 2 hours of exciting surf lesson including all equipment. Whether you're a beginner or looking to improve, our expert instructors will have you standing up in no time."
   }
 ]
