@@ -7,15 +7,18 @@ import {
     StarIcon,
     ShareIcon,
     CheckIcon,
-    SparklesIcon,
-    ShieldCheckIcon,
+    ClockIcon,
+    CalendarDaysIcon,
+    UserIcon,
+    PhoneIcon,
     ChevronDownIcon,
     ChevronLeftIcon,
     ChevronRightIcon,
     XMarkIcon,
-    CalendarDaysIcon,
-    UserIcon,
-    PhoneIcon,
+    SunIcon,
+    TruckIcon,
+    UserGroupIcon,
+    SparklesIcon,
 } from "@heroicons/react/24/outline";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 import ItineraryTimeline from "@/components/ItineraryTimeline";
@@ -195,10 +198,8 @@ function MobileBookingModal({
     kids,
     onKidsChange,
     maxGuests,
-    priceAdult,
-    priceKid,
+    priceMad,
     listingTitle,
-    listingAddress,
     onWhatsApp,
 }: {
     isOpen: boolean;
@@ -210,10 +211,8 @@ function MobileBookingModal({
     kids: number;
     onKidsChange: (n: number) => void;
     maxGuests: number;
-    priceAdult: number;
-    priceKid: number;
+    priceMad: number;
     listingTitle: string;
-    listingAddress: string;
     onWhatsApp: (name: string, phone: string) => void;
 }) {
     const [step, setStep] = useState<"form" | "success">("form");
@@ -232,8 +231,9 @@ function MobileBookingModal({
 
     const fmt = (n: number) => `${n.toLocaleString("en-US")} MAD`;
     const totalGuests = adults + kids;
-    const adultsTotal = adults * priceAdult;
-    const kidsTotal = kids * priceKid;
+    const kidsPrice = Math.round(priceMad * 0.5);
+    const adultsTotal = adults * priceMad;
+    const kidsTotal = kids * kidsPrice;
     const grandTotal = adultsTotal + kidsTotal;
 
     const handleSubmit = () => {
@@ -256,8 +256,6 @@ function MobileBookingModal({
                 onClick={onClose}
             />
             <div className="relative bg-white w-full sm:max-w-md sm:rounded-3xl rounded-t-3xl max-h-[90vh] overflow-hidden animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
-                
-                {/* Header */}
                 <div className="flex items-center justify-between p-4 sm:p-5 border-b border-neutral-100">
                     {step === "form" && (
                         <button
@@ -284,12 +282,9 @@ function MobileBookingModal({
                     <div className="w-9" />
                 </div>
 
-                {/* Content */}
                 <div className="overflow-y-auto max-h-[calc(90vh-60px)]">
-                    
                     {step === "form" && (
                         <div className="p-4 sm:p-5 space-y-5">
-                            {/* Date Selection */}
                             <div>
                                 <label className="block text-sm font-medium text-neutral-700 mb-3">
                                     Select Date
@@ -302,7 +297,6 @@ function MobileBookingModal({
                                 </div>
                             </div>
 
-                            {/* Guest Selection */}
                             <div>
                                 <label className="block text-sm font-medium text-neutral-700 mb-3">
                                     Number of Guests
@@ -311,7 +305,7 @@ function MobileBookingModal({
                                     <div className="flex items-center justify-between p-4">
                                         <div>
                                             <p className="text-[15px] font-medium text-neutral-900">Adults</p>
-                                            <p className="text-[13px] text-neutral-500">{fmt(priceAdult)} each</p>
+                                            <p className="text-[13px] text-neutral-500">{fmt(priceMad)} each</p>
                                         </div>
                                         <div className="flex items-center gap-4">
                                             <button
@@ -334,7 +328,7 @@ function MobileBookingModal({
                                     <div className="flex items-center justify-between p-4">
                                         <div>
                                             <p className="text-[15px] font-medium text-neutral-900">Kids</p>
-                                            <p className="text-[13px] text-neutral-500">{fmt(priceKid)} each · under 12</p>
+                                            <p className="text-[13px] text-neutral-500">{fmt(kidsPrice)} each · under 12</p>
                                         </div>
                                         <div className="flex items-center gap-4">
                                             <button
@@ -357,7 +351,6 @@ function MobileBookingModal({
                                 </div>
                             </div>
 
-                            {/* Contact Info */}
                             <div className="space-y-4">
                                 <div>
                                     <label className="block text-sm font-medium text-neutral-700 mb-2">
@@ -391,15 +384,14 @@ function MobileBookingModal({
                                 </div>
                             </div>
 
-                            {/* Price Summary */}
                             <div className="bg-neutral-50 rounded-2xl p-4 space-y-2">
                                 <div className="flex justify-between text-sm text-neutral-600">
-                                    <span>{fmt(priceAdult)} × {adults} adult{adults !== 1 ? "s" : ""}</span>
+                                    <span>{fmt(priceMad)} x {adults} adult{adults !== 1 ? "s" : ""}</span>
                                     <span>{fmt(adultsTotal)}</span>
                                 </div>
                                 {kids > 0 && (
                                     <div className="flex justify-between text-sm text-neutral-600">
-                                        <span>{fmt(priceKid)} × {kids} kid{kids !== 1 ? "s" : ""}</span>
+                                        <span>{fmt(kidsPrice)} x {kids} kid{kids !== 1 ? "s" : ""}</span>
                                         <span>{fmt(kidsTotal)}</span>
                                     </div>
                                 )}
@@ -409,7 +401,6 @@ function MobileBookingModal({
                                 </div>
                             </div>
 
-                            {/* Submit Button */}
                             <button
                                 type="button"
                                 onClick={handleSubmit}
@@ -628,15 +619,6 @@ function BookingModal({
     );
 }
 
-function Row({ label, value }: { label: string; value: string }) {
-    return (
-        <div className="flex justify-between gap-3">
-            <span className="text-neutral-500">{label}</span>
-            <span className="font-medium text-neutral-900 dark:text-neutral-100 text-right">{value}</span>
-        </div>
-    );
-}
-
 interface ReservationData {
     listingTitle: string;
     address: string;
@@ -653,12 +635,9 @@ interface ReservationData {
 export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const {
         galleryImgs, title, address, reviewStart, reviewCount,
-        price, maxGuests, bedrooms, bathrooms, author,
+        price, priceMad, priceEur, maxGuests, author,
+        duration, scheduleDays, includes, tourDescription,
     } = listing;
-
-    const numericPrice = parseFloat(String(price).replace(/[^0-9.]/g, "")) || 100;
-    const PRICE_ADULT = numericPrice;
-    const PRICE_KID = Math.round(numericPrice * 0.5);
 
     const [calOpen, setCalOpen] = useState(false);
     const [guestsOpen, setGuestsOpen] = useState(false);
@@ -699,11 +678,12 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
         document.addEventListener("keydown", handleKeyDown);
         return () => document.removeEventListener("keydown", handleKeyDown);
-    }, [galleryOpen]);
+    }, [galleryOpen, galleryImgs.length]);
 
     const totalGuests = adults + kids;
-    const adultsTotal = adults * PRICE_ADULT;
-    const kidsTotal = kids * PRICE_KID;
+    const kidsPrice = Math.round(priceMad * 0.5);
+    const adultsTotal = adults * priceMad;
+    const kidsTotal = kids * kidsPrice;
     const grandTotal = adultsTotal + kidsTotal;
 
     const fmt = (n: number) => `${n.toLocaleString("en-US")} MAD`;
@@ -720,8 +700,8 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
             selectedDate: formatDate(selectedDate)!,
             adults,
             kids,
-            pricePerAdult: fmt(PRICE_ADULT),
-            pricePerKid: fmt(PRICE_KID),
+            pricePerAdult: fmt(priceMad),
+            pricePerKid: fmt(kidsPrice),
             adultsTotal: fmt(adultsTotal),
             kidsTotal: fmt(kidsTotal),
             grandTotal: fmt(grandTotal),
@@ -738,7 +718,6 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
         
         const message = `*New Booking Request*\n\n` +
             `*Tour:* ${reservationData.listingTitle}\n` +
-            `*Address:* ${reservationData.address}\n` +
             `*Date:* ${reservationData.selectedDate}\n` +
             `*Adults:* ${reservationData.adults}\n` +
             `*Kids:* ${reservationData.kids}\n` +
@@ -755,11 +734,17 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const renderSidebar = () => (
         <div className="sticky top-28 z-20 w-full overflow-visible">
             <div className="bg-white dark:bg-neutral-900 border border-neutral-200/60 dark:border-neutral-800/60 rounded-3xl p-7 shadow-xl shadow-neutral-200/50 dark:shadow-black/20 overflow-visible">
+                <div className="flex items-center gap-3 mb-6">
+                    <CalendarDaysIcon className="w-6 h-6 text-orange-500" />
+                    <span className="text-sm font-medium text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 px-3 py-1 rounded-full">
+                        {scheduleDays}
+                    </span>
+                </div>
 
                 <div className="flex justify-between items-end mb-7">
                     <div className="flex items-baseline gap-1.5">
-                        <span className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{fmt(PRICE_ADULT)}</span>
-                        <span className="text-neutral-500 text-[15px]">/ adult</span>
+                        <span className="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{priceMad}</span>
+                        <span className="text-neutral-500 text-[15px]">MAD</span>
                     </div>
                     <div className="flex items-center text-[14px] font-medium text-neutral-700 dark:text-neutral-300">
                         <StarIcon className="w-4 h-4 fill-orange-500 text-orange-500 dark:text-orange-400 mr-1.5" />
@@ -772,7 +757,6 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 </div>
 
                 <div className="bg-white dark:bg-neutral-900 border-2 border-neutral-200 dark:border-neutral-700 rounded-2xl mb-5 hover:border-orange-400 dark:hover:border-orange-500 transition-colors relative">
-
                     <div ref={calRef} className="relative border-b border-neutral-200 dark:border-neutral-700">
                         <button
                             type="button"
@@ -834,27 +818,24 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                         {guestsOpen && (
                             <div className="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-neutral-900
                                 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 p-2 mx-1">
-
                                 <CounterRow
                                     label="Adults"
-                                    sublabel={`${fmt(PRICE_ADULT)} each`}
+                                    sublabel={`${fmt(priceMad)} each`}
                                     value={adults}
                                     min={1}
                                     max={maxGuests || 10}
                                     onChange={setAdults}
                                 />
-
                                 <div className="border-t border-neutral-100 dark:border-neutral-800 mx-2">
                                     <CounterRow
                                         label="Kids"
-                                        sublabel={`${fmt(PRICE_KID)} each · under 12`}
+                                        sublabel={`${fmt(kidsPrice)} each · under 12`}
                                         value={kids}
                                         min={0}
                                         max={maxGuests || 10}
                                         onChange={setKids}
                                     />
                                 </div>
-
                                 <div className="mt-2 pt-4 border-t border-neutral-100 dark:border-neutral-800 flex justify-between items-center px-2">
                                     <p className="text-[13px] text-neutral-500">Max {maxGuests || 10} guests</p>
                                     <button
@@ -893,12 +874,12 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
                 <div className="space-y-4 text-[15px] text-neutral-600 dark:text-neutral-400">
                     <div className="flex justify-between">
-                        <span className="hover:underline cursor-pointer">{fmt(PRICE_ADULT)} × {adults} adult{adults !== 1 ? "s" : ""}</span>
+                        <span className="hover:underline cursor-pointer">{fmt(priceMad)} x {adults} adult{adults !== 1 ? "s" : ""}</span>
                         <span className="text-neutral-900 dark:text-neutral-200">{fmt(adultsTotal)}</span>
                     </div>
                     {kids > 0 && (
                         <div className="flex justify-between">
-                            <span className="hover:underline cursor-pointer">{fmt(PRICE_KID)} × {kids} kid{kids !== 1 ? "s" : ""}</span>
+                            <span className="hover:underline cursor-pointer">{fmt(kidsPrice)} x {kids} kid{kids !== 1 ? "s" : ""}</span>
                             <span className="text-neutral-900 dark:text-neutral-200">{fmt(kidsTotal)}</span>
                         </div>
                     )}
@@ -953,75 +934,106 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
     const renderGallery = () => (
         <div className="relative z-10">
-            {/* Desktop: 4-image grid */}
-            <div className="hidden md:grid grid-cols-4 grid-rows-2 gap-1.5 h-[45vh] md:h-[65vh] min-h-[350px] md:min-h-[500px] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-900">
+            <div className="hidden md:block">
                 <div 
-                    className="relative col-span-2 row-span-2 cursor-pointer group"
+                    className="grid grid-cols-12 gap-1.5 h-[55vh] md:h-[70vh] min-h-[450px] md:min-h-[550px] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-900 cursor-pointer"
                     onClick={() => { setCurrentImageIndex(0); setGalleryOpen(true); }}
                 >
-                    <Image src={galleryImgs[0]} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" priority />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-                    <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                    </div>
-                </div>
-                {galleryImgs.slice(1, 5).map((img: string, idx: number) => (
-                    <div 
-                        key={idx} 
-                        className="relative col-span-1 row-span-1 cursor-pointer group"
-                        onClick={() => { setCurrentImageIndex(idx + 1); setGalleryOpen(true); }}
-                    >
-                        <Image src={img || galleryImgs[0]} alt={`gallery-${idx + 2}`} fill className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
-                        <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                            </svg>
+                    <div className="col-span-7 relative group overflow-hidden rounded-l-3xl">
+                        <Image 
+                            src={galleryImgs[0]} 
+                            alt={title} 
+                            fill 
+                            sizes="(max-width: 768px) 100vw, 60vw"
+                            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                            priority 
+                            quality={90}
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                        <div className="absolute bottom-6 left-6 z-10">
+                            <div className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                View Gallery
+                            </div>
                         </div>
                     </div>
-                ))}
+                    <div className="col-span-5 grid grid-rows-2 gap-1.5">
+                        {galleryImgs.slice(1, 3).map((img: string, idx: number) => (
+                            <div 
+                                key={idx} 
+                                className="relative group overflow-hidden"
+                                onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx + 1); setGalleryOpen(true); }}
+                            >
+                                <Image 
+                                    src={img} 
+                                    alt={`gallery-${idx + 2}`} 
+                                    fill 
+                                    sizes="(max-width: 768px) 100vw, 40vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                                    quality={85}
+                                />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                                {idx === 1 && galleryImgs.length > 3 && (
+                                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/60 transition-colors duration-300">
+                                        <div className="text-center">
+                                            <span className="text-white font-bold text-xl block">+{galleryImgs.length - 3}</span>
+                                            <span className="text-white/80 text-sm">more photos</span>
+                                        </div>
+                                    </div>
+                                )}
+                                {galleryImgs.length <= 3 && (
+                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <div className="bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm p-2 rounded-full">
+                                            <svg className="w-4 h-4 text-neutral-700 dark:text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
 
-            {/* Mobile: Single main image with thumbnail strip */}
             <div className="md:hidden">
                 <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-100">
                     <Image 
                         src={galleryImgs[currentImageIndex]} 
                         alt={`${title} - Image ${currentImageIndex + 1}`} 
                         fill 
+                        sizes="100vw"
                         className="object-cover"
                         priority
+                        quality={90}
                     />
                     <button 
                         type="button" 
-                        className="absolute bottom-4 right-4 bg-white/90 dark:bg-neutral-900/90 px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 hover:bg-white dark:hover:bg-neutral-800 transition-all shadow-lg"
+                        className="absolute bottom-4 right-4 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 hover:bg-white dark:hover:bg-neutral-800 transition-all shadow-xl"
                         onClick={() => setGalleryOpen(true)}
                     >
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
-                        View all
+                        {currentImageIndex + 1} / {galleryImgs.length}
                     </button>
+                    {galleryImgs.length > 1 && (
+                        <div className="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-1.5">
+                            {galleryImgs.map((__img: string, idx: number) => (
+                                <button
+                                    key={idx}
+                                    type="button"
+                                    onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
+                                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                                        currentImageIndex === idx ? "bg-white scale-125" : "bg-white/60 hover:bg-white/80"
+                                    }`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
-                {/* Thumbnail strip */}
-                {galleryImgs.length > 1 && (
-                    <div className="flex gap-2 mt-3 overflow-x-auto pb-2 scrollbar-hide">
-                        {galleryImgs.map((img: string, idx: number) => (
-                            <button
-                                key={idx}
-                                type="button"
-                                onClick={() => setCurrentImageIndex(idx)}
-                                className={`relative flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden transition-all ${
-                                    currentImageIndex === idx ? "ring-2 ring-orange-500" : "opacity-60 hover:opacity-100"
-                                }`}
-                            >
-                                <Image src={img} alt={`thumbnail-${idx + 1}`} fill className="object-cover" />
-                            </button>
-                        ))}
-                    </div>
-                )}
             </div>
         </div>
     );
@@ -1033,85 +1045,73 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
             <div className="mt-10 sm:mt-14 grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-14 lg:gap-16 items-start">
                 <div className="lg:col-span-2 space-y-8 sm:space-y-12">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start pb-6 sm:pb-10 border-b border-neutral-200 dark:border-neutral-800 gap-4">
-                        <div className="flex-1">
-                            <h2 className="text-lg sm:text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-2 sm:mb-3">
-                                Hosted by {author.displayName}
-                            </h2>
-                            <div className="flex flex-wrap items-center text-neutral-500 dark:text-neutral-400 text-xs sm:text-[15px] gap-x-3 gap-y-1">
-                                <span>{maxGuests} guests</span>
-                                <span className="text-neutral-300">·</span>
-                                <span>{bedrooms} bedrooms</span>
-                                <span className="text-neutral-300">·</span>
-                                <span>{bedrooms} beds</span>
-                                <span className="text-neutral-300">·</span>
-                                <span>{bathrooms} bath</span>
-                            </div>
+                    <div className="flex items-start gap-4 py-6 border-b border-neutral-200 dark:border-neutral-800">
+                        <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
+                            <ClockIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                         </div>
-                        <div className="relative w-12 sm:w-16 h-12 sm:h-16 rounded-xl sm:rounded-2xl overflow-hidden ml-0 sm:ml-6 ring-2 ring-white dark:ring-neutral-800 shadow-lg">
-                            <Image src={author.avatar} alt={author.displayName} fill className="object-cover" />
+                        <div>
+                            <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100 mb-1">Duration</h3>
+                            <p className="text-neutral-600 dark:text-neutral-400">{duration || "Half day experience"}</p>
                         </div>
                     </div>
 
-                    <div className="space-y-6 sm:space-y-8 pb-6 sm:pb-10 border-b border-neutral-200 dark:border-neutral-800">
-                        <div className="flex items-start gap-4 sm:gap-5">
-                            <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl sm:rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
-                                <SparklesIcon className="w-5 sm:w-6 h-5 sm:h-6 text-orange-700 dark:text-orange-400" />
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-sm sm:text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">{author.displayName} is a Superhost</h3>
-                                <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-[15px] leading-relaxed">Superhosts are experienced, highly rated hosts committed to providing great stays for guests.</p>
-                            </div>
+                    <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center flex-shrink-0">
+                            <CalendarDaysIcon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                         </div>
-                        <div className="flex items-start gap-4 sm:gap-5">
-                            <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl sm:rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
-                                <MapPinIcon className="w-5 sm:w-6 h-5 sm:h-6 text-orange-700 dark:text-orange-400" />
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-sm sm:text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">Great location</h3>
-                                <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-[15px] leading-relaxed">100% of recent guests gave the location a 5-star rating.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-4 sm:gap-5">
-                            <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl sm:rounded-2xl bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
-                                <ShieldCheckIcon className="w-5 sm:w-6 h-5 sm:h-6 text-orange-700 dark:text-orange-400" />
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-sm sm:text-[17px] text-neutral-900 dark:text-neutral-100 mb-1">Free cancellation for 48 hours</h3>
-                                <p className="text-neutral-500 dark:text-neutral-400 text-xs sm:text-[15px] leading-relaxed">Get a full refund if you change your mind.</p>
-                            </div>
+                        <div>
+                            <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100 mb-1">Available</h3>
+                            <p className="text-neutral-600 dark:text-neutral-400">{scheduleDays || "Every day"}</p>
                         </div>
                     </div>
 
                     <div className="pb-6 sm:pb-10 border-b border-neutral-200 dark:border-neutral-800">
-                        <h3 className="text-lg sm:text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-4 sm:mb-6">About this space</h3>
-                        <div className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-[16px] leading-relaxed space-y-3 sm:space-y-5">
-                            <p>Experience the ultimate relaxation in our beautifully designed space. Perfect for families, couples, and solo travelers looking for a unique getaway.</p>
-                            <p>Located just minutes away from local attractions in {address}, you'll have everything you need for a memorable stay.</p>
+                        <h3 className="text-lg sm:text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-4 sm:mb-6">About This Tour</h3>
+                        <div className="text-neutral-600 dark:text-neutral-300 text-xs sm:text-[16px] leading-relaxed space-y-4">
+                            <p>{tourDescription || `Experience this incredible adventure in ${address}. Our professional guides will ensure you have an unforgettable experience.`}</p>
                         </div>
-                        <button type="button" className="mt-6 sm:mt-8 font-semibold text-xs sm:text-[15px] text-orange-700 dark:text-orange-400 flex items-center gap-1.5 hover:gap-2 transition-all">
-                            Show more 
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                        </button>
+                    </div>
+
+                    <div className="pb-6 sm:pb-10 border-b border-neutral-200 dark:border-neutral-800">
+                        <h3 className="text-lg sm:text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-5 sm:mb-7">What's Included</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                            {includes && includes.length > 0 ? (
+                                includes.map((item: string, idx: number) => (
+                                    <div key={idx} className="flex items-center gap-3">
+                                        <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                            <CheckIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <span className="text-sm sm:text-[15px] text-neutral-700 dark:text-neutral-300">{item}</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                            <TruckIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <span className="text-sm sm:text-[15px] text-neutral-700 dark:text-neutral-300">Round Trip Transport</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                            <UserGroupIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <span className="text-sm sm:text-[15px] text-neutral-700 dark:text-neutral-300">Professional Guide</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                                            <SparklesIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <span className="text-sm sm:text-[15px] text-neutral-700 dark:text-neutral-300">Moroccan Mint Tea</span>
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
 
                     {listing.itinerary && listing.itinerary.length > 0 && (
                         <ItineraryTimeline itinerary={listing.itinerary} />
                     )}
-
-                    <div className="pb-4 sm:pb-6">
-                        <h3 className="text-lg sm:text-[24px] font-semibold text-neutral-900 dark:text-neutral-100 mb-5 sm:mb-7">What this place offers</h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 sm:gap-y-4 gap-x-6 sm:gap-x-8">
-                            {["Wifi", "Kitchen", "Free parking on premises", "Pool", "Air conditioning", "Patio or balcony", "Security cameras on property", "Carbon monoxide alarm"].map((item, i) => (
-                                <div key={i} className="flex items-center gap-3 sm:gap-4 py-1">
-                                    <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-orange-50 dark:bg-orange-800/30 flex items-center justify-center flex-shrink-0">
-                                        <CheckIcon className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-orange-700 dark:text-orange-400" />
-                                    </div>
-                                    <span className="text-xs sm:text-[16px] text-neutral-700 dark:text-neutral-300">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
                 </div>
 
                 <div className="hidden lg:block lg:col-span-1 lg:self-start overflow-visible">
@@ -1119,15 +1119,27 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 </div>
             </div>
 
-            {/* Mobile Bottom Bar - Floating Orange Button */}
             <div className="lg:hidden fixed bottom-4 left-0 right-0 z-40 px-4">
-                <button
-                    type="button"
-                    onClick={openMobileBooking}
-                    className="w-full py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-base shadow-lg shadow-orange-500/30 transition-all flex items-center justify-center gap-2"
-                >
-                    Reserve
-                </button>
+                <div className="bg-white dark:bg-neutral-900 rounded-2xl p-4 shadow-lg border border-neutral-200 dark:border-neutral-800">
+                    <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center gap-2">
+                            <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{priceMad} MAD</span>
+                            <span className="text-neutral-500 text-sm">/ person</span>
+                        </div>
+                        <div className="flex items-center gap-1 text-sm">
+                            <StarIcon className="w-4 h-4 fill-orange-500 text-orange-500" />
+                            <span className="font-medium">{reviewStart || 4.8}</span>
+                            <span className="text-neutral-400">({reviewCount || 28})</span>
+                        </div>
+                    </div>
+                    <button
+                        type="button"
+                        onClick={openMobileBooking}
+                        className="w-full py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-base shadow-lg shadow-orange-500/30 transition-all flex items-center justify-center gap-2"
+                    >
+                        Book Now
+                    </button>
+                </div>
             </div>
 
             {showModal && reservationData && (
@@ -1138,7 +1150,6 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 />
             )}
 
-            {/* Mobile Booking Modal */}
             <MobileBookingModal
                 isOpen={mobileBookingOpen}
                 onClose={() => setMobileBookingOpen(false)}
@@ -1151,92 +1162,103 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
                 kids={kids}
                 onKidsChange={setKids}
                 maxGuests={maxGuests || 10}
-                priceAdult={PRICE_ADULT}
-                priceKid={PRICE_KID}
+                priceMad={priceMad}
                 listingTitle={title}
-                listingAddress={address}
                 onWhatsApp={handleWhatsApp}
             />
 
-            {/* Full Screen Gallery Modal */}
             {galleryOpen && (
-                <div className="fixed inset-0 z-50">
-                    {/* Blurred Backdrop */}
+                <div className="fixed inset-0 z-50 bg-black/95">
                     <div 
-                        className="absolute inset-0 bg-black/90 backdrop-blur-md"
+                        className="absolute inset-0 cursor-pointer"
                         onClick={() => setGalleryOpen(false)}
                     />
 
-                    {/* Close Button */}
                     <button
                         type="button"
                         onClick={() => setGalleryOpen(false)}
-                        className="absolute top-4 right-4 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                        className="absolute top-4 right-4 z-20 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-sm"
                     >
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
 
-                    {/* Counter */}
-                    <div className="absolute top-4 left-4 z-10 px-4 py-2 rounded-full bg-black/50 text-white text-sm font-medium">
-                        {currentImageIndex + 1} / {galleryImgs.length}
+                    <div className="absolute top-4 left-4 z-20 px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm text-white text-sm font-medium flex items-center gap-2">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        {currentImageIndex + 1} of {galleryImgs.length}
                     </div>
 
-                    {/* Main Image */}
-                    <div className="relative h-full w-full flex items-center justify-center px-16">
-                        <div className="relative w-full h-full max-w-6xl">
+                    <div className="relative h-full w-full flex items-center justify-center px-8 sm:px-16">
+                        <div className="relative w-full h-full max-w-7xl">
                             <Image
                                 src={galleryImgs[currentImageIndex]}
                                 alt={`Gallery ${currentImageIndex + 1}`}
                                 fill
+                                sizes="100vw"
                                 className="object-contain"
                                 priority
+                                quality={95}
                             />
                         </div>
                     </div>
 
-                    {/* Previous Button */}
                     {galleryImgs.length > 1 && (
-                        <button
-                            type="button"
-                            onClick={() => setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1))}
-                            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-                        >
-                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
+                        <>
+                            <button
+                                type="button"
+                                onClick={() => setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1))}
+                                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-4 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all backdrop-blur-sm"
+                            >
+                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+
+                            <button
+                                type="button"
+                                onClick={() => setCurrentImageIndex((prev) => (prev < galleryImgs.length - 1 ? prev + 1 : 0))}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-4 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all backdrop-blur-sm"
+                            >
+                                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </>
                     )}
 
-                    {/* Next Button */}
                     {galleryImgs.length > 1 && (
-                        <button
-                            type="button"
-                            onClick={() => setCurrentImageIndex((prev) => (prev < galleryImgs.length - 1 ? prev + 1 : 0))}
-                            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-                        >
-                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    )}
-
-                    {/* Thumbnails */}
-                    {galleryImgs.length > 1 && (
-                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 px-4 py-2 rounded-full bg-black/50">
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2 p-3 rounded-full bg-black/50 backdrop-blur-sm">
                             {galleryImgs.map((img: string, idx: number) => (
                                 <button
                                     key={idx}
                                     type="button"
                                     onClick={() => setCurrentImageIndex(idx)}
-                                    className={`w-3 h-3 rounded-full transition-all ${
-                                        currentImageIndex === idx ? "bg-white scale-110" : "bg-white/40 hover:bg-white/60"
+                                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                                        currentImageIndex === idx ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
                                     }`}
                                 />
                             ))}
                         </div>
                     )}
+
+                    <div className="absolute bottom-6 right-4 z-20 flex gap-2">
+                        <button
+                            type="button"
+                            onClick={() => {
+                                if (navigator.share) {
+                                    navigator.share({ title: `${title} - Photo ${currentImageIndex + 1}`, url: window.location.href });
+                                }
+                            }}
+                            className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors backdrop-blur-sm"
+                        >
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             )}
         </div>
