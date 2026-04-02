@@ -61,11 +61,11 @@ const Hero = () => {
           </button>
           
           <Link
-            href="/airport-pickup"
+            href="/transfers"
             className="group relative inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2.5 sm:px-6 sm:py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20 hover:border-white/50 backdrop-blur-sm"
           >
             <Plane className="h-4 w-4" />
-            <span className="tracking-tight">Airport Pickup</span>
+            <span className="tracking-tight">Transfers</span>
           </Link>
         </div>
       </div>

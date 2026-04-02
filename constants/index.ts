@@ -3,7 +3,7 @@ export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
   { href: '/tours', key: 'tours', label: 'Tours' },
   { href: '/packs', key: 'packs', label: 'Packs' },
-  { href: '/airport-pickup', key: 'airport-pickup', label: 'Airport Pickup' },
+  { href: '/transfers', key: 'transfers', label: 'Transfers' },
   { href: '/about', key: 'about', label: 'About' },
   { href: '/contact', key: 'contact', label: 'Contact' },
 ];

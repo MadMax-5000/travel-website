@@ -12,6 +12,7 @@ import {
     ChevronRightIcon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { MessageCircle } from "lucide-react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { PackDataType, StayDataType } from "@/data/types";
 import StartRating from "@/components/StartRating";
@@ -363,10 +364,7 @@ Phone: ${customerPhone}`;
                                         onClick={handleWhatsApp}
                                         className="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M17.6 14c-.9-1.2-2.1-2-3.5-2.4-1.4-.4-3-.3-4.3.3l-1.6 1.6c-1.3 1.3-1.5 3.5-.4 5 .9 1.2 2.4 2 4 2.2 1.5.2 2.9-.2 4-1l1.8-1.5c.5-.4.7-1 .8-1.6.1-.7-.2-1.4-.8-1.8l-.6-.6z"/>
-                                            <path d="M17.6 14c1.1-1.1 1.8-2.6 1.9-4.2.1-1.7-.4-3.4-1.4-4.7C16.8 3.2 15 2 13 2l-.7.1C10.7 2.2 9 2.7 7.6 3.6L6.2 5c-1.4 1-2.2 2.5-2.4 4l-.1 1.4c0 1.7.6 3.3 1.8 4.5l1.2 1.2c1.3 1.3 3 2.1 4.9 2.1h.7c1.4-.1 2.8-.6 3.9-1.4z"/>
-                                        </svg>
+                                        <MessageCircle className="w-5 h-5" />
                                         Book via WhatsApp
                                     </button>
                                 </>

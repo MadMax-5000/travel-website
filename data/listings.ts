@@ -159,6 +159,19 @@ function generateItinerary(title: string, duration: string, includes: string[]):
             description: "Enjoy an authentic Moroccan meal at a local establishment.",
             stepNumber: step++
         });
+    } else if (title.toLowerCase().includes('berber fantasia')) {
+        items.push({
+            time: "08:00 PM",
+            title: "Berber Fantasia Show",
+            description: "Experience the spectacular Berber Fantasia show featuring traditional music, horseback performances, and cultural displays.",
+            stepNumber: step++
+        });
+        items.push({
+            time: "09:30 PM",
+            title: "Traditional Moroccan Dinner",
+            description: "Enjoy a delicious authentic Moroccan dinner with live entertainment including belly dancing.",
+            stepNumber: step++
+        });
     }
     
     items.push({

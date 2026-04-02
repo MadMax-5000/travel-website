@@ -7,10 +7,8 @@ import TourCard from "@/components/TourCard"
 import { SlidersHorizontal, MapPin, X } from "lucide-react"
 
 export default function ToursPage() {
-  const [currentPage, setCurrentPage] = useState(1)
   const [selectedCategory, setSelectedCategory] = useState<string | number | null>(null)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const itemsPerPage = 12
 
   const categories = useMemo(() => DEMO_STAY_CATEGORIES, [])
 
@@ -20,13 +18,6 @@ export default function ToursPage() {
       return categoryMatch
     })
   }, [selectedCategory])
-
-  const totalPages = Math.ceil(filteredTours.length / itemsPerPage)
-
-  const currentTours = filteredTours.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  )
 
   const clearFilters = () => {
     setSelectedCategory(null)
@@ -187,9 +178,9 @@ export default function ToursPage() {
               </button>
             </div>
 
-            {currentTours.length > 0 ? (
-              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {currentTours.map((tour, index) => (
+            {filteredTours.length > 0 ? (
+              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                {filteredTours.map((tour) => (
                   <TourCard key={tour.id} data={tour} />
                 ))}
               </div>
@@ -209,40 +200,6 @@ export default function ToursPage() {
                   className="px-6 py-2.5 rounded-full bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors"
                 >
                   Clear filters
-                </button>
-              </div>
-            )}
-
-            {totalPages > 1 && (
-              <div className="flex mt-10 sm:mt-12 justify-center items-center gap-2">
-                <button
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                  className="px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
-                >
-                  Prev
-                </button>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                    <button
-                      key={page}
-                      onClick={() => setCurrentPage(page)}
-                      className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${
-                        currentPage === page
-                          ? "bg-orange-500 text-white"
-                          : "text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  ))}
-                </div>
-                <button
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                  disabled={currentPage === totalPages}
-                  className="px-4 py-2 rounded-full border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm font-medium"
-                >
-                  Next
                 </button>
               </div>
             )}

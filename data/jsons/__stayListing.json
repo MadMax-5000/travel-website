@@ -757,7 +757,33 @@
     "duration": "from 07:00pm to 11:45pm",
     "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
     "includes": ["Round Trip Transport", "Folklore Show", "Acrobatics", "Fire Show", "Belly Dancer", "Traditional Moroccan Dinner"],
-    "tourDescription": "Experience authentic Moroccan culture at this spectacular evening show. Watch traditional Berber folklore, thrilling acrobatics, and a mesmerizing fire show. Enjoy a delicious traditional Moroccan dinner while being entertained by skilled belly dancers."
+    "tourDescription": "Experience authentic Moroccan culture at this spectacular evening show. Watch traditional Berber folklore, thrilling acrobatics, and a mesmerizing fire show. Enjoy a delicious traditional Moroccan dinner while being entertained by skilled belly dancers.",
+    "itinerary": [
+      {
+        "time": "07:00 PM",
+        "title": "Hotel Pickup",
+        "description": "Our comfortable transport will pick you up from your hotel in Agadir",
+        "stepNumber": 1
+      },
+      {
+        "time": "08:00 PM",
+        "title": "Berber Fantasia Show",
+        "description": "Experience the spectacular Berber Fantasia show featuring traditional music, horseback performances, and cultural displays",
+        "stepNumber": 2
+      },
+      {
+        "time": "09:30 PM",
+        "title": "Traditional Moroccan Dinner",
+        "description": "Enjoy a delicious authentic Moroccan dinner with live entertainment including belly dancing",
+        "stepNumber": 3
+      },
+      {
+        "time": "11:30 PM",
+        "title": "Return Transport",
+        "description": "Relax as we transport you back to your hotel in Agadir",
+        "stepNumber": 4
+      }
+    ]
   },
   {
     "id": "tour_21",
