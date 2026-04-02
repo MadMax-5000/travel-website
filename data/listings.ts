@@ -235,10 +235,6 @@ const DEMO_PACK_LISTINGS = __packsListing.map((post, index): PackDataType => {
         (taxonomy) => taxonomy.id === post.listingCategory.id
     )[0];
 
-    const tours = post.tours && post.tours.length > 0 
-        ? DEMO_STAY_LISTINGS.filter((tour) => (post.tours as string[]).includes(tour.id as string))
-        : [];
-
     return {
         ...post,
         id: post.id || `pack_${index}_`,
@@ -248,7 +244,6 @@ const DEMO_PACK_LISTINGS = __packsListing.map((post, index): PackDataType => {
         author: DEMO_AUTHORS.filter((user) => user.id === post.authorId)[0],
         listingCategory: category,
         href: `/packs/${post.slug || `pack-${index}`}` as Route,
-        tours: tours,
     };
 });
 

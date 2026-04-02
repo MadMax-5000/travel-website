@@ -25,7 +25,6 @@ const PackCard = ({ data, className = "" }: PackCardProps) => {
         href,
         galleryImgs,
         price,
-        tours,
     } = data
 
     const imageSrc = typeof galleryImgs?.[0] === 'string' 

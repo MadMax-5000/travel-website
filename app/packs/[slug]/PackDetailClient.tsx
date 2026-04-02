@@ -48,7 +48,7 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
     const [customerPhone, setCustomerPhone] = useState("");
 
     const priceMatch = pack.price.match(/[\d,]+/);
-    const originalPriceMatch = pack.originalPrice.match(/[\d,]+/);
+    const originalPriceMatch = pack.originalPrice?.match(/[\d,]+/);
     const priceAdult = priceMatch ? parseInt(priceMatch[0].replace(/,/g, '')) : 0;
     const originalPrice = originalPriceMatch ? parseInt(originalPriceMatch[0].replace(/,/g, '')) : 0;
     const priceKid = Math.round(priceAdult * 0.5);

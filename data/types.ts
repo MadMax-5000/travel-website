@@ -151,8 +151,8 @@ export interface PackDataType {
     like: boolean;
     galleryImgs: (StaticImageData | string)[];
     price: string;
-    originalPrice: string;
-    savings: string;
+    originalPrice?: string;
+    savings?: string;
     duration: string;
     maxGuests: number;
     listingCategory: TaxonomyType;
