@@ -23,7 +23,7 @@ function generateItinerary(title: string, duration: string, includes: string[]):
 
     if (includes.some(i => i.toLowerCase().includes('guide'))) {
         items.push({
-            time: "Tour Start",
+            time: "",
             title: "Meet Your Guide",
             description: "Your professional guide will accompany you throughout the experience.",
             stepNumber: step++
@@ -32,95 +32,95 @@ function generateItinerary(title: string, duration: string, includes: string[]):
 
     if (title.toLowerCase().includes('city tour')) {
         items.push({
-            time: "10:00 AM",
+            time: "",
             title: "Marina & Tourist Area",
             description: "Visit the beautiful Marina and explore the main tourist attractions.",
             stepNumber: step++
         });
         items.push({
-            time: "11:00 AM",
+            time: "",
             title: "Kasbah (Agadir Oufella)",
             description: "Discover the historic Kasbah and wander through the old medina.",
             stepNumber: step++
         });
         items.push({
-            time: "11:30 AM",
+            time: "",
             title: "Agadir Garden",
             description: "Stroll through the beautiful Agadir Garden and enjoy the peaceful surroundings.",
             stepNumber: step++
         });
         items.push({
-            time: "12:00 PM",
+            time: "",
             title: "Mohammed V Mosque",
             description: "Visit the oldest mosque in Agadir and discover its historical significance.",
             stepNumber: step++
         });
         items.push({
-            time: "12:30 PM",
+            time: "",
             title: "Argan Cooperative",
             description: "See how argan oil and products are made, and enjoy traditional Moroccan tea.",
             stepNumber: step++
         });
         items.push({
-            time: "01:00 PM",
+            time: "",
             title: "Souk ALHAD",
             description: "Explore the vibrant Souk ALHAD market and enjoy traditional mint tea.",
             stepNumber: step++
         });
     } else if (title.toLowerCase().includes('quad') || title.toLowerCase().includes('buggy')) {
         items.push({
-            time: "Arrival",
+            time: "",
             title: "Equipment & Safety Briefing",
             description: "Receive your equipment and comprehensive safety instructions.",
             stepNumber: step++
         });
         items.push({
-            time: "Adventure",
+            time: "",
             title: "Desert Exploration",
             description: "Navigate through stunning dunes and desert landscapes.",
             stepNumber: step++
         });
         items.push({
-            time: "Return",
+            time: "",
             title: "Relaxation",
             description: "Enjoy traditional Moroccan mint tea after your adventure.",
             stepNumber: step++
         });
     } else if (title.toLowerCase().includes('boat')) {
         items.push({
-            time: "09:00 AM",
+            time: "",
             title: "Marina Departure",
             description: "Board your boat at Agadir Marina.",
             stepNumber: step++
         });
         items.push({
-            time: "Sea Time",
+            time: "",
             title: "Swimming & Fishing",
             description: "Enjoy swimming in crystal-clear waters and try fishing.",
             stepNumber: step++
         });
         items.push({
-            time: "12:00 PM",
+            time: "",
             title: "Onboard Lunch",
             description: "Feast on a delicious lunch prepared on board.",
             stepNumber: step++
         });
     } else if (title.toLowerCase().includes('camel') || title.toLowerCase().includes('horse')) {
         items.push({
-            time: "Arrival",
+            time: "",
             title: "Mount Selection",
             description: "Choose your camel or horse for the adventure.",
             stepNumber: step++
         });
         items.push({
-            time: "2 Hours",
+            time: "",
             title: "Forest & River Trail",
             description: "Ride through scenic forest paths and along the river.",
             stepNumber: step++
         });
         if (title.toLowerCase().includes('sunset') || title.toLowerCase().includes('bbq')) {
             items.push({
-                time: "Sunset",
+                time: "",
                 title: "Barbecue Dinner",
                 description: "Enjoy a traditional Moroccan BBQ dinner under the stars.",
                 stepNumber: step++
@@ -128,64 +128,52 @@ function generateItinerary(title: string, duration: string, includes: string[]):
         }
     } else if (title.toLowerCase().includes('marrakech')) {
         items.push({
-            time: "07:15 AM",
-            title: "Departure from Agadir",
-            description: "Comfortable journey to the Red City.",
-            stepNumber: step++
-        });
-        items.push({
-            time: "Arrival",
+            time: "",
             title: "Koutoubia Mosque",
             description: "Visit the iconic landmark of Marrakech.",
             stepNumber: step++
         });
         items.push({
-            time: "Market",
+            time: "",
             title: "Traditional Souks",
             description: "Get lost in the colorful maze of traditional markets.",
             stepNumber: step++
         });
         items.push({
-            time: "Evening",
+            time: "",
             title: "Jamaa el-Fna Square",
             description: "Experience the magic of the famous square.",
             stepNumber: step++
         });
     } else if (title.toLowerCase().includes('essaouira')) {
         items.push({
-            time: "07:30 AM",
-            title: "Journey to Essaouira",
-            description: "Scenic drive to the windswept Atlantic coast.",
-            stepNumber: step++
-        });
-        items.push({
-            time: "Port",
+            time: "",
             title: "Historic Harbor",
             description: "Explore the traditional fishing port.",
             stepNumber: step++
         });
         items.push({
-            time: "Medina",
+            time: "",
             title: "UNESCO Old City",
             description: "Wander through the charming blue and white medina.",
             stepNumber: step++
         });
     } else if (includes.some(i => i.toLowerCase().includes('lunch'))) {
         items.push({
-            time: "Midday",
+            time: "",
             title: "Local Lunch",
             description: "Enjoy an authentic Moroccan meal at a local establishment.",
             stepNumber: step++
         });
     } else if (title.toLowerCase().includes('berber fantasia')) {
         items.push({
-            time: "08:00 PM",
+            time: "",
             title: "Berber Fantasia Show",
             description: "Experience the spectacular Berber Fantasia show featuring traditional music, horseback performances, and cultural displays.",
             stepNumber: step++
         });
         items.push({
-            time: "09:30 PM",
+            time: "",
             title: "Traditional Moroccan Dinner",
             description: "Enjoy a delicious authentic Moroccan dinner with live entertainment including belly dancing.",
             stepNumber: step++

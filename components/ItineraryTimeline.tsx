@@ -100,11 +100,13 @@ export default function ItineraryTimeline({ itinerary }: ItineraryTimelineProps)
                                 </div>
 
                                 <div className="flex-1 min-w-0 pt-1">
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <span className={`text-[10px] font-semibold uppercase tracking-wide ${isFirst ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-400 dark:text-neutral-500'}`}>
-                                            {item.time}
-                                        </span>
-                                    </div>
+                                    {item.time && (
+                                        <div className="flex items-center gap-2 mb-1">
+                                            <span className={`text-[10px] font-semibold uppercase tracking-wide ${isFirst ? 'text-orange-600 dark:text-orange-400' : 'text-neutral-400 dark:text-neutral-500'}`}>
+                                                {item.time}
+                                            </span>
+                                        </div>
+                                    )}
                                     <h4 className="font-semibold text-sm sm:text-base text-neutral-900 dark:text-neutral-100 mb-0.5">
                                         {item.title}
                                     </h4>
