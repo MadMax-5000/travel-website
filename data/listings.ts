@@ -13,14 +13,14 @@ import { Route } from "@/routers/types";
 function generateItinerary(title: string, duration: string, includes: string[]): ItineraryItem[] {
     const items: ItineraryItem[] = [];
     let step = 1;
-    
+
     items.push({
         time: "Hotel Pickup",
         title: "Pickup from Your Hotel",
         description: "Our driver will pick you up from your hotel reception or designated meeting point.",
         stepNumber: step++
     });
-    
+
     if (includes.some(i => i.toLowerCase().includes('guide'))) {
         items.push({
             time: "Tour Start",
@@ -29,7 +29,7 @@ function generateItinerary(title: string, duration: string, includes: string[]):
             stepNumber: step++
         });
     }
-    
+
     if (title.toLowerCase().includes('city tour')) {
         items.push({
             time: "10:00 AM",
@@ -39,12 +39,30 @@ function generateItinerary(title: string, duration: string, includes: string[]):
         });
         items.push({
             time: "11:00 AM",
-            title: "Kasbah & Old City",
+            title: "Kasbah (Agadir Oufella)",
             description: "Discover the historic Kasbah and wander through the old medina.",
             stepNumber: step++
         });
         items.push({
+            time: "11:30 AM",
+            title: "Agadir Garden",
+            description: "Stroll through the beautiful Agadir Garden and enjoy the peaceful surroundings.",
+            stepNumber: step++
+        });
+        items.push({
             time: "12:00 PM",
+            title: "Mohammed V Mosque",
+            description: "Visit the oldest mosque in Agadir and discover its historical significance.",
+            stepNumber: step++
+        });
+        items.push({
+            time: "12:30 PM",
+            title: "Argan Cooperative",
+            description: "See how argan oil and products are made, and enjoy traditional Moroccan tea.",
+            stepNumber: step++
+        });
+        items.push({
+            time: "01:00 PM",
             title: "Souk ALHAD",
             description: "Explore the vibrant Souk ALHAD market and enjoy traditional mint tea.",
             stepNumber: step++
@@ -173,14 +191,14 @@ function generateItinerary(title: string, duration: string, includes: string[]):
             stepNumber: step++
         });
     }
-    
+
     items.push({
         time: "Return",
         title: "Hotel Drop-off",
         description: "Relaxed journey back with drop-off at your hotel.",
         stepNumber: step
     });
-    
+
     return items;
 }
 
@@ -197,7 +215,7 @@ const DEMO_STAY_LISTINGS = __stayListing.map((post, index): StayDataType => {
         isAds: post.isAds,
         author: DEMO_AUTHORS.filter((user) => user.id === post.authorId)[0],
         listingCategory: category,
-        href: `/listing/${post.slug || `stay-listing-${index}`}` as Route,
+        href: `/tour/${post.slug || `stay-listing-${index}`}` as Route,
         bedrooms: 2,
         bathrooms: 1,
         maxGuests: post.maxGuests || 4,

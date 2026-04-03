@@ -1,6 +1,6 @@
 import React from "react";
 import { ItineraryItem } from "@/data/types";
-import { MapPinIcon, ClockIcon } from "@heroicons/react/24/outline";
+import { Clock, MapPin, Anchor, Castle, Trees, Landmark, Factory, ShoppingBag } from "lucide-react";
 
 interface ItineraryTimelineProps {
     itinerary: ItineraryItem[];
@@ -11,15 +11,28 @@ export default function ItineraryTimeline({ itinerary }: ItineraryTimelineProps)
 
     const getIcon = (title: string) => {
         const lower = title.toLowerCase();
-        if (lower.includes('pickup') || lower.includes('departure') || lower.includes('arrival')) {
-            return (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-            );
+        if (lower.includes('pickup') || lower.includes('departure') || lower.includes('arrival') || lower.includes('hotel')) {
+            return <MapPin className="w-5 h-5" />;
         }
-        if (lower.includes('swim') || lower.includes('beach') || lower.includes('ocean')) {
+        if (lower.includes('marina') || lower.includes('tourist')) {
+            return <Anchor className="w-5 h-5" />;
+        }
+        if (lower.includes('kasbah') || lower.includes('medina')) {
+            return <Castle className="w-5 h-5" />;
+        }
+        if (lower.includes('garden') || lower.includes('park')) {
+            return <Trees className="w-5 h-5" />;
+        }
+        if (lower.includes('mosque') || lower.includes('religious')) {
+            return <Landmark className="w-5 h-5" />;
+        }
+        if (lower.includes('argan') || lower.includes('cooperative')) {
+            return <Factory className="w-5 h-5" />;
+        }
+        if (lower.includes('souk') || lower.includes('market') || lower.includes('shopping')) {
+            return <ShoppingBag className="w-5 h-5" />;
+        }
+        if (lower.includes('swim') || lower.includes('beach') || lower.includes('ocean') || lower.includes('sea')) {
             return (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
@@ -33,7 +46,7 @@ export default function ItineraryTimeline({ itinerary }: ItineraryTimelineProps)
                 </svg>
             );
         }
-        if (lower.includes('guide') || lower.includes('meet') || lower.includes('tour')) {
+        if (lower.includes('guide') || lower.includes('meet')) {
             return (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -54,17 +67,13 @@ export default function ItineraryTimeline({ itinerary }: ItineraryTimelineProps)
                 </svg>
             );
         }
-        return (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        );
+        return <Clock className="w-5 h-5" />;
     };
 
     return (
         <div className="pb-6 sm:pb-8">
             <h3 className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-5 flex items-center gap-2">
-                <ClockIcon className="w-5 h-5 text-orange-500" />
+                <Clock className="w-5 h-5 text-orange-500" />
                 Tour Itinerary
             </h3>
             <div className="relative">
