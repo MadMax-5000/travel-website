@@ -463,13 +463,13 @@ const PacksSection = () => {
           <div className="flex items-center justify-between gap-6 mb-4">
             <div className="flex-1 max-w-2xl">
               <div className="flex items-center gap-2 mb-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full text-xs font-semibold text-blue-600 dark:text-blue-400">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 dark:bg-orange-900/30 rounded-full text-xs font-semibold text-orange-600 dark:text-orange-400">
                   <Plane className="w-3 h-3" />
                   Packages
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">
-                Curated <span className="font-serif italic text-blue-600 dark:text-blue-500">Packages</span>
+                Curated <span className="font-serif italic text-orange-500">Packages</span>
               </h2>
               <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
                 Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together.
@@ -479,7 +479,7 @@ const PacksSection = () => {
               <button
                 onClick={() => scroll("left")}
                 disabled={!canScrollLeft}
-                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -488,7 +488,7 @@ const PacksSection = () => {
               <button
                 onClick={() => scroll("right")}
                 disabled={!canScrollRight}
-                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-orange-500 hover:text-orange-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -527,7 +527,7 @@ const PacksSection = () => {
         <div className="flex justify-center mt-8 md:mt-12">
           <Link
             href="/packs"
-            className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors text-sm sm:text-base"
           >
             View All Packages
             <ArrowRight className="w-4 h-4" />
