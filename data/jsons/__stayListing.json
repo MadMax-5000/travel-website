@@ -464,44 +464,7 @@
     "includes": ["Round Trip Transport", "Entrance Ticket", "Dolphin Show", "Photo Opportunity"],
     "tourDescription": "Be amazed by the intelligence and grace of bottlenose dolphins in a spectacular show. Watch these incredible creatures perform incredible acrobatics and interact with their trainers. A memorable experience for all ages."
   },
-  {
-    "id": "tour_15",
-    "authorId": 1,
-    "date": "2026-02-15",
-    "href": "/listing-stay-detail",
-    "listingCategory": {
-      "id": 110,
-      "name": "Transfers"
-    },
-    "title": "AIRPORT TRANSFER",
-    "featuredImage": "/images/airport-transfer/aéroport-international-Agadir-Al-Massira.jpg",
-    "galleryImgs": [
-      "/images/airport-transfer/aéroport-international-Agadir-Al-Massira.jpg",
-      "/images/airport-transfer/morocco-expands-agadir-airport-ahead-2030-world-cup-co-hosting-107755.jpg",
-      "/images/airport-transfer/51.jpg"
-    ],
-    "commentCount": 0,
-    "viewCount": 0,
-    "like": false,
-    "address": "Agadir Al Massira Airport",
-    "reviewStart": 5.0,
-    "reviewCount": 267,
-    "price": "250 MAD",
-    "priceEur": 25,
-    "priceMad": 250,
-    "maxGuests": 4,
-    "saleOff": "EVERYDAY",
-    "isAds": null,
-    "map": {
-      "lat": 30.334,
-      "lng": -9.4121
-    },
-    "slug": "airport-transfer",
-    "duration": "Any time (24/7)",
-    "scheduleDays": "EVERYDAY",
-    "includes": ["Hotel Pickup", "Direct Transfer", "Flight Monitoring", "Meet & Greet"],
-    "tourDescription": "Comfortable and reliable airport transfer service. Pickup from your hotel reception with direct transfer to Agadir Al Massira Airport. Professional drivers, flight monitoring, and punctual service guaranteed."
-  },
+
   {
     "id": "tour_16",
     "authorId": 1,
