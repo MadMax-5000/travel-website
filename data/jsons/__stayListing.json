@@ -32,26 +32,20 @@
       "lng": -9.5981
     },
     "slug": "agadir-city-tour",
-    "duration": "from 10:00am to 01:00pm",
-    "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Professional Guide", "Souk ALHAD Visit", "Mint Tea"],
-    "tourDescription": "Discover the best of Agadir on this comprehensive city tour. Visit the stunning Marina, explore the historic Kasbah, experience the vibrant Old City, admire the magnificent Big Mosque, and lose yourself in the colors and scents of Souk ALHAD. Perfect for first-time visitors wanting to experience the essence of Agadir."
-  },
-  {
-    "id": "tour_3",
-    "authorId": 1,
-    "date": "2026-02-15",
-    "href": "/listing-stay-detail",
-    "listingCategory": {
-      "id": 103,
-      "name": "Desert Activities"
-    },
-    "title": "QUAD BIKE IN DESERT",
-    "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+    "featuredImage": "/images/birdview-agadir-beach&city.jpg",
     "galleryImgs": [
-      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
-      "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg",
-      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg"
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/agadir-beach.jpg",
+      "/images/argan-guided-tour/pexels-christophe-rascle-159591525-18742777.jpg",
+      "/images/argan-guided-tour/pexels-ivan-drazic-20457695-13812743.jpg",
+      "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-2165030241-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-1146362546-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-154961749-612x612.jpg",
+      "/images/agadir-city-tour/gettyimages-141856967-612x612.jpg",
+      "/images/agadir-city-tour/Souk-Agadir-mosquee.jpg",
+      "/images/agadir-city-tour/pexels-mag-photography-1501456-30237001.jpg",
+      "/images/agadir-city-tour/pexels-mag-photography-1501456-30236986.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
