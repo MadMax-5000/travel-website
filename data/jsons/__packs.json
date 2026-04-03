@@ -59,22 +59,26 @@
       "name": "Water Sports"
     },
     "title": "Saki Experience",
-    "subtitle": "Quad • Boat • Animation • Show",
-    "featuredImage": "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg",
+    "subtitle": "Quad • Sandboarding • Camel Ride • Boat • Show • Dinner",
+    "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
     "galleryImgs": [
-      "/images/quad-bike-in-desert/pexels-septimiu-lupea-271955805-35427232.jpg",
-      "/images/boat-trip/boats.jpg",
-      "/images/berber-fantasia-night-show/unnamed-1-1.jpg"
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+      "/images/image-timlaline-1.webp",
+      "/images/image-timlaline.webp",
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
+      "/images/sunset-sandboarding/pexels-misho-cha-61081292-11763711.jpg",
+      "/images/gnawa.jpg",
+      "/images/gnawa-2.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Agadir Beach • Marina • Desert",
+    "address": "Agadir Desert • Beach • Marina • Colored Village",
     "reviewStart": 4.8,
     "reviewCount": 28,
-    "price": "75 € / 750 MAD",
-    "duration": "Half Day",
-    "maxGuests": 6,
+    "price": "120 € / 1200 MAD",
+    "duration": "Full Day",
+    "maxGuests": 8,
     "saleOff": "Best Seller",
     "isAds": null,
     "map": {
@@ -82,13 +86,18 @@
       "lng": -9.5981
     },
     "slug": "saki-experience",
-    "description": "The perfect blend of adventure and entertainment! Feel the adrenaline with quad biking in the desert, then head to the marina for an exciting boat trip with animation. Enjoy live entertainment with a Skit show and return to your hotel with memories to last a lifetime.",
+    "description": "The ultimate adventure and entertainment experience! Feel the thrill of quad biking through golden dunes, slide down sandy slopes with sandboarding, enjoy a peaceful camel ride, then head to the marina for an exciting boat trip. End your day with a live Gnawa show and a delicious traditional Moroccan dinner for an unforgettable experience.",
     "highlights": [
-      "Quad biking adventure in the desert",
+      "Quad biking in the Sahara dunes (1 hour)",
+      "Sandboarding adventure at sunset",
+      "Camel riding through forest and river trails",
+      "Visit to the colorful village",
       "Scenic boat trip from Agadir Marina",
       "On-board animation and entertainment",
-      "Live Skit (Berber folklore) performance",
-      "Hotel pick-up and drop-off included"
+      "Live Gnawa show performance",
+      "Traditional Moroccan dinner included",
+      "Round-trip hotel transportation",
+      "Traditional Moroccan mint tea"
     ]
   },
   {
@@ -102,11 +111,16 @@
     },
     "title": "Agadir by Night",
     "subtitle": "Oufella • Marina • Koutchi • Dinner",
-    "featuredImage": "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
+    "featuredImage": "/images/agadir-bynight-1.webp",
     "galleryImgs": [
-      "/images/agadir-city-tour/Souk-Agadir-mosquee.jpg",
-      "/images/agadir-by-night.jpg",
-      "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg"
+      "/images/marina.webp",
+      "/images/agadir-bynight-2.webp",
+      "/images/agadir-city-tour/gettyimages-1146362546-612x612.jpg",
+      "/images/agadir-bynight-1.webp",
+      "/images/kooutchi.png",
+      "/images/agadir-bynight-3.webp",
+      "/images/agadir-bynight-4.webp",
+      "/images/agadir-city-tour/gettyimages-2165030241-612x612.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -114,7 +128,7 @@
     "address": "Agadir Kasbah • Marina • Koutchi",
     "reviewStart": 4.9,
     "reviewCount": 45,
-    "price": "55 € / 550 MAD",
+    "price": "65 € / 650 MAD",
     "duration": "Evening",
     "maxGuests": 10,
     "saleOff": "Evening Special",
