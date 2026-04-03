@@ -37,43 +37,6 @@
     "includes": ["Round Trip Transport", "Professional Guide", "Souk ALHAD Visit", "Mint Tea"],
     "tourDescription": "Discover the best of Agadir on this comprehensive city tour. Visit the stunning Marina, explore the historic Kasbah, experience the vibrant Old City, admire the magnificent Big Mosque, and lose yourself in the colors and scents of Souk ALHAD. Perfect for first-time visitors wanting to experience the essence of Agadir."
   },
-  {
-    "id": "tour_2",
-    "authorId": 1,
-    "date": "2026-02-15",
-    "href": "/listing-stay-detail",
-    "listingCategory": {
-      "id": 102,
-      "name": "Cultural Tours"
-    },
-    "title": "ARGAN GUIDED TOUR",
-    "featuredImage": "/images/argan-guided-tour/pexels-mert-kaya-60338873-13962138.jpg",
-    "galleryImgs": [
-      "/images/argan-guided-tour/pexels-mert-kaya-60338873-13962138.jpg",
-      "/images/argan-guided-tour/pexels-luigi-maggio-1750047758-28076406.jpg",
-      "/images/argan-guided-tour/pexels-christophe-rascle-159591525-18742777.jpg"
-    ],
-    "commentCount": 0,
-    "viewCount": 0,
-    "like": false,
-    "address": "Argan Oil Cooperative, Agadir",
-    "reviewStart": 4.6,
-    "reviewCount": 89,
-    "price": "20 MAD",
-    "priceEur": 2,
-    "priceMad": 20,
-    "maxGuests": 10,
-    "saleOff": "EVERYDAY",
-    "isAds": null,
-    "map": {
-      "lat": 30.4278,
-      "lng": -9.5981
-    },
-    "slug": "argan-guided-tour",
-    "duration": "Departure Every Hour",
-    "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Factory Visit", "Argan Oil Presentation", "Moroccan Mint Tea"],
-    "tourDescription": "Learn about Morocco's precious Argan oil on this guided tour of a traditional cooperative. Watch the ancient extraction process, discover the many uses of Argan oil, and enjoy a relaxing cup of traditional Moroccan mint tea. A cultural experience not to be missed."
   },
   {
     "id": "tour_3",
