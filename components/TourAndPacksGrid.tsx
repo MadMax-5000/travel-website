@@ -11,8 +11,7 @@ type TabType = "tours" | "packs"
 
 /* ─────────────────────────── TOUR CARD (desktop) ─────────────────────────── */
 const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
-  const { title, price, reviewStart, listingCategory, href, like, galleryImgs } = data
-  const euroPrice = price?.split("/")[0]?.trim() || price
+  const { title, priceEur, priceMad, reviewStart, listingCategory, href, like, galleryImgs } = data
   const [isLiked, setIsLiked] = useState(like)
 
   const imageSrc =
@@ -58,7 +57,7 @@ const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
         <div className="flex items-center gap-2 px-1">
           <Tag className="w-4 h-4 text-neutral-400 flex-shrink-0" />
           <span className="text-sm text-neutral-500 dark:text-neutral-400">from</span>
-          <span className="text-base font-bold text-neutral-900 dark:text-white">{euroPrice}</span>
+          <span className="text-base font-bold text-neutral-900 dark:text-white">{priceEur} € / {priceMad} MAD</span>
         </div>
 
         {/* ── CTA row ── */}

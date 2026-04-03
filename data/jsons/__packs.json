@@ -9,10 +9,11 @@
       "name": "Desert Activities"
     },
     "title": "Timlalin Adventure",
-    "subtitle": "Quad • Sandboarding • Camel/Horse Ride",
+    "subtitle": "Quad • Sandboarding • Camel Ride",
     "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
     "galleryImgs": [
       "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+      "/images/9e.jpg",
       "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg",
       "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502445.jpg",
       "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
@@ -27,7 +28,7 @@
     "address": "Agadir Desert • Colored Village",
     "reviewStart": 5,
     "reviewCount": 0,
-    "price": "110 € / 1100 MAD",
+    "price": "95 € / 950 MAD",
     "duration": "Full Day",
     "maxGuests": 8,
     "saleOff": "Best Value",
@@ -37,11 +38,11 @@
       "lng": -9.5981
     },
     "slug": "timlalin-adventure",
-    "description": "Experience the ultimate desert adventure with three exciting activities in one day! Feel the thrill of quad biking through golden dunes, slide down the sandy slopes with sandboarding, and enjoy a peaceful camel or horse ride through the scenic landscape. Perfect combination of adrenaline and relaxation!",
+    "description": "Experience the ultimate desert adventure with three exciting activities in one day! Feel the thrill of quad biking through golden dunes, slide down the sandy slopes with sandboarding, and enjoy a peaceful camel ride through the scenic landscape. Perfect combination of adrenaline and relaxation!",
     "highlights": [
       "Quad biking in the Sahara dunes (1 hour)",
       "Sandboarding adventure at sunset",
-      "Camel or Horse riding through forest and river trails",
+      "Camel riding through forest and river trails",
       "Visit to the colorful village",
       "Round-trip hotel transportation",
       "Traditional Moroccan mint tea"

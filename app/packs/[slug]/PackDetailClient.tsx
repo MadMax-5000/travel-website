@@ -11,6 +11,7 @@ import {
     ChevronLeftIcon,
     ChevronRightIcon,
     XMarkIcon,
+    ArrowsPointingOutIcon,
 } from "@heroicons/react/24/outline";
 import { MessageCircle } from "lucide-react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
@@ -39,24 +40,21 @@ interface PackDetailClientProps {
 
 export default function PackDetailClient({ pack }: PackDetailClientProps) {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-    const [adults, setAdults] = useState(2);
-    const [kids, setKids] = useState(0);
+    const [guests, setGuests] = useState(2);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [bookingStep, setBookingStep] = useState<"form" | "success">("form");
     const [customerName, setCustomerName] = useState("");
     const [customerPhone, setCustomerPhone] = useState("");
 
-    const priceMatch = pack.price.match(/[\d,]+/);
+    const priceMatch = pack.price.match(/(\d+)\s*€\s*\/\s*(\d+)\s*MAD/i);
+    const priceEur = priceMatch ? parseInt(priceMatch[1]) : 0;
+    const priceMad = priceMatch ? parseInt(priceMatch[2]) : 0;
     const originalPriceMatch = pack.originalPrice?.match(/[\d,]+/);
-    const priceAdult = priceMatch ? parseInt(priceMatch[0].replace(/,/g, '')) : 0;
     const originalPrice = originalPriceMatch ? parseInt(originalPriceMatch[0].replace(/,/g, '')) : 0;
-    const priceKid = Math.round(priceAdult * 0.5);
 
-    const totalGuests = adults + kids;
-    const adultsTotal = adults * priceAdult;
-    const kidsTotal = kids * priceKid;
-    const grandTotal = adultsTotal + kidsTotal;
+    const guestsTotal = guests * priceMad;
+    const grandTotal = guestsTotal;
 
     const handleWhatsApp = () => {
         if (!selectedDate) {
@@ -72,8 +70,8 @@ export default function PackDetailClient({ pack }: PackDetailClientProps) {
 
 Pack: ${pack.title}
 Date: ${formatDate(selectedDate)}
-Guests: ${adults} adult${adults !== 1 ? "s" : ""}${kids > 0 ? `, ${kids} kid${kids !== 1 ? "s" : ""}` : ""}
-Total: ${grandTotal.toLocaleString()} MAD
+Guests: ${guests} guest${guests !== 1 ? "s" : ""}
+Total: ${grandTotal.toLocaleString()} MAD (${priceEur * guests} €)
 
 Name: ${customerName}
 Phone: ${customerPhone}`;
@@ -93,80 +91,83 @@ Phone: ${customerPhone}`;
 
     return (
         <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 pt-16">
-            {/* Bento Grid Gallery */}
-            <div className="grid grid-cols-4 grid-rows-2 gap-1 sm:gap-2 h-[45vh] sm:h-[55vh] mx-2 sm:mx-4 mt-2">
-                {/* Main large image - spans 2x2 */}
-                <div 
-                    className="col-span-2 row-span-2 relative cursor-pointer overflow-hidden rounded-l-xl"
-                    onClick={() => { setCurrentImageIndex(0); setLightboxOpen(true); }}
-                >
-                    <img 
-                        src={pack.galleryImgs[0] as string} 
-                        alt={pack.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
+            {/* Interactive Hero Gallery */}
+            <div className="relative">
+                {/* Main Image Slider */}
+                <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-orange-50 dark:bg-orange-950">
+                    <div 
+                        className="absolute inset-0 cursor-grab active:cursor-grabbing flex items-center justify-center p-4"
+                        onMouseDown={(e) => {
+                            const startX = e.clientX;
+                            const handleMouseMove = (moveEvent: MouseEvent) => {
+                                const diff = startX - moveEvent.clientX;
+                                if (Math.abs(diff) > 50) {
+                                    if (diff > 0) nextImage();
+                                    else prevImage();
+                                    document.removeEventListener('mousemove', handleMouseMove);
+                                }
+                            };
+                            document.addEventListener('mousemove', handleMouseMove);
+                        }}
+                    >
+                        <img 
+                            src={pack.galleryImgs[currentImageIndex] as string} 
+                            alt={pack.title}
+                            className="max-w-full max-h-full object-contain rounded-lg"
+                        />
+                    </div>
+                    
+                    {/* Navigation Arrows */}
+                    <button
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white rounded-full text-black hover:bg-orange-500 hover:text-white transition-all"
+                    >
+                        <ChevronLeftIcon className="w-8 h-8" />
+                    </button>
+                    <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white rounded-full text-black hover:bg-orange-500 hover:text-white transition-all"
+                    >
+                        <ChevronRightIcon className="w-8 h-8" />
+                    </button>
+                    
+                    {/* Image Counter */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white rounded-full text-black text-sm font-medium">
+                        {currentImageIndex + 1} / {pack.galleryImgs.length}
+                    </div>
+                    
+                    {/* View All Button */}
+                    <button
+                        onClick={() => setLightboxOpen(true)}
+                        className="absolute top-4 right-4 px-4 py-2 bg-white rounded-full text-black text-sm font-medium hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
+                    >
+                        <ArrowsPointingOutIcon className="w-5 h-5" />
+                        View All Photos
+                    </button>
                 </div>
                 
-                {/* Second image - top right */}
-                {pack.galleryImgs[1] && (
-                    <div 
-                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden"
-                        onClick={() => { setCurrentImageIndex(1); setLightboxOpen(true); }}
-                    >
-                        <img 
-                            src={pack.galleryImgs[1] as string} 
-                            alt={pack.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
+                {/* Thumbnail Navigation */}
+                <div className="max-w-7xl mx-auto px-4 py-4 bg-orange-50 dark:bg-orange-950">
+                    <div className="flex justify-center gap-2 flex-wrap">
+                        {pack.galleryImgs.map((img, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setCurrentImageIndex(idx)}
+                                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all ${
+                                    currentImageIndex === idx 
+                                    ? 'ring-2 ring-orange-500 scale-105' 
+                                    : 'opacity-60 hover:opacity-100'
+                                }`}
+                            >
+                                <img 
+                                    src={img as string} 
+                                    alt=""
+                                    className="w-full h-full object-cover"
+                                />
+                            </button>
+                        ))}
                     </div>
-                )}
-                
-                {/* Third image - bottom right top */}
-                {pack.galleryImgs[2] && (
-                    <div 
-                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden"
-                        onClick={() => { setCurrentImageIndex(2); setLightboxOpen(true); }}
-                    >
-                        <img 
-                            src={pack.galleryImgs[2] as string} 
-                            alt={pack.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                )}
-                
-                {/* Fourth image - bottom right bottom */}
-                {pack.galleryImgs[3] && (
-                    <div 
-                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden rounded-tr-xl"
-                        onClick={() => { setCurrentImageIndex(3); setLightboxOpen(true); }}
-                    >
-                        <img 
-                            src={pack.galleryImgs[3] as string} 
-                            alt={pack.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                )}
-                
-                {/* Fifth image - show remaining count */}
-                {pack.galleryImgs[4] && (
-                    <div 
-                        className="col-span-1 row-span-1 relative cursor-pointer overflow-hidden rounded-br-xl"
-                        onClick={() => setLightboxOpen(true)}
-                    >
-                        <img 
-                            src={pack.galleryImgs[4] as string} 
-                            alt={pack.title}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                        {pack.galleryImgs.length > 5 && (
-                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                                <span className="text-white font-medium text-sm">+{pack.galleryImgs.length - 5} more photos</span>
-                            </div>
-                        )}
-                    </div>
-                )}
+                </div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -275,44 +276,23 @@ Phone: ${customerPhone}`;
                                     </div>
 
                                     {/* Guests */}
-                                    <div className="mb-5 space-y-3">
+                                    <div className="mb-5">
                                         <div className="flex items-center justify-between p-3 bg-neutral-50 dark:bg-neutral-800 rounded-xl">
                                             <div>
-                                                <p className="font-medium text-neutral-900 dark:text-white">Adults</p>
-                                                <p className="text-sm text-neutral-500">{priceAdult} MAD each</p>
+                                                <p className="font-medium text-neutral-900 dark:text-white">Guests</p>
+                                                <p className="text-sm text-neutral-500">{priceEur} € / {priceMad} MAD each</p>
+                                                <p className="text-xs text-orange-600 mt-1" title="This activity requires a minimum of 2 guests">Min. 2 guests required</p>
                                             </div>
                                             <div className="flex items-center gap-3">
                                                 <button
-                                                    onClick={() => setAdults(Math.max(1, adults - 1))}
+                                                    onClick={() => setGuests(Math.max(2, guests - 1))}
                                                     className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-600 flex items-center justify-center hover:border-orange-500 transition-colors"
                                                 >
                                                     <MinusIcon className="w-4 h-4" />
                                                 </button>
-                                                <span className="w-6 text-center font-semibold">{adults}</span>
+                                                <span className="w-6 text-center font-semibold">{guests}</span>
                                                 <button
-                                                    onClick={() => setAdults(Math.min(pack.maxGuests, adults + 1))}
-                                                    className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-600 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                                >
-                                                    <PlusIcon className="w-4 h-4" />
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-center justify-between p-3 bg-neutral-50 dark:bg-neutral-800 rounded-xl">
-                                            <div>
-                                                <p className="font-medium text-neutral-900 dark:text-white">Kids</p>
-                                                <p className="text-sm text-neutral-500">{priceKid} MAD each (50% off)</p>
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                <button
-                                                    onClick={() => setKids(Math.max(0, kids - 1))}
-                                                    className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-600 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                                >
-                                                    <MinusIcon className="w-4 h-4" />
-                                                </button>
-                                                <span className="w-6 text-center font-semibold">{kids}</span>
-                                                <button
-                                                    onClick={() => setKids(Math.min(pack.maxGuests - adults, kids + 1))}
+                                                    onClick={() => setGuests(Math.min(pack.maxGuests, guests + 1))}
                                                     className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-600 flex items-center justify-center hover:border-orange-500 transition-colors"
                                                 >
                                                     <PlusIcon className="w-4 h-4" />
@@ -324,19 +304,13 @@ Phone: ${customerPhone}`;
                                     {/* Total */}
                                     <div className="mb-5 p-4 bg-neutral-50 dark:bg-neutral-800 rounded-xl">
                                         <div className="flex justify-between text-sm mb-2">
-                                            <span className="text-neutral-500">Adults x {adults}</span>
-                                            <span className="text-neutral-900 dark:text-white">{adultsTotal} MAD</span>
+                                            <span className="text-neutral-500">Guests x {guests}</span>
+                                            <span className="text-neutral-900 dark:text-white">{priceEur * guests} € / {guestsTotal} MAD</span>
                                         </div>
-                                        {kids > 0 && (
-                                            <div className="flex justify-between text-sm mb-2">
-                                                <span className="text-neutral-500">Kids x {kids}</span>
-                                                <span className="text-neutral-900 dark:text-white">{kidsTotal} MAD</span>
-                                            </div>
-                                        )}
                                         <div className="border-t border-neutral-200 dark:border-neutral-700 pt-2 mt-2">
                                             <div className="flex justify-between font-semibold">
                                                 <span className="text-neutral-900 dark:text-white">Total</span>
-                                                <span className="text-orange-600">{grandTotal.toLocaleString()} MAD</span>
+                                                <span className="text-orange-600">{priceEur * guests} € / {grandTotal.toLocaleString()} MAD</span>
                                             </div>
                                         </div>
                                     </div>

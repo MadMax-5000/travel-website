@@ -13,6 +13,8 @@ const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
   const {
     title,
     price,
+    priceEur,
+    priceMad,
     address,
     reviewStart,
     reviewCount,
@@ -82,7 +84,7 @@ const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-lg font-bold text-orange-500">{price}</p>
+            <p className="text-lg font-bold text-orange-500">{priceEur} € / {priceMad} MAD</p>
             <p className="text-xs text-neutral-400">per person</p>
           </div>
         </div>
@@ -95,6 +97,8 @@ const TourCardMobile = ({ data, index }: { data: StayDataType; index: number }) 
   const {
     title,
     price,
+    priceEur,
+    priceMad,
     address,
     reviewStart,
     listingCategory,
@@ -151,7 +155,7 @@ const TourCardMobile = ({ data, index }: { data: StayDataType; index: number }) 
           <MapPin className="w-3.5 h-3.5" />
           <span className="line-clamp-1">{address}</span>
         </div>
-        <p className="text-sm font-bold text-orange-500 mt-1">{price}</p>
+        <p className="text-sm font-bold text-orange-500 mt-1">{priceEur} € / {priceMad} MAD</p>
       </div>
     </Link>
   )

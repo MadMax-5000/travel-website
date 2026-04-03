@@ -193,12 +193,11 @@ function MobileBookingModal({
     onClose,
     selectedDate,
     onDateSelect,
-    adults,
-    onAdultsChange,
-    kids,
-    onKidsChange,
+    guests,
+    onGuestsChange,
     maxGuests,
     priceMad,
+    priceEur,
     listingTitle,
     onWhatsApp,
 }: {
@@ -206,12 +205,11 @@ function MobileBookingModal({
     onClose: () => void;
     selectedDate: Date | null;
     onDateSelect: (date: Date | null) => void;
-    adults: number;
-    onAdultsChange: (n: number) => void;
-    kids: number;
-    onKidsChange: (n: number) => void;
+    guests: number;
+    onGuestsChange: (n: number) => void;
     maxGuests: number;
     priceMad: number;
+    priceEur: number;
     listingTitle: string;
     onWhatsApp: (name: string, phone: string) => void;
 }) {
@@ -229,12 +227,9 @@ function MobileBookingModal({
 
     if (!isOpen) return null;
 
-    const fmt = (n: number) => `${n.toLocaleString("en-US")} MAD`;
-    const totalGuests = adults + kids;
-    const kidsPrice = Math.round(priceMad * 0.5);
-    const adultsTotal = adults * priceMad;
-    const kidsTotal = kids * kidsPrice;
-    const grandTotal = adultsTotal + kidsTotal;
+    const fmt = (mad: number, includeEur = true) => includeEur ? `${priceEur} € / ${mad.toLocaleString("en-US")} MAD` : `${mad.toLocaleString("en-US")} MAD`;
+    const guestsTotal = guests * priceMad;
+    const grandTotal = guestsTotal;
 
     const handleSubmit = () => {
         if (!selectedDate) {
@@ -302,54 +297,31 @@ function MobileBookingModal({
                                     Number of Guests
                                 </label>
                                 <div className="bg-neutral-50 rounded-2xl divide-y divide-neutral-200">
-                                    <div className="flex items-center justify-between p-4">
-                                        <div>
-                                            <p className="text-[15px] font-medium text-neutral-900">Adults</p>
-                                            <p className="text-[13px] text-neutral-500">{fmt(priceMad)} each</p>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                            <button
-                                                type="button"
-                                                onClick={() => onAdultsChange(Math.max(1, adults - 1))}
-                                                className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                            >
-                                                <MinusIcon className="w-4 h-4" />
-                                            </button>
-                                            <span className="w-6 text-center font-semibold">{adults}</span>
-                                            <button
-                                                type="button"
-                                                onClick={() => onAdultsChange(Math.min(maxGuests, adults + 1))}
-                                                className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                            >
-                                                <PlusIcon className="w-4 h-4" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center justify-between p-4">
-                                        <div>
-                                            <p className="text-[15px] font-medium text-neutral-900">Kids</p>
-                                            <p className="text-[13px] text-neutral-500">{fmt(kidsPrice)} each · under 12</p>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                            <button
-                                                type="button"
-                                                onClick={() => onKidsChange(Math.max(0, kids - 1))}
-                                                className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                            >
-                                                <MinusIcon className="w-4 h-4" />
-                                            </button>
-                                            <span className="w-6 text-center font-semibold">{kids}</span>
-                                            <button
-                                                type="button"
-                                                onClick={() => onKidsChange(Math.min(maxGuests, kids + 1))}
-                                                className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                            >
-                                                <PlusIcon className="w-4 h-4" />
-                                            </button>
+                                        <div className="flex items-center justify-between p-4">
+                                            <div>
+                                                <p className="text-[15px] font-medium text-neutral-900">Guests</p>
+                                                <p className="text-[13px] text-neutral-500">{fmt(priceMad)} each</p>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => onGuestsChange(Math.max(1, guests - 1))}
+                                                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
+                                                >
+                                                    <MinusIcon className="w-4 h-4" />
+                                                </button>
+                                                <span className="w-6 text-center font-semibold">{guests}</span>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => onGuestsChange(Math.min(maxGuests, guests + 1))}
+                                                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
+                                                >
+                                                    <PlusIcon className="w-4 h-4" />
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                             <div className="space-y-4">
                                 <div>
@@ -386,15 +358,9 @@ function MobileBookingModal({
 
                             <div className="bg-neutral-50 rounded-2xl p-4 space-y-2">
                                 <div className="flex justify-between text-sm text-neutral-600">
-                                    <span>{fmt(priceMad)} x {adults} adult{adults !== 1 ? "s" : ""}</span>
-                                    <span>{fmt(adultsTotal)}</span>
+                                    <span>{fmt(priceMad)} x {guests} guest{guests !== 1 ? "s" : ""}</span>
+                                    <span>{fmt(guestsTotal)}</span>
                                 </div>
-                                {kids > 0 && (
-                                    <div className="flex justify-between text-sm text-neutral-600">
-                                        <span>{fmt(kidsPrice)} x {kids} kid{kids !== 1 ? "s" : ""}</span>
-                                        <span>{fmt(kidsTotal)}</span>
-                                    </div>
-                                )}
                                 <div className="flex justify-between font-bold text-neutral-900 pt-2 border-t border-neutral-200">
                                     <span>Total</span>
                                     <span className="text-orange-600">{fmt(grandTotal)}</span>
@@ -521,7 +487,7 @@ function BookingModal({
                             </div>
                             <div className="flex justify-between">
                                 <span className="text-neutral-500">Guests</span>
-                                <span className="font-medium text-neutral-900 dark:text-neutral-100">{data.adults} adult{data.adults !== 1 ? "s" : ""}{data.kids > 0 ? `, ${data.kids} kid${data.kids !== 1 ? "s" : ""}` : ""}</span>
+                                <span className="font-medium text-neutral-900 dark:text-neutral-100">{data.guests} guest{data.guests !== 1 ? "s" : ""}</span>
                             </div>
                             <div className="border-t border-neutral-200 dark:border-neutral-700 pt-3 flex justify-between font-bold text-[17px]">
                                 <span className="text-neutral-900 dark:text-neutral-100">Total</span>
@@ -625,12 +591,9 @@ interface ReservationData {
     listingTitle: string;
     address: string;
     selectedDate: string;
-    adults: number;
-    kids: number;
-    pricePerAdult: string;
-    pricePerKid: string;
-    adultsTotal: string;
-    kidsTotal: string;
+    guests: number;
+    pricePerGuest: string;
+    guestsTotal: string;
     grandTotal: string;
 }
 
@@ -644,8 +607,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const [calOpen, setCalOpen] = useState(false);
     const [guestsOpen, setGuestsOpen] = useState(false);
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-    const [adults, setAdults] = useState(1);
-    const [kids, setKids] = useState(0);
+    const [guests, setGuests] = useState(1);
     const [showModal, setShowModal] = useState(false);
     const [reservationData, setReservationData] = useState<ReservationData | null>(null);
     const [galleryOpen, setGalleryOpen] = useState(false);
@@ -682,13 +644,10 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
         return () => document.removeEventListener("keydown", handleKeyDown);
     }, [galleryOpen, galleryImgs.length]);
 
-    const totalGuests = adults + kids;
-    const kidsPrice = Math.round(priceMad * 0.5);
-    const adultsTotal = adults * priceMad;
-    const kidsTotal = kids * kidsPrice;
-    const grandTotal = adultsTotal + kidsTotal;
+    const guestsTotal = guests * priceMad;
+    const grandTotal = guestsTotal;
 
-    const fmt = (n: number) => `${n.toLocaleString("en-US")} MAD`;
+    const fmt = (mad: number, includeEur = true) => includeEur ? `${priceEur} € / ${mad.toLocaleString("en-US")} MAD` : `${mad.toLocaleString("en-US")} MAD`;
 
     const handleReserve = () => {
         if (!selectedDate) { 
@@ -700,12 +659,9 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
             listingTitle: title,
             address: address,
             selectedDate: formatDate(selectedDate)!,
-            adults,
-            kids,
-            pricePerAdult: fmt(priceMad),
-            pricePerKid: fmt(kidsPrice),
-            adultsTotal: fmt(adultsTotal),
-            kidsTotal: fmt(kidsTotal),
+            guests,
+            pricePerGuest: fmt(priceMad),
+            guestsTotal: fmt(guestsTotal),
             grandTotal: fmt(grandTotal),
         });
         setShowModal(true);
@@ -722,7 +678,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
 Tour: ${reservationData.listingTitle}
 Date: ${reservationData.selectedDate}
-Guests: ${reservationData.adults} adult${reservationData.adults !== 1 ? "s" : ""}${reservationData.kids > 0 ? `, ${reservationData.kids} kid${reservationData.kids !== 1 ? "s" : ""}` : ""}
+Guests: ${reservationData.guests} guest${reservationData.guests !== 1 ? "s" : ""}
 Total: ${reservationData.grandTotal}
 
 Name: ${name}
@@ -810,8 +766,7 @@ Phone: ${phone}`;
                                     Guests
                                 </label>
                                 <span className="block text-[15px] text-neutral-900 dark:text-neutral-100 font-semibold">
-                                    {totalGuests} {totalGuests === 1 ? "guest" : "guests"}
-                                    {kids > 0 && ` · ${adults} adult${adults !== 1 ? "s" : ""}, ${kids} kid${kids !== 1 ? "s" : ""}`}
+                                    {guests} {guests === 1 ? "guest" : "guests"}
                                 </span>
                             </div>
                             <ChevronDownIcon className={`w-5 h-5 text-neutral-400 transition-transform duration-200 ${guestsOpen ? "rotate-180" : ""}`} />
@@ -821,23 +776,13 @@ Phone: ${phone}`;
                             <div className="absolute left-0 right-0 top-full mt-2 bg-white dark:bg-neutral-900
                                 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 p-2 mx-1">
                                 <CounterRow
-                                    label="Adults"
+                                    label="Guests"
                                     sublabel={`${fmt(priceMad)} each`}
-                                    value={adults}
+                                    value={guests}
                                     min={1}
                                     max={maxGuests || 10}
-                                    onChange={setAdults}
+                                    onChange={setGuests}
                                 />
-                                <div className="border-t border-neutral-100 dark:border-neutral-800 mx-2">
-                                    <CounterRow
-                                        label="Kids"
-                                        sublabel={`${fmt(kidsPrice)} each · under 12`}
-                                        value={kids}
-                                        min={0}
-                                        max={maxGuests || 10}
-                                        onChange={setKids}
-                                    />
-                                </div>
                                 <div className="mt-2 pt-4 border-t border-neutral-100 dark:border-neutral-800 flex justify-between items-center px-2">
                                     <p className="text-[13px] text-neutral-500">Max {maxGuests || 10} guests</p>
                                     <button
@@ -876,15 +821,9 @@ Phone: ${phone}`;
 
                 <div className="space-y-4 text-[15px] text-neutral-600 dark:text-neutral-400">
                     <div className="flex justify-between">
-                        <span className="hover:underline cursor-pointer">{fmt(priceMad)} x {adults} adult{adults !== 1 ? "s" : ""}</span>
-                        <span className="text-neutral-900 dark:text-neutral-200">{fmt(adultsTotal)}</span>
+                        <span className="hover:underline cursor-pointer">{fmt(priceMad)} x {guests} guest{guests !== 1 ? "s" : ""}</span>
+                        <span className="text-neutral-900 dark:text-neutral-200">{fmt(guestsTotal)}</span>
                     </div>
-                    {kids > 0 && (
-                        <div className="flex justify-between">
-                            <span className="hover:underline cursor-pointer">{fmt(kidsPrice)} x {kids} kid{kids !== 1 ? "s" : ""}</span>
-                            <span className="text-neutral-900 dark:text-neutral-200">{fmt(kidsTotal)}</span>
-                        </div>
-                    )}
                     <div className="pt-5 mt-3 border-t border-neutral-200 dark:border-neutral-700">
                         <div className="flex justify-between font-bold text-[17px] text-neutral-900 dark:text-neutral-100">
                             <span>Total</span>
@@ -1125,7 +1064,7 @@ Phone: ${phone}`;
                 <div className="bg-white dark:bg-neutral-900 rounded-2xl p-4 shadow-lg border border-neutral-200 dark:border-neutral-800">
                     <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">
-                            <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{priceMad} MAD</span>
+                            <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{fmt(priceMad)}</span>
                             <span className="text-neutral-500 text-sm">/ person</span>
                         </div>
                         <div className="flex items-center gap-1 text-sm">
@@ -1159,12 +1098,11 @@ Phone: ${phone}`;
                 onDateSelect={(date) => {
                     setSelectedDate(date);
                 }}
-                adults={adults}
-                onAdultsChange={setAdults}
-                kids={kids}
-                onKidsChange={setKids}
+                guests={guests}
+                onGuestsChange={setGuests}
                 maxGuests={maxGuests || 10}
                 priceMad={priceMad}
+                priceEur={priceEur}
                 listingTitle={title}
                 onWhatsApp={handleWhatsApp}
             />

@@ -19,6 +19,7 @@ const TourCard = ({ data, className = "" }: TourCardProps) => {
     const {
         title,
         priceMad,
+        priceEur,
         address,
         reviewStart,
         reviewCount,
@@ -85,7 +86,7 @@ const TourCard = ({ data, className = "" }: TourCardProps) => {
                         </div>
                     </div>
                     <div className="text-right">
-                        <p className="text-lg font-bold text-orange-500">{priceMad} MAD</p>
+                        <p className="text-lg font-bold text-orange-500">{priceEur} € / {priceMad} MAD</p>
                         <p className="text-xs text-neutral-400">per person</p>
                     </div>
                 </div>
