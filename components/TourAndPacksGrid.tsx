@@ -5,9 +5,7 @@ import { DEMO_STAY_LISTINGS, DEMO_PACK_LISTINGS } from "@/data/listings"
 import { StayDataType, PackDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, Star, Tag, Plane } from "lucide-react"
-
-type TabType = "tours" | "packs"
+import { Heart, Star, Tag, Plane, ArrowRight } from "lucide-react"
 
 /* ─────────────────────────── TOUR CARD (desktop) ─────────────────────────── */
 const TourCard = ({ data, index }: { data: StayDataType; index: number }) => {
@@ -330,30 +328,13 @@ const PackCardMobile = ({ data, index }: { data: PackDataType; index: number }) 
   )
 }
 
-/* ─────────────────────────────── MAIN SECTION ────────────────────────────── */
-const TourAndPacksGrid = () => {
+/* ─────────────────────────────── TOURS SECTION ────────────────────────────── */
+const ToursSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
-  const [activeTab, setActiveTab] = useState<TabType>("tours")
-  const tabsRef = useRef<HTMLDivElement>(null)
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
 
-  useEffect(() => {
-    const updateIndicator = () => {
-      if (tabsRef.current) {
-        const buttons = tabsRef.current.querySelectorAll(".tab-button")
-        const activeIndex = activeTab === "tours" ? 0 : 1
-        const activeBtn = buttons[activeIndex] as HTMLElement
-        if (activeBtn) {
-          setIndicatorStyle({ left: activeBtn.offsetLeft, width: activeBtn.offsetWidth })
-        }
-      }
-    }
-    updateIndicator()
-    window.addEventListener("resize", updateIndicator)
-    return () => window.removeEventListener("resize", updateIndicator)
-  }, [activeTab])
+  const tours = DEMO_STAY_LISTINGS
 
   const checkScroll = () => {
     if (scrollRef.current) {
@@ -369,66 +350,24 @@ const TourAndPacksGrid = () => {
     }
   }
 
-  const tours = DEMO_STAY_LISTINGS
-  const packs = DEMO_PACK_LISTINGS
-  const currentData = activeTab === "tours" ? tours : packs
-  const viewAllLink = activeTab === "tours" ? "/tours" : "/packs"
-  const viewAllText = activeTab === "tours" ? "View All Tours" : "View All Packs"
-
   return (
-    <section className="w-full overflow-hidden bg-white dark:bg-neutral-900 py-12 lg:py-24">
+    <section className="w-full overflow-hidden bg-white dark:bg-neutral-900 py-12 lg:py-20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-
         {/* ── Header ── */}
-        <div className="mb-4 md:mb-6">
-          {/* Tab switcher */}
-          <div className="flex justify-center mb-6">
-            <div
-              className="relative inline-flex bg-neutral-200 dark:bg-neutral-800 p-1 rounded-full"
-              ref={tabsRef}
-            >
-              <div
-                className="absolute top-1 bottom-1 bg-orange-500 rounded-full transition-all duration-300 ease-out"
-                style={{ left: indicatorStyle.left, width: indicatorStyle.width }}
-              />
-              <button
-                onClick={() => setActiveTab("tours")}
-                className={`tab-button relative flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 z-10 ${
-                  activeTab === "tours"
-                    ? "text-white"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
-                }`}
-              >
-                <Tag className="w-4 h-4" />
-                Tours
-              </button>
-              <button
-                onClick={() => setActiveTab("packs")}
-                className={`tab-button relative flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 z-10 ${
-                  activeTab === "packs"
-                    ? "text-white"
-                    : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
-                }`}
-              >
-                <Plane className="w-4 h-4" />
-                Packs
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between gap-6 mb-6">
+        <div className="mb-6 md:mb-8">
+          <div className="flex items-center justify-between gap-6 mb-4">
             <div className="flex-1 max-w-2xl">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-1 sm:mb-2">
-                {activeTab === "tours" ? (
-                  <>Unforgettable <span className="font-serif italic text-orange-500">Adventures</span></>
-                ) : (
-                  <>Curated <span className="font-serif italic text-orange-500">Packages</span></>
-                )}
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 dark:bg-orange-900/30 rounded-full text-xs font-semibold text-orange-600 dark:text-orange-400">
+                  <Tag className="w-3 h-3" />
+                  Tours
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">
+                Unforgettable <span className="font-serif italic text-orange-500">Adventures</span>
               </h2>
               <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
-                {activeTab === "tours"
-                  ? "Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences."
-                  : "Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together."}
+                Discover the hidden gems of Agadir with our handpicked selection of premium tours and authentic local experiences.
               </p>
             </div>
             <div className="hidden md:flex items-center gap-3 flex-shrink-0">
@@ -459,30 +398,22 @@ const TourAndPacksGrid = () => {
           <div
             ref={scrollRef}
             onScroll={checkScroll}
-            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory animate-fadeIn"
+            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            {currentData.map((item, index) => (
+            {tours.map((item, index) => (
               <div key={item.id} className="snap-start">
-                {activeTab === "tours" ? (
-                  <TourCard data={item as StayDataType} index={index} />
-                ) : (
-                  <PackCard data={item as PackDataType} index={index} />
-                )}
+                <TourCard data={item} index={index} />
               </div>
             ))}
           </div>
         </div>
 
         {/* ── Mobile: 2-column grid ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden animate-fadeIn">
-          {currentData.slice(0, 6).map((item, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+          {tours.slice(0, 6).map((item, index) => (
             <div key={item.id}>
-              {activeTab === "tours" ? (
-                <TourCardMobile data={item as StayDataType} index={index} />
-              ) : (
-                <PackCardMobile data={item as PackDataType} index={index} />
-              )}
+              <TourCardMobile data={item} index={index} />
             </div>
           ))}
         </div>
@@ -490,17 +421,130 @@ const TourAndPacksGrid = () => {
         {/* ── View all CTA ── */}
         <div className="flex justify-center mt-8 md:mt-12">
           <Link
-            href={viewAllLink}
+            href="/tours"
             className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium hover:bg-orange-500 hover:text-white transition-colors text-sm sm:text-base"
           >
-            {viewAllText}
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            View All Tours
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
     </section>
+  )
+}
+
+/* ─────────────────────────────── PACKS SECTION ────────────────────────────── */
+const PacksSection = () => {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const packs = DEMO_PACK_LISTINGS
+
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
+      setCanScrollLeft(scrollLeft > 0)
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
+    }
+  }
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: direction === "left" ? -400 : 400, behavior: "smooth" })
+    }
+  }
+
+  return (
+    <section className="w-full overflow-hidden bg-neutral-50 dark:bg-neutral-950 py-12 lg:py-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        {/* ── Header ── */}
+        <div className="mb-6 md:mb-8">
+          <div className="flex items-center justify-between gap-6 mb-4">
+            <div className="flex-1 max-w-2xl">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full text-xs font-semibold text-blue-600 dark:text-blue-400">
+                  <Plane className="w-3 h-3" />
+                  Packages
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-2">
+                Curated <span className="font-serif italic text-blue-600 dark:text-blue-500">Packages</span>
+              </h2>
+              <p className="text-neutral-500 dark:text-neutral-400 text-base sm:text-lg leading-relaxed">
+                Get the best value with our curated tour packages. Save up to 26% when you book multiple tours together.
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+              <button
+                onClick={() => scroll("left")}
+                disabled={!canScrollLeft}
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                disabled={!canScrollRight}
+                className="p-3 rounded-full border border-neutral-200 dark:border-neutral-700 hover:border-blue-500 hover:text-blue-500 disabled:opacity-40 disabled:hover:border-neutral-200 disabled:hover:text-neutral-400 transition-all"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Desktop: horizontal scroll ── */}
+        <div className="hidden md:flex">
+          <div
+            ref={scrollRef}
+            onScroll={checkScroll}
+            className="flex gap-4 overflow-x-auto scrollbar-hide pb-4 snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {packs.map((item, index) => (
+              <div key={item.id} className="snap-start">
+                <PackCard data={item} index={index} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── Mobile: 2-column grid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
+          {packs.slice(0, 6).map((item, index) => (
+            <div key={item.id}>
+              <PackCardMobile data={item} index={index} />
+            </div>
+          ))}
+        </div>
+
+        {/* ── View all CTA ── */}
+        <div className="flex justify-center mt-8 md:mt-12">
+          <Link
+            href="/packs"
+            className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors text-sm sm:text-base"
+          >
+            View All Packages
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─────────────────────────────── MAIN COMPONENT ────────────────────────────── */
+const TourAndPacksGrid = () => {
+  return (
+    <>
+      <ToursSection />
+      <PacksSection />
+    </>
   )
 }
 
