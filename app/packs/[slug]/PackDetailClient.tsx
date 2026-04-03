@@ -94,7 +94,7 @@ Phone: ${customerPhone}`;
             {/* Interactive Hero Gallery */}
             <div className="relative">
                 {/* Main Image Slider */}
-                <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-orange-50 dark:bg-orange-950">
+                <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-white">
                     <div 
                         className="absolute inset-0 cursor-grab active:cursor-grabbing flex items-center justify-center p-4"
                         onMouseDown={(e) => {
@@ -147,7 +147,7 @@ Phone: ${customerPhone}`;
                 </div>
                 
                 {/* Thumbnail Navigation */}
-                <div className="max-w-7xl mx-auto px-4 py-4 bg-orange-50 dark:bg-orange-950">
+                <div className="max-w-7xl mx-auto px-4 py-4 bg-white">
                     <div className="flex justify-center gap-2 flex-wrap">
                         {pack.galleryImgs.map((img, idx) => (
                             <button
