@@ -918,7 +918,7 @@ Phone: ${phone}`;
                     </button>
                     
                     {/* Image Counter */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white rounded-full text-black text-sm font-medium">
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-white rounded-full text-black text-sm font-medium">
                         {currentImageIndex + 1} / {galleryImgs.length}
                     </div>
                     
