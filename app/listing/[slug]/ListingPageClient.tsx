@@ -19,6 +19,7 @@ import {
     TruckIcon,
     UserGroupIcon,
     SparklesIcon,
+    ArrowsPointingOutIcon,
 } from "@heroicons/react/24/outline";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 import ItineraryTimeline from "@/components/ItineraryTimeline";
@@ -875,105 +876,83 @@ Phone: ${phone}`;
 
     const renderGallery = () => (
         <div className="relative z-10">
-            <div className="hidden md:block">
-                <div 
-                    className="grid grid-cols-12 gap-1.5 h-[55vh] md:h-[70vh] min-h-[450px] md:min-h-[550px] rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-900 cursor-pointer"
-                    onClick={() => { setCurrentImageIndex(0); setGalleryOpen(true); }}
-                >
-                    <div className="col-span-7 relative group overflow-hidden rounded-l-3xl">
-                        <Image 
-                            src={galleryImgs[0]} 
-                            alt={title} 
-                            fill 
-                            sizes="(max-width: 768px) 100vw, 60vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-                            priority 
-                            quality={90}
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                        <div className="absolute bottom-6 left-6 z-10">
-                            <div className="bg-black/50 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                </svg>
-                                View Gallery
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-span-5 grid grid-rows-2 gap-1.5">
-                        {galleryImgs.slice(1, 3).map((img: string, idx: number) => (
-                            <div 
-                                key={idx} 
-                                className="relative group overflow-hidden"
-                                onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx + 1); setGalleryOpen(true); }}
-                            >
-                                <Image 
-                                    src={img} 
-                                    alt={`gallery-${idx + 2}`} 
-                                    fill 
-                                    sizes="(max-width: 768px) 100vw, 40vw"
-                                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-                                    quality={85}
-                                />
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-                                {idx === 1 && galleryImgs.length > 3 && (
-                                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/60 transition-colors duration-300">
-                                        <div className="text-center">
-                                            <span className="text-white font-bold text-xl block">+{galleryImgs.length - 3}</span>
-                                            <span className="text-white/80 text-sm">more photos</span>
-                                        </div>
-                                    </div>
-                                )}
-                                {galleryImgs.length <= 3 && (
-                                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm p-2 rounded-full">
-                                            <svg className="w-4 h-4 text-neutral-700 dark:text-neutral-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            <div className="md:hidden">
-                <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-100">
-                    <Image 
-                        src={galleryImgs[currentImageIndex]} 
-                        alt={`${title} - Image ${currentImageIndex + 1}`} 
-                        fill 
-                        sizes="100vw"
-                        className="object-cover"
-                        priority
-                        quality={90}
-                    />
-                    <button 
-                        type="button" 
-                        className="absolute bottom-4 right-4 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 hover:bg-white dark:hover:bg-neutral-800 transition-all shadow-xl"
+            {/* Interactive Hero Gallery */}
+            <div className="relative">
+                {/* Main Image Slider */}
+                <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-orange-50 dark:bg-orange-950">
+                    <div 
+                        className="absolute inset-0 cursor-grab active:cursor-grabbing flex items-center justify-center p-4"
+                        onMouseDown={(e) => {
+                            const startX = e.clientX;
+                            const handleMouseMove = (moveEvent: MouseEvent) => {
+                                const diff = startX - moveEvent.clientX;
+                                if (Math.abs(diff) > 50) {
+                                    if (diff > 0) setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1));
+                                    else setCurrentImageIndex((prev) => (prev < galleryImgs.length - 1 ? prev + 1 : 0));
+                                    document.removeEventListener('mousemove', handleMouseMove);
+                                }
+                            };
+                            document.addEventListener('mousemove', handleMouseMove);
+                        }}
                         onClick={() => setGalleryOpen(true)}
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        {currentImageIndex + 1} / {galleryImgs.length}
+                        <img 
+                            src={galleryImgs[currentImageIndex]} 
+                            alt={`${title} - Image ${currentImageIndex + 1}`}
+                            className="max-w-full max-h-full object-contain rounded-lg"
+                        />
+                    </div>
+                    
+                    {/* Navigation Arrows */}
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1)); }}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white rounded-full text-black hover:bg-orange-500 hover:text-white transition-all"
+                    >
+                        <ChevronLeftIcon className="w-8 h-8" />
                     </button>
-                    {galleryImgs.length > 1 && (
-                        <div className="absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-1.5">
-                            {galleryImgs.map((__img: string, idx: number) => (
-                                <button
-                                    key={idx}
-                                    type="button"
-                                    onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
-                                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                                        currentImageIndex === idx ? "bg-white scale-125" : "bg-white/60 hover:bg-white/80"
-                                    }`}
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setCurrentImageIndex((prev) => (prev < galleryImgs.length - 1 ? prev + 1 : 0)); }}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white rounded-full text-black hover:bg-orange-500 hover:text-white transition-all"
+                    >
+                        <ChevronRightIcon className="w-8 h-8" />
+                    </button>
+                    
+                    {/* Image Counter */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white rounded-full text-black text-sm font-medium">
+                        {currentImageIndex + 1} / {galleryImgs.length}
+                    </div>
+                    
+                    {/* View All Button */}
+                    <button
+                        onClick={(e) => { e.stopPropagation(); setGalleryOpen(true); }}
+                        className="absolute top-4 right-4 px-4 py-2 bg-white rounded-full text-black text-sm font-medium hover:bg-orange-500 hover:text-white transition-all flex items-center gap-2"
+                    >
+                        <ArrowsPointingOutIcon className="w-5 h-5" />
+                        View All Photos
+                    </button>
+                </div>
+                
+                {/* Thumbnail Navigation */}
+                <div className="max-w-7xl mx-auto px-4 py-4 bg-orange-50 dark:bg-orange-950">
+                    <div className="flex justify-center gap-2 flex-wrap">
+                        {galleryImgs.map((img: string, idx: number) => (
+                            <button
+                                key={idx}
+                                onClick={() => setCurrentImageIndex(idx)}
+                                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all ${
+                                    currentImageIndex === idx 
+                                    ? 'ring-2 ring-orange-500 scale-105' 
+                                    : 'opacity-60 hover:opacity-100'
+                                }`}
+                            >
+                                <img 
+                                    src={img} 
+                                    alt=""
+                                    className="w-full h-full object-cover"
                                 />
-                            ))}
-                        </div>
-                    )}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
