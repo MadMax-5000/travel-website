@@ -179,7 +179,7 @@ export default function ToursPage() {
             </div>
 
             {filteredTours.length > 0 ? (
-              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {filteredTours.map((tour) => (
                   <TourCard key={tour.id} data={tour} />
                 ))}
