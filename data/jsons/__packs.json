@@ -8,7 +8,7 @@
       "id": 103,
       "name": "Desert Activities"
     },
-    "title": "Timlalin Adventure",
+    "title": "Nomad Spirits",
     "subtitle": "Quad • Sandboarding • Camel Ride",
     "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
     "galleryImgs": [
@@ -20,7 +20,6 @@
       "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
       "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
       "/images/sunset-sandboarding/pexels-misho-cha-61081292-11763711.jpg",
-      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
       "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg"
     ],
     "commentCount": 0,
@@ -38,7 +37,7 @@
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "timlalin-adventure",
+    "slug": "nomad-spirits",
     "description": "Experience the ultimate desert adventure with three exciting activities in one day! Feel the thrill of quad biking through golden dunes, slide down the sandy slopes with sandboarding, and enjoy a peaceful camel ride through the scenic landscape. Perfect combination of adrenaline and relaxation!",
     "highlights": [
       "Quad biking in the Sahara dunes (1 hour)",
@@ -59,21 +58,21 @@
       "name": "Water Sports"
     },
     "title": "Saki Experience",
-    "subtitle": "Quad • Sandboarding • Camel Ride • Boat • Show • Dinner",
+    "subtitle": "Quad • Sandboarding • Camel Ride • Show • Dinner",
     "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
     "galleryImgs": [
-      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
-      "/images/image-timlaline-1.webp",
-      "/images/image-timlaline.webp",
-      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
       "/images/sunset-sandboarding/pexels-misho-cha-61081292-11763711.jpg",
       "/images/gnawa.jpg",
-      "/images/gnawa-2.jpg"
+      "/images/image-timlaline.webp",
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+      "/images/gnawa-2.jpg",
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
+      "/images/image-timlaline-1.webp"
     ],
     "commentCount": 0,
     "viewCount": 0,
     "like": true,
-    "address": "Agadir Desert • Beach • Marina • Colored Village",
+    "address": "Agadir Desert • Beach • Colored Village",
     "reviewStart": 4.8,
     "reviewCount": 28,
     "price": "120 € / 1200 MAD",
@@ -86,13 +85,12 @@
       "lng": -9.5981
     },
     "slug": "saki-experience",
-    "description": "The ultimate adventure and entertainment experience! Feel the thrill of quad biking through golden dunes, slide down sandy slopes with sandboarding, enjoy a peaceful camel ride, then head to the marina for an exciting boat trip. End your day with a live Gnawa show and a delicious traditional Moroccan dinner for an unforgettable experience.",
+    "description": "The ultimate adventure and entertainment experience! Feel the thrill of quad biking through golden dunes, slide down sandy slopes with sandboarding, and enjoy a peaceful camel ride. End your day with a live Gnawa show and a delicious traditional Moroccan dinner for an unforgettable experience.",
     "highlights": [
       "Quad biking in the Sahara dunes (1 hour)",
       "Sandboarding adventure at sunset",
       "Camel riding through forest and river trails",
       "Visit to the colorful village",
-      "Scenic boat trip from Agadir Marina",
       "On-board animation and entertainment",
       "Live Gnawa show performance",
       "Traditional Moroccan dinner included",
@@ -109,7 +107,7 @@
       "id": 101,
       "name": "City Tours"
     },
-    "title": "Agadir by Night",
+    "title": "The Night Loop",
     "subtitle": "Oufella • Marina • Koutchi • Dinner",
     "featuredImage": "/images/agadir-bynight-1.webp",
     "galleryImgs": [
@@ -117,7 +115,7 @@
       "/images/agadir-bynight-2.webp",
       "/images/agadir-city-tour/gettyimages-1146362546-612x612.jpg",
       "/images/agadir-bynight-1.webp",
-      "/images/kooutchi.png",
+      "/images/koutchii.jpeg",
       "/images/agadir-bynight-3.webp",
       "/images/agadir-bynight-4.webp",
       "/images/agadir-city-tour/gettyimages-2165030241-612x612.jpg"
@@ -137,7 +135,7 @@
       "lat": 30.4278,
       "lng": -9.5981
     },
-    "slug": "agadir-by-night",
+    "slug": "the-night-loop",
     "description": "Discover the magic of Agadir after dark! Begin with a scenic tour of the historic Oufella (Kasbah) offering panoramic views, then stroll through the lively Marina. Experience the vibrant Koutchi (night market) before savoring a delicious traditional Moroccan dinner. The perfect evening to soak in Agadir's nightlife.",
     "highlights": [
       "Pick-up from your hotel at 5:45 PM",
