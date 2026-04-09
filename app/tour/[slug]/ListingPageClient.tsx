@@ -881,19 +881,7 @@ Phone: ${phone}`;
                 {/* Main Image Slider */}
                 <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-white">
                     <div 
-                        className="absolute inset-0 cursor-grab active:cursor-grabbing flex items-center justify-center p-4"
-                        onMouseDown={(e) => {
-                            const startX = e.clientX;
-                            const handleMouseMove = (moveEvent: MouseEvent) => {
-                                const diff = startX - moveEvent.clientX;
-                                if (Math.abs(diff) > 50) {
-                                    if (diff > 0) setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1));
-                                    else setCurrentImageIndex((prev) => (prev < galleryImgs.length - 1 ? prev + 1 : 0));
-                                    document.removeEventListener('mousemove', handleMouseMove);
-                                }
-                            };
-                            document.addEventListener('mousemove', handleMouseMove);
-                        }}
+                        className="absolute inset-0 flex items-center justify-center p-4 cursor-pointer"
                         onClick={() => setGalleryOpen(true)}
                     >
                         <img 
