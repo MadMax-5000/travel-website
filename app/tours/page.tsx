@@ -4,20 +4,25 @@ import { useState, useMemo } from "react"
 import { DEMO_STAY_LISTINGS } from "@/data/listings"
 import { DEMO_STAY_CATEGORIES } from "@/data/taxonomies"
 import TourCard from "@/components/TourCard"
-import { SlidersHorizontal, MapPin, X } from "lucide-react"
+import { SlidersHorizontal, MapPin, X, Search } from "lucide-react"
 
 export default function ToursPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | number | null>(null)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("")
 
   const categories = useMemo(() => DEMO_STAY_CATEGORIES, [])
 
   const filteredTours = useMemo(() => {
     return DEMO_STAY_LISTINGS.filter((tour) => {
       const categoryMatch = !selectedCategory || tour.listingCategory?.id === selectedCategory
-      return categoryMatch
+      const searchLower = searchQuery.toLowerCase()
+      const searchMatch = !searchQuery || 
+        tour.title.toLowerCase().includes(searchLower) ||
+        tour.listingCategory?.name?.toLowerCase().includes(searchLower)
+      return categoryMatch && searchMatch
     })
-  }, [selectedCategory])
+  }, [selectedCategory, searchQuery])
 
   const clearFilters = () => {
     setSelectedCategory(null)
@@ -150,7 +155,7 @@ export default function ToursPage() {
           </div>
 
           <div className="flex-1">
-            <div className="flex items-center justify-between mb-6 sm:mb-8">
+            <div className="flex items-center justify-between mb-6 sm:mb-8 gap-4">
               <div>
                 <h1 className="text-2xl sm:text-3xl font-bold text-neutral-900 dark:text-white">
                   {selectedCategory
@@ -160,6 +165,24 @@ export default function ToursPage() {
                 <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-1">
                   {filteredTours.length} tours available
                 </p>
+              </div>
+              <div className="relative flex-shrink-0">
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400 pointer-events-none" />
+                <input
+                  type="text"
+                  placeholder="Search tours..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-48 sm:w-56 pl-10 pr-10 py-2.5 rounded-2xl bg-neutral-100 dark:bg-neutral-800 border border-transparent focus:border-orange-500 focus:bg-white dark:focus:bg-neutral-700 text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 transition-all outline-none"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 rounded-full text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             </div>
 

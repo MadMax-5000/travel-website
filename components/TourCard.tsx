@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { StayDataType } from "@/data/types"
 import Image from "next/image"
 import Link from "next/link"
-import { Heart, MapPin, Star } from "lucide-react"
+import { Heart, MapPin, Calendar } from "lucide-react"
 
 export interface TourCardProps {
     data?: StayDataType
@@ -21,8 +21,6 @@ const TourCard = ({ data, className = "" }: TourCardProps) => {
         priceMad,
         priceEur,
         address,
-        reviewStart,
-        reviewCount,
         listingCategory,
         href,
         galleryImgs,
@@ -34,64 +32,62 @@ const TourCard = ({ data, className = "" }: TourCardProps) => {
         || "/images/agadir.jpg"
 
     return (
-        <div className="group relative">
-            <Link href={href} className="block">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+        <Link href={href} className={`group block ${className}`}>
+            <div className="bg-white dark:bg-neutral-800 rounded-xl overflow-hidden border-2 border-neutral-300 dark:border-neutral-600 hover:border-orange-400 dark:hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+                <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                         src={imageSrc}
                         alt={title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
                     <button
                         onClick={(e) => {
                             e.preventDefault()
                             setIsLiked(!isLiked)
                         }}
-                        className="absolute top-4 right-4 p-2 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/40 transition-colors z-10"
+                        className="absolute top-3 right-3 p-2 rounded-full bg-white/95 backdrop-blur-sm hover:bg-white transition-colors z-10 shadow-sm"
                     >
                         <Heart 
-                            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-white"}`} 
+                            className={`w-4 h-4 ${isLiked ? "fill-orange-500 text-orange-500" : "text-neutral-600"}`} 
                         />
                     </button>
+                </div>
 
-                    <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                        <div className="flex items-center justify-between">
-                            <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-neutral-900">
-                                {listingCategory?.name || "Tour"}
+                <div className="p-3">
+                    <p className="text-[11px] font-medium text-orange-500 uppercase tracking-wide mb-2">
+                        {listingCategory?.name || "Tour"}
+                    </p>
+
+                    <h3 className="text-[15px] font-medium text-neutral-900 dark:text-white leading-snug mb-2">
+                        {title}
+                    </h3>
+
+                    <div className="flex items-center gap-1 text-neutral-500 dark:text-neutral-400 text-xs mb-4">
+                        <MapPin className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate">{address}</span>
+                    </div>
+
+                    <div className="border-t border-neutral-200 dark:border-neutral-700 pt-3">
+                        <div className="flex items-baseline gap-2 mb-3">
+                            <span className="text-[18px] font-semibold text-orange-500">
+                                {priceEur} €
                             </span>
-                            <div className="flex items-center gap-1 px-2 py-1 bg-orange-500 rounded-full text-xs font-medium text-white">
-                                <Star className="w-3 h-3 fill-white" />
-                                {reviewStart || "4.8"}
-                            </div>
+                            <span className="text-xs text-neutral-400">
+                                / {priceMad} MAD
+                            </span>
                         </div>
-                    </div>
-                </div>
 
-                <div className="flex justify-between items-start gap-2 mt-4">
-                    <div className="flex-1">
-                        <p className="text-xs text-orange-500 font-medium mb-1">
-                            {listingCategory?.name || "Tour"}
-                        </p>
-                        <h3 className="font-semibold text-lg text-neutral-900 dark:text-white line-clamp-1 group-hover:text-orange-500 transition-colors">
-                            {title}
-                        </h3>
-                        <div className="flex items-center gap-1 mt-2 text-neutral-500 dark:text-neutral-400 text-sm">
-                            <MapPin className="w-4 h-4" />
-                            <span className="line-clamp-1">{address}</span>
-                        </div>
-                    </div>
-                    <div className="text-right">
-                        <p className="text-lg font-bold text-orange-500">{priceEur} € / {priceMad} MAD</p>
-                        <p className="text-xs text-neutral-400">per person</p>
+                        <button className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors">
+                            <Calendar className="w-4 h-4" />
+                            Book Tour
+                        </button>
                     </div>
                 </div>
-            </Link>
-        </div>
+            </div>
+        </Link>
     )
 }
 
