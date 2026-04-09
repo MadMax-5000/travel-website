@@ -11,18 +11,18 @@
     "title": "AGADIR CITY TOUR",
     "featuredImage": "/images/birdview-agadir-beach&city.jpg",
     "galleryImgs": [
-      "/images/birdview-agadir-beach&city.jpg",
-      "/images/agadir-beach.jpg",
-      "/images/argan-guided-tour/pexels-christophe-rascle-159591525-18742777.jpg",
-      "/images/argan-guided-tour/pexels-ivan-drazic-20457695-13812743.jpg",
-      "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
+      "/images/agadir-city-tour/pexels-mag-photography-1501456-30237001.jpg",
+      "/images/agadir-city-tour/gettyimages-154961749-612x612.jpg",
       "/images/agadir-city-tour/gettyimages-2165030241-612x612.jpg",
       "/images/agadir-city-tour/gettyimages-1146362546-612x612.jpg",
-      "/images/agadir-city-tour/gettyimages-154961749-612x612.jpg",
       "/images/agadir-city-tour/gettyimages-141856967-612x612.jpg",
+      "/images/argan-guided-tour/pexels-christophe-rascle-159591525-18742777.jpg",
+      "/images/agadir-city-tour/pexels-mag-photography-1501456-30236986.jpg",
       "/images/agadir-city-tour/Souk-Agadir-mosquee.jpg",
-      "/images/agadir-city-tour/pexels-mag-photography-1501456-30237001.jpg",
-      "/images/agadir-city-tour/pexels-mag-photography-1501456-30236986.jpg"
+      "/images/birdview-agadir-beach&city.jpg",
+      "/images/argan-guided-tour/pexels-ivan-drazic-20457695-13812743.jpg",
+      "/images/agadir-beach.jpg",
+      "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -41,9 +41,59 @@
       "lng": -9.5981
     },
     "slug": "agadir-city-tour",
-    "duration": "08:30am-11:30am / 02:00pm-05:30pm",
+    "duration": "from 10:00am to 01:00pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Quad Bike Equipment", "Safety Briefing", "Moroccan Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "Professional Guide",
+      "Souk ALHAD Visit",
+      "Mint Tea"
+    ],
+    "tourDescription": "Discover the best of Agadir on this comprehensive city tour. Visit the stunning Marina, explore the historic Kasbah, experience the vibrant Old City, admire the magnificent Big Mosque, and lose yourself in the colors and scents of Souk ALHAD. Perfect for first-time visitors wanting to experience the essence of Agadir."
+  },
+  {
+    "id": "tour_2",
+    "authorId": 1,
+    "date": "2026-02-15",
+    "href": "/listing-stay-detail",
+    "listingCategory": {
+      "id": 103,
+      "name": "Adventure"
+    },
+    "title": "QUAD BIKE IN DESERT",
+    "featuredImage": "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+    "galleryImgs": [
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502445.jpg",
+      "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
+      "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg"
+    ],
+    "commentCount": 0,
+    "viewCount": 0,
+    "like": false,
+    "address": "Desert Area, Agadir",
+    "reviewStart": 4.5,
+    "reviewCount": 67,
+    "price": "350 MAD / 35 €",
+    "priceEur": 35,
+    "priceMad": 350,
+    "maxGuests": 6,
+    "saleOff": "EVERYDAY",
+    "isAds": null,
+    "map": {
+      "lat": 30.4278,
+      "lng": -9.5981
+    },
+    "slug": "quad-bike-in-desert",
+    "duration": "2 Hours",
+    "scheduleDays": "EVERYDAY",
+    "includes": [
+      "Round Trip Transport",
+      "Hotel Pickup & Drop-off",
+      "Quad Bike Equipment",
+      "Safety Briefing",
+      "Moroccan Mint Tea",
+      "Tea Gelssa"
+    ],
     "tourDescription": "Feel the adrenaline rush as you navigate through the stunning Moroccan desert on a powerful quad bike. Traverse sand dunes, rocky paths, and breathtaking landscapes. All equipment provided with professional safety briefing included."
   },
   {
@@ -68,7 +118,7 @@
     "address": "Desert Area, Agadir",
     "reviewStart": 4.7,
     "reviewCount": 42,
-    "price": "650 MAD",
+    "price": "650 MAD / 65 €",
     "priceEur": 65,
     "priceMad": 650,
     "maxGuests": 4,
@@ -81,7 +131,12 @@
     "slug": "buggy-in-desert",
     "duration": "08:30am-11:30am / 02:00pm-05:30pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Buggy Equipment", "Safety Gear", "Moroccan Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "Buggy Equipment",
+      "Safety Gear",
+      "Moroccan Mint Tea"
+    ],
     "tourDescription": "Experience the thrill of off-road adventure with our desert buggy tour. Tackle challenging terrain in a powerful buggy, explore hidden valleys, and enjoy spectacular desert views. An unforgettable adventure for thrill-seekers."
   },
   {
@@ -96,8 +151,8 @@
     "title": "PARADIS VALLEY",
     "featuredImage": "/images/paradis-valley/paradise.jpg",
     "galleryImgs": [
-      "/images/paradis-valley/paradise.jpg",
       "/images/paradis-valley/0bd3a0bc-1aef-4ea8-b465-a415de6c2fa2.jpg",
+      "/images/paradis-valley/paradise.jpg",
       "/images/paradis-valley/paradise-valley-7-Morocco.jpg"
     ],
     "commentCount": 0,
@@ -119,7 +174,12 @@
     "slug": "paradis-valley",
     "duration": "08:30am-01:30pm / 02:00pm-06:30pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Swimming in Natural Pools", "Scenic Hike", "Moroccan Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "Swimming in Natural Pools",
+      "Scenic Hike",
+      "Moroccan Mint Tea"
+    ],
     "tourDescription": "Escape to Paradise Valley, a stunning oasis nestled in the Anti-Atlas mountains. Swim in crystal-clear natural pools, explore lush palm groves, and discover hidden waterfalls. A nature lover's paradise just a short drive from Agadir."
   },
   {
@@ -132,11 +192,12 @@
       "name": "Water Sports"
     },
     "title": "BOAT TRIP",
-    "featuredImage": "/images/boat-trip/boats.jpg",
+    "featuredImage": "/images/boat-trip/boat-trips-agadir-taghazout.jpeg",
     "galleryImgs": [
+      "/images/boat-trip/promenade-en-mer-agadir-1534254096.jpg",
       "/images/boat-trip/boats.jpg",
-      "/images/boat-trip/pexels-mag-photography-1501456-30532040.jpg",
-      "/images/boat-trip/pexels-mag-photography-1501456-30532042.jpg"
+      "/images/boat-trip/boat-trips-agadir-taghazout.jpeg",
+      "/images/boat-trip/bateau-agadir-the-phantom-hero1.jfif"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -157,7 +218,14 @@
     "slug": "boat-trip",
     "duration": "from 09:00am to 02:00pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Swimming Stop", "Fishing Activity", "Onboard Animation", "Lunch Included", "Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "Swimming Stop",
+      "Fishing Activity",
+      "Onboard Animation",
+      "Lunch Included",
+      "Mint Tea"
+    ],
     "tourDescription": "Set sail from Agadir Marina for an unforgettable day on the Atlantic. Enjoy swimming in calm waters, try your hand at fishing, feast on a delicious onboard lunch, and soak up the sun with full animation and entertainment throughout the trip."
   },
   {
@@ -172,9 +240,9 @@
     "title": "CAMEL OR HORSE RIDING",
     "featuredImage": "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
     "galleryImgs": [
-      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
       "/images/camel-or-horse-riding/isabeltenbrink-horses-1530497.jpg",
-      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg"
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
+      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -195,7 +263,12 @@
     "slug": "camel-or-horse-riding",
     "duration": "10:00am-12:00pm / 03:00pm-05:00pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "2 Hours Ride", "Forest & River Trail", "Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "2 Hours Ride",
+      "Forest & River Trail",
+      "Mint Tea"
+    ],
     "tourDescription": "Experience traditional Moroccan transportation on a peaceful ride through scenic forest and river landscapes. Choose between a gentle camel or elegant horse and explore the beautiful countryside surrounding Agadir."
   },
   {
@@ -210,9 +283,11 @@
     "title": "CAMEL OR HORSE RIDING + SUNSET + BBQ",
     "featuredImage": "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg",
     "galleryImgs": [
+      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg",
+      "/images/camel-or-horse-riding/grilling-juicy-steaks-at-sunset-scenic-outdoor-bbq-delicious-food-experience-serene-landscape-free-photo.jpeg",
+      "/images/camel-or-horse-riding/bbq-smoker-sunset-with-tantalizing-brisket_198067-1701.jpg",
       "/images/camel-or-horse-riding/pexels-jdgromov-4857556.jpg",
-      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg",
-      "/images/camel-or-horse-riding/guy-riding-camel-inbeach.jpg"
+      "/images/camel-or-horse-riding/pexels-emrecanalgul-26775378.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -233,7 +308,13 @@
     "slug": "camel-or-horse-riding-sunset-bbq",
     "duration": "from 05:00pm to 08:30pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "2 Hours Sunset Ride", "Forest & River Trail", "Barbecue Dinner", "Mint Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "2 Hours Sunset Ride",
+      "Forest & River Trail",
+      "Barbecue Dinner",
+      "Mint Tea"
+    ],
     "tourDescription": "The ultimate combinaton of adventure and relaxation. Ride through the forest and river at sunset, then enjoy a delicious traditional Moroccan barbecue dinner under the stars. A magical evening experience."
   },
   {
@@ -248,9 +329,9 @@
     "title": "MASSA + TIZNIT (JEEP 4×4 MINI SAHARA)",
     "featuredImage": "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-ktschankula-32955677.jpg",
     "galleryImgs": [
+      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-soumithsoman-5812065.jpg",
       "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-ktschankula-32955677.jpg",
-      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-jdgromov-13118555.jpg",
-      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-soumithsoman-5812065.jpg"
+      "/images/massa-tiznit-jeep-4-4-mini-sahara/pexels-jdgromov-13118555.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -271,7 +352,14 @@
     "slug": "massa-tiznit-jeep-4-4-mini-sahara",
     "duration": "from 08:30am to 04:00pm",
     "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
-    "includes": ["4×4 Jeep Transport", "Sand Dunes", "Berber Villages", "Wild Beach", "Off-Road Adventure", "Lunch at Local's House"],
+    "includes": [
+      "4×4 Jeep Transport",
+      "Sand Dunes",
+      "Berber Villages",
+      "Wild Beach",
+      "Off-Road Adventure",
+      "Lunch at Local's House"
+    ],
     "tourDescription": "Embark on an epic off-road adventure through southern Morocco. Explore golden sand dunes, visit traditional Berber villages, relax on untouched wild beaches, and enjoy an authentic lunch with local families. Experience the real Morocco."
   },
   {
@@ -309,7 +397,13 @@
     "slug": "argan-massage-and-morrocan-hammam",
     "duration": "from 10:00am to 06:00pm (Depends on availability)",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "1 Hour Argan Massage", "1 Hour Traditional Hammam", "Black Soap Scrub", "Ghassoul Clay Mask"],
+    "includes": [
+      "Round Trip Transport",
+      "1 Hour Argan Massage",
+      "1 Hour Traditional Hammam",
+      "Black Soap Scrub",
+      "Ghassoul Clay Mask"
+    ],
     "tourDescription": "Indulge in the ultimate Moroccan spa experience. Start with a traditional hammam ritual including black soap scrub and ghassoul clay, followed by a rejuvenating Argan oil massage. Pure relaxation and wellness."
   },
   {
@@ -324,8 +418,8 @@
     "title": "SUNSET SANDBORDING",
     "featuredImage": "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
     "galleryImgs": [
-      "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
       "/images/sunset-sandboarding/pexels-oidonnyboy-9540385.jpg",
+      "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
       "/images/sunset-sandboarding/pexels-misho-cha-61081292-11763711.jpg"
     ],
     "commentCount": 0,
@@ -347,7 +441,13 @@
     "slug": "sunset-sandboarding",
     "duration": "from 04:00pm to 08:30pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Sandboarding Equipment", "Colored Village Visit", "Desert Style Experience", "Moroccan Tea"],
+    "includes": [
+      "Round Trip Transport",
+      "Sandboarding Equipment",
+      "Colored Village Visit",
+      "Desert Style Experience",
+      "Moroccan Tea"
+    ],
     "tourDescription": "Catch the magical desert sunset while sandboarding down giant dunes. Visit the stunning Colored Village famous for its vibrant landscapes, and experience authentic Moroccan desert hospitality. An unforgettable evening adventure."
   },
   {
@@ -385,7 +485,12 @@
     "slug": "jetski-30min",
     "duration": "30 minutes (Depends on availability)",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Life Jacket", "Safety Briefing", "30 Minutes Riding Time"],
+    "includes": [
+      "Round Trip Transport",
+      "Life Jacket",
+      "Safety Briefing",
+      "30 Minutes Riding Time"
+    ],
     "tourDescription": "Feel the thrill of speeding across the Atlantic waves on a powerful jetski. 30 minutes of pure excitement with all safety equipment provided. Perfect for adrenaline junkies looking for a quick aquatic adventure."
   },
   {
@@ -401,8 +506,8 @@
     "featuredImage": "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
     "galleryImgs": [
       "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
-      "/images/crocodile-park/35.jpg",
-      "/images/crocodile-park/Crocoparc-Agadir-bassins-crocodiles-min.jfif"
+      "/images/crocodile-park/Crocoparc-Agadir-bassins-crocodiles-min.jfif",
+      "/images/crocodile-park/35.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -423,7 +528,11 @@
     "slug": "crocodil-park",
     "duration": "10:00am-01:00pm / 02:00pm-05:00pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Entrance Ticket", "Guided Tour", "Crocodile Feeding Show"],
+    "includes": [
+      "Round Trip Transport",
+      "Entrance Ticket",
+      "Crocodile Feeding Show"
+    ],
     "tourDescription": "Discover the fascinating world of crocodiles at this unique park. Home to hundreds of Nile crocodiles, the park also features beautiful gardens, a museum, and regular feeding shows. Educational fun for the whole family."
   },
   {
@@ -439,8 +548,8 @@
     "featuredImage": "/images/dolphin-show/pexels-magda-ehlers-pexels-11740717.jpg",
     "galleryImgs": [
       "/images/dolphin-show/pexels-magda-ehlers-pexels-11740717.jpg",
-      "/images/dolphin-show/pexels-andromeda99-18155773.jpg",
-      "/images/dolphin-show/pexels-raul-mex-2159043921-35797193.jpg"
+      "/images/dolphin-show/pexels-raul-mex-2159043921-35797193.jpg",
+      "/images/dolphin-show/pexels-andromeda99-18155773.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -461,10 +570,14 @@
     "slug": "dolphin-show",
     "duration": "from 10:15am to 12:30pm",
     "scheduleDays": "EVERYDAY",
-    "includes": ["Round Trip Transport", "Entrance Ticket", "Dolphin Show", "Photo Opportunity"],
+    "includes": [
+      "Round Trip Transport",
+      "Entrance Ticket",
+      "Dolphin Show",
+      "Photo Opportunity"
+    ],
     "tourDescription": "Be amazed by the intelligence and grace of bottlenose dolphins in a spectacular show. Watch these incredible creatures perform incredible acrobatics and interact with their trainers. A memorable experience for all ages."
   },
-
   {
     "id": "tour_16",
     "authorId": 1,
@@ -477,9 +590,9 @@
     "title": "MARRAKECH",
     "featuredImage": "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg",
     "galleryImgs": [
-      "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg",
+      "/images/marrakesh/pexels-poppin-2448418.jpg",
       "/images/marrakesh/pexels-tony-zohari-3296024-35659931.jpg",
-      "/images/marrakesh/pexels-poppin-2448418.jpg"
+      "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -500,7 +613,15 @@
     "slug": "marrakech",
     "duration": "from 07:15am to 09:00pm",
     "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
-    "includes": ["Air-Conditioned Transport", "Professional Guide", "Jamaa el-Fna Square", "Koutoubia Mosque", "Hotel Mamounia Visit", "Free Time", "Return to Agadir"],
+    "includes": [
+      "Air-Conditioned Transport",
+      "Professional Guide",
+      "Jamaa el-Fna Square",
+      "Koutoubia Mosque",
+      "Hotel Mamounia Visit",
+      "Free Time",
+      "Return to Agadir"
+    ],
     "tourDescription": "Discover the magical Red City of Marrakech. Visit the iconic Koutoubia Mosque, explore the historic Jamaa el-Fna square, enjoy the famous Hotel Mamounia, and explore the souks. Let our expert guide show you the hidden gems of this ancient city before returning to Agadir."
   },
   {
@@ -516,8 +637,15 @@
     "featuredImage": "/images/taroudant+tiout/taroudant.jpg.1920x0_q85_format-jpg.jpg",
     "galleryImgs": [
       "/images/taroudant+tiout/taroudant.jpg.1920x0_q85_format-jpg.jpg",
+      "/images/taroudant+tiout/pexels-damien-paye-emeraudetrip-2152991274-36685468.jpg",
+      "/images/argan-guided-tour/pexels-georgia-115809844-9756598.jpg",
+      "/images/taroudant+tiout/34_6399d534e5f79s_0.jpg",
+      "/images/argan-guided-tour/pexels-pljack-16146092.jpg",
       "/images/taroudant+tiout/pexels-axp-photography-500641970-19473609.jpg",
-      "/images/taroudant+tiout/pexels-jean-pierre-liut-722716555-33691653.jpg"
+      "/images/taroudant+tiout/pexels-jean-pierre-liut-722716555-33691653.jpg",
+      "/images/taroudant+tiout/Start-a-blog-in-2022-1080x550.webp",
+      "/images/taroudant+tiout/taroudant_morocco-11-scaled.jpg",
+      "/images/taroudant+tiout/riad-ain-khadra.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -538,8 +666,16 @@
     "slug": "taroudant-tiout",
     "duration": "from 08:30am to 06:00pm",
     "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
-    "includes": ["4×4 Transport", "Professional Guide", "Taroudant Ramparts", "Old Fortress", "Tiout Oasis", "Ali Baba Lunch"],
-    "tourDescription": "Explore the charming Berber city of Taroudant, often called 'Little Marrakech'. Walk the historic ramparts, visit the ancient fortress, then continue to the beautiful Tiout oasis. Enjoy an authentic Ali Baba themed lunch in a stunning setting."
+    "includes": [
+      "4×4 Transport",
+      "Professional Guide",
+      "Taroudant Ramparts",
+      "Old Fortress",
+      "Tiout Oasis",
+      "Ali Baba Lunch",
+      "Goats in Trees Visit"
+    ],
+    "tourDescription": "Explore the charming Berber city of Taroudant, often called 'Little Marrakech'. Walk the historic ramparts, visit the ancient fortress, then continue to the beautiful Tiout oasis. Discover the famous goats in trees along the way - a unique phenomenon where goats climb argan trees to eat their fruit. Enjoy an authentic Ali Baba themed lunch in a stunning setting."
   },
   {
     "id": "tour_18",
@@ -553,8 +689,8 @@
     "title": "LEGZIRA + MASSA",
     "featuredImage": "/images/legzira+massa/Legzira.jpg",
     "galleryImgs": [
-      "/images/legzira+massa/Legzira.jpg",
       "/images/legzira+massa/legzira-beach.jpg",
+      "/images/legzira+massa/Legzira.jpg",
       "/images/legzira+massa/Screenshot-2023-06-26-at-16.28.09-1024x638.jpg"
     ],
     "commentCount": 0,
@@ -576,7 +712,14 @@
     "slug": "legzira-massa",
     "duration": "from 08:00am to 06:00pm",
     "scheduleDays": "TUESDAY / THURSDAY / SATURDAY",
-    "includes": ["Air-Conditioned Transport", "Professional Guide", "Legzira Arches", "Massa Lagoon", "Ocean Lunch", "Beautiful Landscapes"],
+    "includes": [
+      "Air-Conditioned Transport",
+      "Professional Guide",
+      "Legzira Arches",
+      "Massa Lagoon",
+      "Ocean Lunch",
+      "Beautiful Landscapes"
+    ],
     "tourDescription": "Visit the legendary Legzira beach famous for its stunning natural rock arches. Continue to the peaceful Massa lagoon and enjoy a delicious lunch by the ocean. Experience breathtaking Atlantic coastline scenery."
   },
   {
@@ -593,7 +736,17 @@
     "galleryImgs": [
       "/images/essaouira/Essaouira.jpg",
       "/images/essaouira/pexels-sarah-hall-74912249-12494695.jpg",
-      "/images/essaouira/cuyahoga-boats-1143724.jpg"
+      "/images/essaouira/cuyahoga-boats-1143724.jpg",
+      "/images/argan-guided-tour/pexels-pljack-16146092.jpg",
+      "/images/argan-guided-tour/pexels-georgia-115809844-9756598.jpg",
+      "/images/essaouira/5b.jpg",
+      "/images/essaouira/Shopping-Essaouira-street.webp",
+      "/images/essaouira/Essaouira_8.jpg.webp",
+      "/images/essaouira/Essaouira_Atlantic.jpg",
+      "/images/essaouira/pexels-diblacl-161196470-33137293.jpg",
+      "/images/essaouira/850BAE63-D389-4026-9BBF-3413275C505C_1_201_a-scaled.jpeg",
+      "/images/essaouira/bbq-smoker-sunset-with-tantalizing-brisket_198067-1701.jpg",
+      "/images/essaouira/grilling-juicy-steaks-at-sunset-scenic-outdoor-bbq-delicious-food-experience-serene-landscape-free-photo.jpeg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -614,8 +767,18 @@
     "slug": "essaouira",
     "duration": "from 07:30am to 07:00pm",
     "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
-    "includes": ["Air-Conditioned Transport", "Professional Guide", "Station Stop", "Argane Cooperative", "Goats on Trees", "Essaouira City Tour", "Return to Agadir"],
-    "tourDescription": "Discover the windswept beauty of Essaouira, the former Portuguese city. Starting at 7:30 AM, visit the station, stop at an argane cooperative with famous goats on trees, enjoy a guided tour of the UNESCO-listed medina, and return to Agadir."
+    "includes": [
+      "Air-Conditioned Transport",
+      "Professional Guide",
+      "Station Stop",
+      "Argane Cooperative",
+      "Goats on Trees",
+      "Essaouira City Tour",
+      "Old City Visit",
+      "BBQ Dinner",
+      "Return to Agadir"
+    ],
+    "tourDescription": "Discover the windswept beauty of Essaouira, the former Portuguese city. Starting at 7:30 AM, visit the station, stop at an argane cooperative with famous goats on trees - a unique Moroccan phenomenon where goats climb argan trees to eat their fruit. Explore the UNESCO-listed medina with its old city walls, visit the historic port, and enjoy a delicious BBQ dinner. Return to Agadir with unforgettable memories."
   },
   {
     "id": "tour_20",
@@ -652,7 +815,14 @@
     "slug": "berber-fantasia-night-show",
     "duration": "from 07:00pm to 11:45pm",
     "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
-    "includes": ["Round Trip Transport", "Folklore Show", "Acrobatics", "Fire Show", "Belly Dancer", "Traditional Moroccan Dinner"],
+    "includes": [
+      "Round Trip Transport",
+      "Folklore Show",
+      "Acrobatics",
+      "Fire Show",
+      "Belly Dancer",
+      "Traditional Moroccan Dinner"
+    ],
     "tourDescription": "Experience authentic Moroccan culture at this spectacular evening show. Watch traditional Berber folklore, thrilling acrobatics, and a mesmerizing fire show. Enjoy a delicious traditional Moroccan dinner while being entertained by skilled belly dancers.",
     "itinerary": [
       {
@@ -716,7 +886,14 @@
     "slug": "surf-lesson-2-hours",
     "duration": "from 10:30am to 01:30pm",
     "scheduleDays": "MONDAY / WEDNESDAY / FRIDAY",
-    "includes": ["Round Trip Transport", "Professional Instructor", "Surfboard", "Bodyboard", "Wetsuit", "Safety Briefing"],
+    "includes": [
+      "Round Trip Transport",
+      "Professional Instructor",
+      "Surfboard",
+      "Bodyboard",
+      "Wetsuit",
+      "Safety Briefing"
+    ],
     "tourDescription": "Learn to ride the Atlantic waves with our professional surf instructors. 2 hours of exciting surf lesson including all equipment. Whether you're a beginner or looking to improve, our expert instructors will have you standing up in no time."
   }
 ]
