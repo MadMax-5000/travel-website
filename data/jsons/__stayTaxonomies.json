@@ -20,7 +20,7 @@
         "name": "Adventure",
         "href": "tours/adventure",
         "thumbnail": "/images/buggy-in-desert/pexels-jdgromov-13252283.jpg",
-        "count": 3,
+        "count": 4,
         "icon": "zap"
     },
     {
@@ -28,7 +28,7 @@
         "name": "Nature & Wellness",
         "href": "tours/nature-wellness",
         "thumbnail": "/images/paradis-valley/paradise.jpg",
-        "count": 3,
+        "count": 2,
         "icon": "leaf"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Family Fun",
         "href": "tours/family-fun",
         "thumbnail": "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
-        "count": 2,
+        "count": 4,
         "icon": "users"
     },
     {
@@ -52,7 +52,7 @@
         "name": "Cultural Experiences",
         "href": "tours/cultural",
         "thumbnail": "/images/berber-fantasia-night-show/48.jpg",
-        "count": 2,
+        "count": 1,
         "icon": "music"
     }
 ]
