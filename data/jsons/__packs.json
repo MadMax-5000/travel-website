@@ -75,9 +75,10 @@
     "address": "Agadir Desert • Beach • Colored Village",
     "reviewStart": 4.8,
     "reviewCount": 28,
-    "price": "120 € / 1200 MAD",
+    "price": "100 € / 1000 MAD",
     "duration": "Full Day",
     "maxGuests": 8,
+    "minGuests": 1,
     "saleOff": "Best Seller",
     "isAds": null,
     "map": {
