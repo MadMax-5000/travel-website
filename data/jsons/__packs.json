@@ -54,8 +54,8 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 105,
-      "name": "Water Sports"
+      "id": 103,
+      "name": "Adventure"
     },
     "title": "Saki Experience",
     "subtitle": "Quad • Sandboarding • Camel Ride • Show • Dinner",
@@ -105,8 +105,8 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 101,
-      "name": "City Tours"
+      "id": 107,
+      "name": "Cultural Experiences"
     },
     "title": "The Night Loop",
     "subtitle": "Oufella • Marina • Koutchi • Dinner",
@@ -152,8 +152,8 @@
     "date": "2026-02-15",
     "href": "/packs",
     "listingCategory": {
-      "id": 103,
-      "name": "Desert Activities"
+      "id": 102,
+      "name": "Day Trips"
     },
     "title": "Taghazoute",
     "subtitle": "Anza • Taghazoute • Aghroud (Colored City)",

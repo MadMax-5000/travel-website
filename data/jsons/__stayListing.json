@@ -187,8 +187,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 105,
-      "name": "Water Sports"
+      "id": 102,
+      "name": "Day Trips"
     },
     "title": "BOAT TRIP",
     "featuredImage": "/images/boat-trip/boat-trips-agadir-taghazout.jpeg",
@@ -369,8 +369,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 107,
-      "name": "Wellness & Spa"
+      "id": 104,
+      "name": "Nature & Wellness"
     },
     "title": "ARGAN MASSAGE AND MOROCCAN HAMMAM",
     "featuredImage": "/images/argan-massage-and-morrocan-hammam/Moroccan-Hammam-Spa-Travel-Exploration-Morocco.jpg",
@@ -413,8 +413,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 108,
-      "name": "Desert Adventure"
+      "id": 103,
+      "name": "Adventure"
     },
     "title": "SUNSET SANDBORDING",
     "featuredImage": "/images/sunset-sandboarding/pexels-janonovoa-16756513.jpg",
@@ -457,8 +457,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 105,
-      "name": "Water Sports"
+      "id": 102,
+      "name": "Day Trips"
     },
     "title": "JETSKI 30MIN",
     "featuredImage": "/images/jetski/pexels-keeganjchecks-18636561.jpg",
@@ -500,8 +500,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 109,
-      "name": "Parks & Shows"
+      "id": 106,
+      "name": "Family Fun"
     },
     "title": "CROCODIL PARK",
     "featuredImage": "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
@@ -542,8 +542,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 109,
-      "name": "Parks & Shows"
+      "id": 106,
+      "name": "Family Fun"
     },
     "title": "DOLPHIN SHOW",
     "featuredImage": "/images/dolphin-show/pexels-magda-ehlers-pexels-11740717.jpg",
@@ -585,7 +585,7 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 101,
+      "id": 102,
       "name": "Day Trips"
     },
     "title": "MARRAKECH",
@@ -631,7 +631,7 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 101,
+      "id": 102,
       "name": "Day Trips"
     },
     "title": "TAROUDANT + TIOUT",
@@ -684,7 +684,7 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 101,
+      "id": 102,
       "name": "Day Trips"
     },
     "title": "LEGZIRA + MASSA",
@@ -732,7 +732,7 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 101,
+      "id": 102,
       "name": "Day Trips"
     },
     "title": "ESSAOUIRA",
@@ -790,8 +790,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 111,
-      "name": "Shows & Events"
+      "id": 107,
+      "name": "Cultural Experiences"
     },
     "title": "BERBER FANTASIA NIGHT SHOW",
     "featuredImage": "/images/berber-fantasia-night-show/48.jpg",
@@ -861,8 +861,8 @@
     "date": "2026-02-15",
     "href": "/listing-stay-detail",
     "listingCategory": {
-      "id": 105,
-      "name": "Water Sports"
+      "id": 102,
+      "name": "Day Trips"
     },
     "title": "SURF LESSON 2 HOURS",
     "featuredImage": "/images/surf-lesson/pexels-grishkoff-30118075.jpg",

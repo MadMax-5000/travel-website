@@ -4,7 +4,7 @@
         "name": "City Tours",
         "href": "tours/city-tours",
         "thumbnail": "/images/agadir-city-tour/gettyimages-629548321-612x612.jpg",
-        "count": 2,
+        "count": 1,
         "icon": "building"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Day Trips",
         "href": "tours/day-trips",
         "thumbnail": "/images/marrakesh/pexels-diego-f-parra-33199-25489589.jpg",
-        "count": 4,
+        "count": 7,
         "icon": "sun"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Adventure",
         "href": "tours/adventure",
         "thumbnail": "/images/buggy-in-desert/pexels-jdgromov-13252283.jpg",
-        "count": 5,
+        "count": 3,
         "icon": "zap"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Water Sports",
         "href": "tours/water-sports",
         "thumbnail": "/images/surf-lesson/pexels-grishkoff-30118075.jpg",
-        "count": 3,
+        "count": 0,
         "icon": "waves"
     },
     {
