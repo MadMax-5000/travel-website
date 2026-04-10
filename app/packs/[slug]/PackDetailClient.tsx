@@ -40,7 +40,8 @@ interface PackDetailClientProps {
 
 export default function PackDetailClient({ pack }: PackDetailClientProps) {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-    const [guests, setGuests] = useState(2);
+    const minGuests = (pack as any).minGuests || 2;
+    const [guests, setGuests] = useState(minGuests);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [bookingStep, setBookingStep] = useState<"form" | "success">("form");
@@ -281,11 +282,11 @@ Phone: ${customerPhone}`;
                                             <div>
                                                 <p className="font-medium text-neutral-900 dark:text-white">Guests</p>
                                                 <p className="text-sm text-neutral-500">{priceEur} € / {priceMad} MAD each</p>
-                                                <p className="text-xs text-orange-600 mt-1" title="This activity requires a minimum of 2 guests">Min. 2 guests required</p>
+                                                <p className="text-xs text-orange-600 mt-1" title={`This activity requires a minimum of ${minGuests} guests`}>Min. {minGuests} guests required</p>
                                             </div>
                                             <div className="flex items-center gap-3">
                                                 <button
-                                                    onClick={() => setGuests(Math.max(2, guests - 1))}
+                                                    onClick={() => setGuests(Math.max(minGuests, guests - 1))}
                                                     className="w-8 h-8 rounded-full border border-neutral-300 dark:border-neutral-600 flex items-center justify-center hover:border-orange-500 transition-colors"
                                                 >
                                                     <MinusIcon className="w-4 h-4" />

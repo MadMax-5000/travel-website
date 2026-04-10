@@ -155,6 +155,7 @@ export interface PackDataType {
     savings?: string;
     duration: string;
     maxGuests: number;
+    minGuests?: number;
     listingCategory: TaxonomyType;
     description: string;
     highlights: string[];
