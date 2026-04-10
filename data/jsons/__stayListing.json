@@ -472,9 +472,9 @@
     "address": "Agadir Beach",
     "reviewStart": 4.4,
     "reviewCount": 54,
-    "price": "600 MAD",
-    "priceEur": 60,
-    "priceMad": 600,
+    "price": "500 MAD",
+    "priceEur": 50,
+    "priceMad": 500,
     "maxGuests": 2,
     "saleOff": "EVERYDAY",
     "isAds": null,
@@ -507,7 +507,14 @@
     "galleryImgs": [
       "/images/crocodile-park/Crocoparc-Agadir-crocodiles-cascade-min.JPG",
       "/images/crocodile-park/Crocoparc-Agadir-bassins-crocodiles-min.jfif",
-      "/images/crocodile-park/35.jpg"
+      "/images/crocodile-park/35.jpg",
+      "/images/WhatsApp Image 2026-04-10 at 16.58.03.jpeg",
+      "/images/WhatsApp Image 2026-04-10 at 16.57.35.jpeg",
+      "/images/WhatsApp Image 2026-04-10 at 17.00.23.jpeg",
+      "/images/cdcdsc.jpeg",
+      "/images/WhatsApp Image 2026-04-10 at 16.59.33.jpeg",
+      "/images/518345883_24308190252138703_2276242981519543528_n.jpg",
+      "/images/517444009_24308190775471984_2867875135025715269_n.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -645,7 +652,10 @@
       "/images/taroudant+tiout/pexels-jean-pierre-liut-722716555-33691653.jpg",
       "/images/taroudant+tiout/Start-a-blog-in-2022-1080x550.webp",
       "/images/taroudant+tiout/taroudant_morocco-11-scaled.jpg",
-      "/images/taroudant+tiout/riad-ain-khadra.jpg"
+      "/images/taroudant+tiout/riad-ain-khadra.jpg",
+      "/images/Oasis-de-Tiout.jpg",
+      "/images/7b.jpg",
+      "/images/tiout-11-1160x870.png"
     ],
     "commentCount": 0,
     "viewCount": 0,
