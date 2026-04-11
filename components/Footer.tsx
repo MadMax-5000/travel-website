@@ -6,8 +6,7 @@ import React, { useState } from 'react'
 import { Facebook, Instagram, Twitter, Youtube, ArrowUpRight } from 'lucide-react'
 
 const FOOTER_TOURS = [
-  'City Tours', 'Desert Adventures', 'Surf Retreats', 'Atlas Mountains',
-  'Day Trips', 'Luxury Tours', 'Camel Riding', 'Quad Biking', 'Boat Tours'
+  'Nomad Spirits', 'Epic Dunes Journey', 'The Night Loop', 'Taghazoute'
 ]
 
 const FOOTER_COMPANY = ['About Us', 'Contact', 'FAQs', 'Careers', 'Privacy Policy']
@@ -23,7 +22,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-[#0a0a0a] text-white overflow-hidden">
+    <footer className="bg-black text-white overflow-hidden">
 
       {/* ── STATEMENT HERO ── */}
       <div className="border-b border-white/[0.06]">
@@ -88,9 +87,9 @@ const Footer = () => {
           <div className="py-10 pr-8">
             <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Experiences</p>
             <ul className="space-y-3">
-              {FOOTER_TOURS.slice(0, 5).map((item) => (
+              {FOOTER_TOURS.slice(0, 2).map((item) => (
                 <li key={item}>
-                  <Link href="/" className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                  <Link href={`/packs/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
                     {item}
                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
                   </Link>
@@ -102,9 +101,9 @@ const Footer = () => {
           <div className="py-10 px-8">
             <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6 invisible">–</p>
             <ul className="space-y-3">
-              {FOOTER_TOURS.slice(5).map((item) => (
+              {FOOTER_TOURS.slice(2).map((item) => (
                 <li key={item}>
-                  <Link href="/" className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                  <Link href={`/packs/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
                     {item}
                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
                   </Link>
