@@ -5,9 +5,9 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { Facebook, Instagram, Twitter, Youtube, ArrowUpRight } from 'lucide-react'
 
-const FOOTER_TOURS = [
-  'Nomad Spirits', 'Epic Dunes Journey', 'The Night Loop', 'Taghazoute'
-]
+const FOOTER_PACKS = ['Nomad Spirits', 'Epic Dunes Journey']
+
+const FOOTER_TOURS = ['The Night Loop', 'Taghazoute']
 
 const FOOTER_COMPANY = ['About Us', 'Contact', 'FAQs', 'Careers', 'Privacy Policy']
 
@@ -85,9 +85,9 @@ const Footer = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/[0.06] border-b border-white/[0.06]">
 
           <div className="py-10 pr-8">
-            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Experiences</p>
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Packs</p>
             <ul className="space-y-3">
-              {FOOTER_TOURS.slice(0, 2).map((item) => (
+              {FOOTER_PACKS.slice(0, 2).map((item) => (
                 <li key={item}>
                   <Link href={`/packs/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
                     {item}
@@ -99,11 +99,11 @@ const Footer = () => {
           </div>
 
           <div className="py-10 px-8">
-            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6 invisible">–</p>
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Tours</p>
             <ul className="space-y-3">
-              {FOOTER_TOURS.slice(2).map((item) => (
+              {FOOTER_TOURS.slice(0, 2).map((item) => (
                 <li key={item}>
-                  <Link href={`/packs/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                  <Link href={`/tours/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
                     {item}
                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
                   </Link>
