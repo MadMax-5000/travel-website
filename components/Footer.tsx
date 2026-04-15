@@ -139,7 +139,7 @@ const Footer = () => {
             <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Contact</p>
             <ul className="space-y-5">
               {[
-                { label: 'Phone', value: '+212 528 82 00 00', href: 'tel:+212528820000' },
+                { label: 'Phone', value: '+212 656 96 57 54', href: 'tel:+212656965754' },
                 { label: 'Email', value: 'info@hmtours.com', href: 'mailto:info@hmtours.com' },
                 { label: 'Location', value: 'Agadir, Morocco', href: null },
               ].map(({ label, value, href }) => (

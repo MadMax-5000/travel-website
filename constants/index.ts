@@ -78,7 +78,7 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
   title: 'Contact Us',
   links: [
-    { label: 'Phone', value: '+212 528 82 00 00' },
+    { label: 'Phone', value: '+212 656 96 57 54' },
     { label: 'Email', value: 'info@hmtours.com' },
     { label: 'Address', value: 'Agadir, Morocco' },
   ],
