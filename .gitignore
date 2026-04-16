@@ -48,3 +48,6 @@ logs
 # data files (if you have local JSON data)
 data/*.json
 !data/example.json
+
+*.err
+nul
