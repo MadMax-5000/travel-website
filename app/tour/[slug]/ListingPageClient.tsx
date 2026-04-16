@@ -16,6 +16,7 @@ import {
     ChevronRightIcon,
     XMarkIcon,
     SunIcon,
+    ChatBubbleOvalLeftIcon,
     TruckIcon,
     UserGroupIcon,
     SparklesIcon,
@@ -248,176 +249,109 @@ function MobileBookingModal({
     return (
         <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center">
             <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                className="absolute inset-0 bg-black/50"
                 onClick={onClose}
             />
-            <div className="relative bg-white w-full sm:max-w-md sm:rounded-3xl rounded-t-3xl max-h-[90vh] overflow-hidden animate-in slide-in-from-bottom sm:slide-in-from-bottom-0 duration-300">
-                <div className="flex items-center justify-between p-4 sm:p-5 border-b border-neutral-100">
-                    {step === "form" && (
-                        <button
-                            type="button"
-                            onClick={onClose}
-                            className="p-2 -ml-2 rounded-full hover:bg-neutral-100 transition-colors"
-                        >
-                            <XMarkIcon className="w-5 h-5 text-neutral-600" />
-                        </button>
-                    )}
-                    {step === "success" && (
-                        <button
-                            type="button"
-                            onClick={onClose}
-                            className="p-2 -ml-2 rounded-full hover:bg-neutral-100 transition-colors"
-                        >
-                            <XMarkIcon className="w-5 h-5 text-neutral-600" />
-                        </button>
-                    )}
-                    <h3 className="text-lg font-semibold text-neutral-900 flex-1 text-center pr-8">
-                        {step === "form" && "Book Your Adventure"}
-                        {step === "success" && "Booking Sent!"}
+            <div className="relative bg-white w-full sm:max-w-sm sm:rounded-2xl rounded-t-2xl max-h-[85vh] overflow-hidden">
+                <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-100">
+                    <button
+                        type="button"
+                        onClick={onClose}
+                        className="p-1.5 -ml-1.5 rounded-full hover:bg-neutral-100 transition-colors"
+                    >
+                        <XMarkIcon className="w-5 h-5 text-neutral-500" />
+                    </button>
+                    <h3 className="text-base font-medium text-neutral-900">
+                        {step === "form" ? "Book Now" : "Done"}
                     </h3>
-                    <div className="w-9" />
+                    <div className="w-8" />
                 </div>
 
-                <div className="overflow-y-auto max-h-[calc(90vh-60px)]">
+                <div className="overflow-y-auto max-h-[calc(85vh-52px)]">
                     {step === "form" && (
-                        <div className="p-4 sm:p-5 space-y-5">
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-700 mb-3">
-                                    Select Date
-                                </label>
-                                <div className="bg-neutral-50 rounded-2xl p-3">
-                                    <MiniCalendar
-                                        selected={selectedDate}
-                                        onSelect={onDateSelect}
-                                    />
+                        <div className="p-4 space-y-4">
+                            <div className="bg-neutral-50 rounded-xl p-2">
+                                <MiniCalendar
+                                    selected={selectedDate}
+                                    onSelect={onDateSelect}
+                                />
+                            </div>
+
+                            <div className="flex items-center justify-between py-3 border-t border-b border-neutral-100">
+                                <div>
+                                    <p className="text-sm font-medium text-neutral-900">Guests</p>
+                                    <p className="text-xs text-neutral-500">{fmt(priceMad)} each</p>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <button
+                                        type="button"
+                                        onClick={() => onGuestsChange(Math.max(1, guests - 1))}
+                                        className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center hover:border-orange-500 transition-colors"
+                                    >
+                                        <MinusIcon className="w-4 h-4" />
+                                    </button>
+                                    <span className="w-5 text-center font-semibold">{guests}</span>
+                                    <button
+                                        type="button"
+                                        onClick={() => onGuestsChange(Math.min(maxGuests, guests + 1))}
+                                        className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center hover:border-orange-500 transition-colors"
+                                    >
+                                        <PlusIcon className="w-4 h-4" />
+                                    </button>
                                 </div>
                             </div>
 
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-700 mb-3">
-                                    Number of Guests
-                                </label>
-                                <div className="bg-neutral-50 rounded-2xl divide-y divide-neutral-200">
-                                        <div className="flex items-center justify-between p-4">
-                                            <div>
-                                                <p className="text-[15px] font-medium text-neutral-900">Guests</p>
-                                                <p className="text-[13px] text-neutral-500">{fmt(priceMad)} each</p>
-                                            </div>
-                                            <div className="flex items-center gap-4">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => onGuestsChange(Math.max(1, guests - 1))}
-                                                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                                >
-                                                    <MinusIcon className="w-4 h-4" />
-                                                </button>
-                                                <span className="w-6 text-center font-semibold">{guests}</span>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => onGuestsChange(Math.min(maxGuests, guests + 1))}
-                                                    className="w-9 h-9 rounded-full border border-neutral-300 flex items-center justify-center hover:border-orange-500 transition-colors"
-                                                >
-                                                    <PlusIcon className="w-4 h-4" />
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <div className="space-y-4">
-                                <div>
-                                    <label className="block text-sm font-medium text-neutral-700 mb-2">
-                                        Full Name
-                                    </label>
-                                    <div className="relative">
-                                        <UserIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
-                                        <input
-                                            type="text"
-                                            value={name}
-                                            onChange={(e) => setName(e.target.value)}
-                                            placeholder="Enter your full name"
-                                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-neutral-200 bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <label className="block text-sm font-medium text-neutral-700 mb-2">
-                                        Phone Number
-                                    </label>
-                                    <div className="relative">
-                                        <PhoneIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
-                                        <input
-                                            type="tel"
-                                            value={phone}
-                                            onChange={(e) => setPhone(e.target.value)}
-                                            placeholder="+212 6XX XXX XXX"
-                                            className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-neutral-200 bg-white text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                                        />
-                                    </div>
-                                </div>
+                            <div className="space-y-3">
+                                <input
+                                    type="text"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder="Full name"
+                                    className="w-full px-3 py-2.5 rounded-lg border border-neutral-200 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-orange-400"
+                                />
+                                <input
+                                    type="tel"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    placeholder="Phone number"
+                                    className="w-full px-3 py-2.5 rounded-lg border border-neutral-200 text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-orange-400"
+                                />
                             </div>
 
-                            <div className="bg-neutral-50 rounded-2xl p-4 space-y-2">
-                                <div className="flex justify-between text-sm text-neutral-600">
-                                    <span>{fmt(priceMad)} x {guests} guest{guests !== 1 ? "s" : ""}</span>
-                                    <span>{fmt(guestsTotal)}</span>
-                                </div>
-                                <div className="flex justify-between font-bold text-neutral-900 pt-2 border-t border-neutral-200">
-                                    <span>Total</span>
-                                    <span className="text-orange-600">{fmt(grandTotal)}</span>
-                                </div>
+                            <div className="flex items-center justify-between py-2 text-sm">
+                                <span className="text-neutral-500">Total</span>
+                                <span className="font-semibold text-neutral-900">{fmt(grandTotal)}</span>
                             </div>
 
                             <button
                                 type="button"
                                 onClick={handleSubmit}
-                                className="w-full py-4 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold text-base transition-all flex items-center justify-center gap-2"
+                                className="w-full py-3 rounded-full bg-green-500 hover:bg-green-600 text-white text-sm font-medium transition-all flex items-center justify-center gap-2"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M17.6 14c-.9-1.2-2.1-2-3.5-2.4-1.4-.4-3-.3-4.3.3l-1.6 1.6c-1.3 1.3-1.5 3.5-.4 5 .9 1.2 2.4 2 4 2.2 1.5.2 2.9-.2 4-1l1.8-1.5c.5-.4.7-1 .8-1.6.1-.7-.2-1.4-.8-1.8l-.6-.6z"/>
-                                    <path d="M17.6 14c1.1-1.1 1.8-2.6 1.9-4.2.1-1.7-.4-3.4-1.4-4.7C16.8 3.2 15 2 13 2l-.7.1C10.7 2.2 9 2.7 7.6 3.6L6.2 5c-1.4 1-2.2 2.5-2.4 4l-.1 1.4c0 1.7.6 3.3 1.8 4.5l1.2 1.2c1.3 1.3 3 2.1 4.9 2.1h.7c1.4-.1 2.8-.6 3.9-1.4z"/>
-                                </svg>
+                                <ChatBubbleOvalLeftIcon className="w-4 h-4" />
                                 Send via WhatsApp
                             </button>
                         </div>
                     )}
 
                     {step === "success" && (
-                        <div className="p-4 sm:p-5 flex flex-col items-center text-center pt-6">
-                            <div className="w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-5">
-                                <CheckIcon className="w-10 h-10 text-green-600 dark:text-green-400" />
+                        <div className="p-6 flex flex-col items-center text-center">
+                            <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                                <CheckIcon className="w-7 h-7 text-green-600" />
                             </div>
-                            <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-                                Booking Submitted!
+                            <h3 className="text-lg font-semibold text-neutral-900 mb-1">
+                                Booking Sent!
                             </h3>
-                            <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-2 max-w-xs">
-                                Your booking request has been sent via WhatsApp.
+                            <p className="text-sm text-neutral-500 mb-5">
+                                We&apos;ll contact you within 24 hours
                             </p>
-                            <p className="text-neutral-400 dark:text-neutral-500 text-xs mb-6 max-w-xs">
-                                Expected response within 24 hours
-                            </p>
-                            <div className="w-full space-y-3 max-w-xs">
-                                <button
-                                    type="button"
-                                    onClick={() => window.location.href = "/tours"}
-                                    className="w-full py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold text-base transition-all"
-                                >
-                                    Browse More Tours
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        if (navigator.share) {
-                                            navigator.share({ title: listingTitle, url: window.location.href });
-                                        } else {
-                                            navigator.clipboard.writeText(window.location.href);
-                                        }
-                                    }}
-                                    className="w-full py-4 rounded-full border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 font-semibold text-base transition-all hover:bg-neutral-50 dark:hover:bg-neutral-800"
-                                >
-                                    Share This Tour
-                                </button>
-                            </div>
+                            <button
+                                type="button"
+                                onClick={onClose}
+                                className="w-full py-2.5 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-sm font-medium transition-all"
+                            >
+                                Done
+                            </button>
                         </div>
                     )}
                 </div>
@@ -451,137 +385,89 @@ function BookingModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                className="absolute inset-0 bg-black/50"
                 onClick={onClose}
             />
-            <div className="relative bg-white dark:bg-neutral-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-md p-5 sm:p-8 z-10 animate-in fade-in zoom-in-95 duration-300">
-                <button
-                    type="button"
-                    onClick={onClose}
-                    className="absolute top-3 sm:top-5 right-3 sm:right-5 p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-                >
-                    <XMarkIcon className="w-5 h-5 text-neutral-400" />
-                </button>
+            <div className="relative bg-white dark:bg-neutral-900 rounded-2xl shadow-xl w-full max-w-sm z-10">
+                <div className="flex items-center justify-between px-4 py-3 border-b border-neutral-100 dark:border-neutral-800">
+                    <button
+                        type="button"
+                        onClick={onClose}
+                        className="p-1.5 -ml-1.5 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                    >
+                        <XMarkIcon className="w-5 h-5 text-neutral-500" />
+                    </button>
+                    <h3 className="text-base font-medium text-neutral-900 dark:text-neutral-100">
+                        {step === "form" ? "Confirm Booking" : "Done"}
+                    </h3>
+                    <div className="w-8" />
+                </div>
 
                 {step === "form" && (
-                    <>
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
-                                <CalendarDaysIcon className="w-6 h-6 text-white" />
+                    <div className="p-4 space-y-4">
+                        <div className="bg-neutral-50 dark:bg-neutral-800 rounded-xl p-4 space-y-2 text-sm">
+                            <p className="font-medium text-neutral-900 dark:text-neutral-100">{data.listingTitle}</p>
+                            <div className="flex justify-between text-neutral-500">
+                                <span>Date</span>
+                                <span className="text-neutral-700 dark:text-neutral-300">{data.selectedDate}</span>
                             </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-                                    Book Now
-                                </h3>
-                                <p className="text-[13px] text-neutral-500">Fill in your details to book</p>
+                            <div className="flex justify-between text-neutral-500">
+                                <span>Guests</span>
+                                <span className="text-neutral-700 dark:text-neutral-300">{data.guests}</span>
                             </div>
-                        </div>
-
-                        <div className="space-y-4 bg-neutral-50 dark:bg-neutral-800/50 rounded-2xl p-5 text-[14px] mb-5">
-                            <div className="pb-3 border-b border-neutral-200 dark:border-neutral-700">
-                                <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 text-base">{data.listingTitle}</h4>
-                                <p className="text-neutral-500 text-sm mt-1">{data.address}</p>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-neutral-500">Date</span>
-                                <span className="font-medium text-neutral-900 dark:text-neutral-100">{data.selectedDate}</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-neutral-500">Guests</span>
-                                <span className="font-medium text-neutral-900 dark:text-neutral-100">{data.guests} guest{data.guests !== 1 ? "s" : ""}</span>
-                            </div>
-                            <div className="border-t border-neutral-200 dark:border-neutral-700 pt-3 flex justify-between font-bold text-[17px]">
+                            <div className="flex justify-between font-semibold pt-2 border-t border-neutral-200 dark:border-neutral-700">
                                 <span className="text-neutral-900 dark:text-neutral-100">Total</span>
-                                <span className="text-orange-700 dark:text-orange-400">{data.grandTotal}</span>
+                                <span className="text-orange-600">{data.grandTotal}</span>
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                                    Full Name
-                                </label>
-                                <div className="relative">
-                                    <UserIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
-                                    <input
-                                        type="text"
-                                        value={name}
-                                        onChange={(e) => setName(e.target.value)}
-                                        placeholder="Enter your full name"
-                                        className="w-full pl-12 pr-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                                    />
-                                </div>
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                                    Phone Number
-                                </label>
-                                <div className="relative">
-                                    <PhoneIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
-                                    <input
-                                        type="tel"
-                                        value={phone}
-                                        onChange={(e) => setPhone(e.target.value)}
-                                        placeholder="+212 6XX XXX XXX"
-                                        className="w-full pl-12 pr-4 py-3 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                                    />
-                                </div>
-                            </div>
+                        <div className="space-y-3">
+                            <input
+                                type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                placeholder="Full name"
+                                className="w-full px-3 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-sm text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 focus:outline-none focus:border-orange-400"
+                            />
+                            <input
+                                type="tel"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                placeholder="Phone number"
+                                className="w-full px-3 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-sm text-neutral-900 dark:text-neutral-100 placeholder-neutral-400 focus:outline-none focus:border-orange-400"
+                            />
                         </div>
 
                         <button
                             type="button"
                             onClick={handleSubmit}
-                            className="w-full mt-6 py-3.5 rounded-full bg-green-500 hover:bg-green-600 text-white font-medium text-sm transition-all flex items-center justify-center gap-2"
+                            className="w-full py-3 rounded-full bg-green-500 hover:bg-green-600 text-white text-sm font-medium transition-all flex items-center justify-center gap-2"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M17.6 14c-.9-1.2-2.1-2-3.5-2.4-1.4-.4-3-.3-4.3.3l-1.6 1.6c-1.3 1.3-1.5 3.5-.4 5 .9 1.2 2.4 2 4 2.2 1.5.2 2.9-.2 4-1l1.8-1.5c.5-.4.7-1 .8-1.6.1-.7-.2-1.4-.8-1.8l-.6-.6z"/>
-                                <path d="M17.6 14c1.1-1.1 1.8-2.6 1.9-4.2.1-1.7-.4-3.4-1.4-4.7C16.8 3.2 15 2 13 2l-.7.1C10.7 2.2 9 2.7 7.6 3.6L6.2 5c-1.4 1-2.2 2.5-2.4 4l-.1 1.4c0 1.7.6 3.3 1.8 4.5l1.2 1.2c1.3 1.3 3 2.1 4.9 2.1h.7c1.4-.1 2.8-.6 3.9-1.4z"/>
-                            </svg>
+                            <ChatBubbleOvalLeftIcon className="w-4 h-4" />
                             Send via WhatsApp
                         </button>
-                    </>
+                    </div>
                 )}
 
                 {step === "success" && (
-                    <>
-                        <div className="flex flex-col items-center text-center pt-4">
-                            <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-5">
-                                <CheckIcon className="w-8 h-8 text-green-600 dark:text-green-400" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
-                                Booking Submitted!
-                            </h3>
-                            <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-2">
-                                Your booking request has been sent via WhatsApp.
-                            </p>
-                            <p className="text-neutral-400 dark:text-neutral-500 text-xs mb-6">
-                                Expected response within 24 hours
-                            </p>
-                            <div className="w-full space-y-3">
-                                <button
-                                    type="button"
-                                    onClick={() => window.location.href = "/tours"}
-                                    className="w-full py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium text-sm transition-all"
-                                >
-                                    Browse More Tours
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        if (navigator.share) {
-                                            navigator.share({ title: data.listingTitle, url: window.location.href });
-                                        } else {
-                                            navigator.clipboard.writeText(window.location.href);
-                                        }
-                                    }}
-                                    className="w-full py-3 rounded-full border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 font-medium text-sm transition-all hover:bg-neutral-50 dark:hover:bg-neutral-800"
-                                >
-                                    Share This Tour
-                                </button>
-                            </div>
+                    <div className="p-6 flex flex-col items-center text-center">
+                        <div className="w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-4">
+                            <CheckIcon className="w-7 h-7 text-green-600 dark:text-green-400" />
                         </div>
-                    </>
+                        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">
+                            Booking Sent!
+                        </h3>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-5">
+                            We&apos;ll contact you within 24 hours
+                        </p>
+                        <button
+                            type="button"
+                            onClick={onClose}
+                            className="w-full py-2.5 rounded-full bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-300 text-sm font-medium transition-all"
+                        >
+                            Done
+                        </button>
+                    </div>
                 )}
             </div>
         </div>
@@ -614,7 +500,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const [galleryOpen, setGalleryOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [mobileBookingOpen, setMobileBookingOpen] = useState(false);
-    
+
     const calRef = useRef<HTMLDivElement>(null);
     const guestsRef = useRef<HTMLDivElement>(null);
 
@@ -651,9 +537,9 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
     const fmt = (mad: number, includeEur = true) => includeEur ? `${priceEur} € / ${mad.toLocaleString("en-US")} MAD` : `${mad.toLocaleString("en-US")} MAD`;
 
     const handleReserve = () => {
-        if (!selectedDate) { 
-            setCalOpen(true); 
-            return; 
+        if (!selectedDate) {
+            setCalOpen(true);
+            return;
         }
 
         setReservationData({
@@ -674,7 +560,7 @@ export default function ListingPageClient({ listing }: ListingPageClientProps) {
 
     const handleWhatsApp = (name: string, phone: string) => {
         if (!reservationData) return;
-        
+
         const message = `Hello! I'd like to book the following tour:
 
 Tour: ${reservationData.listingTitle}
@@ -685,7 +571,7 @@ Total: ${reservationData.grandTotal}
 Name: ${name}
 Phone: ${phone}`;
 
-        const whatsappNumber = "212609080257";
+        const whatsappNumber = "212656965754";
         window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
         setShowModal(false);
     };
@@ -818,13 +704,9 @@ Phone: ${phone}`;
                     Reserve
                 </button>
 
-                <p className="text-center text-neutral-400 text-[13px] mt-4 mb-6">You won't be charged yet</p>
+                <p className="text-center text-neutral-400 text-[13px] mt-4 mb-2">You won't be charged yet</p>
 
                 <div className="space-y-4 text-[15px] text-neutral-600 dark:text-neutral-400">
-                    <div className="flex justify-between">
-                        <span className="hover:underline cursor-pointer">{fmt(priceMad)} x {guests} guest{guests !== 1 ? "s" : ""}</span>
-                        <span className="text-neutral-900 dark:text-neutral-200">{fmt(guestsTotal)}</span>
-                    </div>
                     <div className="pt-5 mt-3 border-t border-neutral-200 dark:border-neutral-700">
                         <div className="flex justify-between font-bold text-[17px] text-neutral-900 dark:text-neutral-100">
                             <span>Total</span>
@@ -880,17 +762,17 @@ Phone: ${phone}`;
             <div className="relative">
                 {/* Main Image Slider */}
                 <div className="relative h-[50vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden bg-white">
-                    <div 
+                    <div
                         className="absolute inset-0 flex items-center justify-center p-4 cursor-pointer"
                         onClick={() => setGalleryOpen(true)}
                     >
-                        <img 
-                            src={galleryImgs[currentImageIndex]} 
+                        <img
+                            src={galleryImgs[currentImageIndex]}
                             alt={`${title} - Image ${currentImageIndex + 1}`}
                             className="max-w-full max-h-full object-contain rounded-lg"
                         />
                     </div>
-                    
+
                     {/* Navigation Arrows */}
                     <button
                         onClick={(e) => { e.stopPropagation(); setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImgs.length - 1)); }}
@@ -904,12 +786,12 @@ Phone: ${phone}`;
                     >
                         <ChevronRightIcon className="w-8 h-8" />
                     </button>
-                    
+
                     {/* Image Counter */}
                     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-white rounded-full text-black text-sm font-medium">
                         {currentImageIndex + 1} / {galleryImgs.length}
                     </div>
-                    
+
                     {/* View All Button */}
                     <button
                         onClick={(e) => { e.stopPropagation(); setGalleryOpen(true); }}
@@ -919,7 +801,7 @@ Phone: ${phone}`;
                         View All Photos
                     </button>
                 </div>
-                
+
                 {/* Thumbnail Navigation */}
                 <div className="max-w-7xl mx-auto px-4 py-4 bg-white">
                     <div className="flex justify-center gap-2 flex-wrap">
@@ -927,14 +809,13 @@ Phone: ${phone}`;
                             <button
                                 key={idx}
                                 onClick={() => setCurrentImageIndex(idx)}
-                                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all ${
-                                    currentImageIndex === idx 
-                                    ? 'ring-2 ring-orange-500 scale-105' 
+                                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all ${currentImageIndex === idx
+                                    ? 'ring-2 ring-orange-500 scale-105'
                                     : 'opacity-60 hover:opacity-100'
-                                }`}
+                                    }`}
                             >
-                                <img 
-                                    src={img} 
+                                <img
+                                    src={img}
                                     alt=""
                                     className="w-full h-full object-cover"
                                 />
@@ -1051,8 +932,8 @@ Phone: ${phone}`;
             </div>
 
             {showModal && reservationData && (
-                <BookingModal 
-                    data={reservationData} 
+                <BookingModal
+                    data={reservationData}
                     onClose={() => setShowModal(false)}
                     onWhatsApp={handleWhatsApp}
                 />
@@ -1076,7 +957,7 @@ Phone: ${phone}`;
 
             {galleryOpen && (
                 <div className="fixed inset-0 z-50 bg-black/95">
-                    <div 
+                    <div
                         className="absolute inset-0 cursor-pointer"
                         onClick={() => setGalleryOpen(false)}
                     />
@@ -1143,9 +1024,8 @@ Phone: ${phone}`;
                                     key={idx}
                                     type="button"
                                     onClick={() => setCurrentImageIndex(idx)}
-                                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                                        currentImageIndex === idx ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
-                                    }`}
+                                    className={`w-2.5 h-2.5 rounded-full transition-all ${currentImageIndex === idx ? "bg-white scale-125" : "bg-white/40 hover:bg-white/60"
+                                        }`}
                                 />
                             ))}
                         </div>
