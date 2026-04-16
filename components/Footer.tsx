@@ -140,7 +140,7 @@ const Footer = () => {
             <ul className="space-y-5">
               {[
                 { label: 'Phone', value: '+212 656 96 57 54', href: 'tel:+212656965754' },
-                { label: 'Email', value: 'info@hmtours.com', href: 'mailto:info@hmtours.com' },
+                { label: 'Email', value: 'Ohmtours6@gmail.com', href: 'mailto:Ohmtours6@gmail.com' },
                 { label: 'Location', value: 'Agadir, Morocco', href: null },
               ].map(({ label, value, href }) => (
                 <li key={label}>

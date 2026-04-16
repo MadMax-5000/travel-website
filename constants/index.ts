@@ -79,7 +79,7 @@ export const FOOTER_CONTACT_INFO = {
   title: 'Contact Us',
   links: [
     { label: 'Phone', value: '+212 656 96 57 54' },
-    { label: 'Email', value: 'info@hmtours.com' },
+    { label: 'Email', value: 'Ohmtours6@gmail.com' },
     { label: 'Address', value: 'Agadir, Morocco' },
   ],
 };

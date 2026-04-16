@@ -31,13 +31,13 @@ export default function Contact() {
                         <div className="flex flex-col">
                             {/* Email Row */}
                             <a
-                                href="mailto:inquiries@hmtours.com"
+                                href="mailto:Ohmtours6@gmail.com"
                                 className="group flex flex-col items-start justify-between gap-2 border-b border-zinc-800/80 py-4 transition-colors hover:border-zinc-600 sm:flex-row sm:items-center"
                             >
                                 <div className="flex items-center gap-3">
                                     <Mail className="h-4 w-4 text-zinc-500 transition-colors group-hover:text-orange-300" />
                                     <span className="text-[13px] font-medium text-zinc-300 transition-colors group-hover:text-white">
-                                        inquiries@hmtours.com
+                                        Ohmtours6@gmail.com
                                     </span>
                                 </div>
                                 <span className="text-[9px] font-semibold tracking-[0.2em] text-zinc-500 uppercase">Email</span>
