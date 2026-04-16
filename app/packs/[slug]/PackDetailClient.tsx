@@ -716,10 +716,13 @@ Phone: ${phone}`;
                         <ChevronRightIcon className="w-10 h-10" />
                     </button>
                     <div className="absolute inset-0 flex items-center justify-center p-4">
-                        <img
+                        <Image
                             src={pack.galleryImgs[currentImageIndex] as string}
                             alt=""
-                            className="max-w-[90vw] max-h-[90vh] object-contain"
+                            fill
+                            sizes="90vw"
+                            className="object-contain"
+                            priority
                         />
                     </div>
                     <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
@@ -747,10 +750,13 @@ Phone: ${phone}`;
                             className="absolute inset-0 flex items-center justify-center p-4 cursor-pointer"
                             onClick={() => setGalleryOpen(true)}
                         >
-                            <img
+                            <Image
                                 src={pack.galleryImgs[currentImageIndex] as string}
                                 alt={pack.title}
-                                className="max-w-full max-h-full object-contain rounded-lg"
+                                fill
+                                sizes="100vw"
+                                className="object-contain rounded-lg"
+                                priority
                             />
                         </div>
 
@@ -791,10 +797,12 @@ Phone: ${phone}`;
                                         : 'opacity-60 hover:opacity-100'
                                         }`}
                                 >
-                                    <img
+                                    <Image
                                         src={img}
                                         alt=""
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        sizes="80px"
+                                        className="object-cover"
                                     />
                                 </button>
                             ))}

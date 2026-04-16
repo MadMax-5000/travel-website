@@ -8,14 +8,14 @@ import { Facebook, Instagram, Twitter, Youtube, ArrowUpRight } from 'lucide-reac
 const FOOTER_PACKS = ['Nomad Spirits', 'Epic Dunes Journey', 'The Night Loop', 'Taghazoute']
 
 const FOOTER_TOURS = [
-  'Quad Bike in Desert',
-  'Buggy in Desert',
-  'Camel Riding',
-  'Sandboarding',
-  'Boat Trip',
-  'Paradis Valley',
-  'Marrakech Day Trip',
-  ' Essaouira Day Trip'
+  { name: 'Agadir City Tour', slug: 'agadir-city-tour' },
+  { name: 'Quad Bike in Desert', slug: 'quad-bike-in-desert' },
+  { name: 'Buggy in Desert', slug: 'buggy-in-desert' },
+  { name: 'Boat Trip', slug: 'boat-trip' },
+  { name: 'Paradis Valley', slug: 'paradis-valley' },
+  { name: 'Marrakech', slug: 'marrakech' },
+  { name: 'Essaouira', slug: 'essaouira' },
+  { name: 'Surf Lesson', slug: 'surf-lesson-2-hours' }
 ]
 
 const FOOTER_COMPANY = ['About Us', 'Contact', 'FAQs', 'Careers', 'Privacy Policy']
@@ -111,9 +111,9 @@ const Footer = () => {
             <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-600 mb-6">Tours</p>
             <ul className="space-y-3">
               {FOOTER_TOURS.slice(0, 6).map((item) => (
-                <li key={item}>
-                  <Link href={`/tours/${item.toLowerCase().replace(/ /g, '-')}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
-                    {item}
+                <li key={item.slug}>
+                  <Link href={`/tour/${item.slug}`} className="group relative inline-block text-[13px] text-neutral-500 hover:text-white transition-colors">
+                    {item.name}
                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
