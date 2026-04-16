@@ -62,7 +62,7 @@ export default function Contact() {
                                 <div className="flex items-center gap-3">
                                     <MapPin className="h-4 w-4 text-zinc-500 transition-colors group-hover:text-orange-300" />
                                     <span className="text-[13px] font-medium text-zinc-300 transition-colors group-hover:text-white">
-                                        Agadir Bay, Morocco
+                                        Agadir, Morocco
                                     </span>
                                 </div>
                                 <span className="text-[9px] font-semibold tracking-[0.2em] text-zinc-500 uppercase">Office</span>

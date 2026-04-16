@@ -210,7 +210,7 @@ ${additionalNotes ? `\n📝 Notes: ${additionalNotes}` : ""}`;
         }
 
         const encodedMessage = encodeURIComponent(message);
-        window.open(`https://wa.me/212609080257?text=${encodedMessage}`, '_blank');
+        window.open(`https://wa.me/212656965754?text=${encodedMessage}`, '_blank');
         setBookingStep("success");
     };
 
