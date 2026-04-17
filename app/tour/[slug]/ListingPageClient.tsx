@@ -766,13 +766,10 @@ Phone: ${phone}`;
                         className="absolute inset-0 flex items-center justify-center p-4 cursor-pointer"
                         onClick={() => setGalleryOpen(true)}
                     >
-                        <Image
+                        <img
                             src={galleryImgs[currentImageIndex]}
                             alt={`${title} - Image ${currentImageIndex + 1}`}
-                            fill
-                            sizes="100vw"
-                            className="object-contain rounded-lg"
-                            priority
+                            className="max-w-full max-h-full object-contain rounded-lg"
                         />
                     </div>
 
@@ -817,12 +814,10 @@ Phone: ${phone}`;
                                     : 'opacity-60 hover:opacity-100'
                                     }`}
                             >
-                                <Image
+                                <img
                                     src={img}
                                     alt=""
-                                    fill
-                                    sizes="80px"
-                                    className="object-cover"
+                                    className="w-full h-full object-cover"
                                 />
                             </button>
                         ))}
