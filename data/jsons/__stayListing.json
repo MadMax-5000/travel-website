@@ -64,7 +64,9 @@
     "galleryImgs": [
       "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502445.jpg",
       "/images/quad-bike-in-desert/pexels-haris-khan-73724010-8502444.jpg",
-      "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg"
+      "/images/quad-bike-in-desert/pexels-abdellah-ziki-1621531168-27549787.jpg",
+      "/images/cross.jpg",
+      "/images/ad.jpg"
     ],
     "commentCount": 0,
     "viewCount": 0,
@@ -83,7 +85,7 @@
       "lng": -9.5981
     },
     "slug": "quad-bike-in-desert",
-    "duration": "2 Hours (08:30am-11:30am / 02:00pm-05:30pm)",
+    "duration": "2 Hours (09:00am-11:00am / 14:00pm-16:00pm / 16:00pm-18:00pm)",
     "scheduleDays": "EVERYDAY",
     "includes": [
       "Round Trip Transport",
