@@ -251,6 +251,22 @@ ${additionalNotes ? `\n📝 Notes: ${additionalNotes}` : ""}`;
         }
     };
 
+    const isMarrakeshRoute = useMemo(() => {
+        if (transferType !== "airport") return false;
+        if (toAirport === "RAK") return true;
+        if (showOtherAirport && otherAirport) {
+            const lower = otherAirport.toLowerCase();
+            return lower.includes("marrak") || lower.includes("rak");
+        }
+        return false;
+    }, [transferType, toAirport, showOtherAirport, otherAirport]);
+
+    useEffect(() => {
+        if (isMarrakeshRoute && serviceType !== "Shuttle") {
+            setServiceType("Shuttle");
+        }
+    }, [isMarrakeshRoute, serviceType]);
+
     const getSidebarContent = () => {
         if (transferType === "airport") {
             return (
@@ -549,25 +565,27 @@ ${additionalNotes ? `\n📝 Notes: ${additionalNotes}` : ""}`;
 
                                         <div>
                                             <label className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1.5 flex items-center gap-1">
-                                                Prefer VIP or Shuttle?
+                                                {isMarrakeshRoute ? "Shuttle Service" : "Prefer VIP or Shuttle?"}
                                                 <Tooltip text={serviceType === "VIP" ? SERVICE_TYPES[0].details : SERVICE_TYPES[1].details}>
                                                     <InformationCircleIcon className="w-4 h-4 text-neutral-400 cursor-help" />
                                                 </Tooltip>
                                             </label>
                                             <div className="grid gap-2 sm:grid-cols-2">
-                                                {SERVICE_TYPES.map((service) => (
-                                                    <button
-                                                        key={service.type}
-                                                        onClick={() => setServiceType(service.type)}
-                                                        className={`p-3 rounded-lg border-2 transition-all text-left ${serviceType === service.type
-                                                            ? "border-orange-500 bg-orange-50 dark:bg-orange-900/20"
-                                                            : "border-neutral-200 dark:border-neutral-700 hover:border-orange-300"
-                                                            }`}
-                                                    >
-                                                        <span className="block font-semibold text-neutral-900 dark:text-white">{service.type}</span>
-                                                        <span className="block text-xs text-neutral-500">{service.description}</span>
-                                                    </button>
-                                                ))}
+                                                {SERVICE_TYPES
+                                                    .filter(service => !isMarrakeshRoute || service.type === "Shuttle")
+                                                    .map((service) => (
+                                                        <button
+                                                            key={service.type}
+                                                            onClick={() => setServiceType(service.type)}
+                                                            className={`p-3 rounded-lg border-2 transition-all text-left ${serviceType === service.type
+                                                                ? "border-orange-500 bg-orange-50 dark:bg-orange-900/20"
+                                                                : "border-neutral-200 dark:border-neutral-700 hover:border-orange-300"
+                                                                }`}
+                                                        >
+                                                            <span className="block font-semibold text-neutral-900 dark:text-white">{service.type}</span>
+                                                            <span className="block text-xs text-neutral-500">{service.description}</span>
+                                                        </button>
+                                                    ))}
                                             </div>
                                         </div>
                                     </div>
