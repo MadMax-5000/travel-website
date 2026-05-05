@@ -170,7 +170,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-5">
             <Link href="/">
-              <Image src="/ansof.png" alt="OHM Tours" width={90} height={36} className="h-6 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity" />
+              <Image src="/images/logo.png" alt="OHM Tours" width={100} height={100} className="h-10 w-auto object-contain opacity-50 hover:opacity-80 transition-opacity scale-150 origin-left" />
             </Link>
             <span className="text-[12px] text-neutral-700">© {currentYear} OHM Tours</span>
           </div>

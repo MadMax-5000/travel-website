@@ -25,22 +25,19 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-3 w-full bg-black border-b border-white/10"
+        className="max-container padding-container flex items-center justify-between fixed top-0 left-0 right-0 z-50 py-1 w-full bg-black border-b border-white/10"
       >
         <Link
           href="/"
           className="flex items-center gap-3"
         >
           <Image
-            src="/ansof.png"
+            src="/images/logo.png"
             alt="OHM Tours Logo"
-            width={120}
-            height={60}
-            className="h-8 sm:h-10 w-auto object-contain"
+            width={200}
+            height={200}
+            className="h-10 sm:h-12 w-auto object-contain scale-[1.75] mt-2"
           />
-          <span className="text-lg sm:text-xl text-white font-semibold italic font-serif">
-            OHM Tours
-          </span>
         </Link>
 
         <ul className="hidden gap-8 lg:flex">
